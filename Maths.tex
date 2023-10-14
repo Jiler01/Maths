@@ -1,0 +1,379 @@
+\documentclass{article}
+\usepackage{tkz-tab}
+\usepackage{amsmath}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+
+\title{Mathématiques lycée}
+\author{JIVA LILA Rehan}
+\date{2022\textemdash 2024}
+
+\begin{document}
+
+\maketitle
+    Ce livret est un récapitulatif de mon année de mathématiques de première et terminale, au Lycée International de Ferney-Voltaire, sur le site principal, durant les années 2022\textemdash2024, dans la classe 1G10 et de TG7.
+
+\tableofcontents
+
+\pagebreak
+
+
+
+\section{Fonctions de références}
+
+
+\subsection{Propriétés de fonction}
+
+\subsubsection{Croissance \& décroissance}
+    \underline{Pour $a<b$:}\\
+    Si $f(a) < f(b)$: la fonction est \emph{croissante}\\
+    Si $f(a) > f(b)$: la fonction est \emph{décroissante}\\
+    Si $f(a) = f(b)$: la fonction est \emph{monotone}
+
+\subsubsection{Parité \& imparité}
+    \underline{$\forall x \in \mathbf{R}$ :}\\
+    Si $f(-x) = f(x)$: la fonction est \emph{paire}\\
+    Si $f(-x) = -f(x)$: la fonction est \emph{impaire}
+
+
+\subsection{Fonctions affines}
+    Une fonction est une fonction de style $f(x) = ax+b$ avec $a$ la dérivée de la fonction, et $b$ son ordonnée à l'origine.
+
+
+\subsection{Fonctions carrées}
+    La fonction carrée est définie par $f(x) = x^2$. Elle est paire sur $\mathbf{R}$, décroissante sur $\mathbf{R^-}$ et croissante sur sur $\mathbf{R^+}$.
+
+
+\subsection{Fonction cube}
+    La fonction cube est définie par $f(x) = x^3$. Elle est impaire et croissante sur $\mathbf{R}$.
+
+
+\subsection{Fonction inverse}
+    La fonction inverse est définie par $f(x) = \frac{1}{x}$. Elle est impaire et décroissante sur $\mathbf{R^*}$.
+
+
+\subsection{Fonction racine carrée}
+    La fonction carrée est définie sur $\mathbf{R^+}$ par $f(x) = \sqrt{x} = x^{-2}$. Elle est croissante.
+
+
+\subsection{La fonction valeur absolue}
+    La fonction valeur absolue est définie par $f(x) = |x| $. Elle est paire sur sur $\mathbf{R}$, décroissante sur $\mathbf{R^-}$ et croissante sur sur $\mathbf{R^+}$.\\
+    Son comportement suit la règle suivante : $|x| = |-x| = x$.
+
+
+
+\section{Règles sur les inégalités}
+    \begin{enumerate}
+        \item Les additions et soustraction \emph{ne changent pas le sens}.
+        \item Les multiplication et division \emph{ne changent le sens QUE SI leur produit ou dividende est négatif}.
+        \item L'application d'une fonction \emph{ne change le sens QUE SI sa fonction est impaire}.
+    \end{enumerate}
+
+
+
+\section{Fonctions polynômes du second degré}
+
+
+\subsection{Formes}
+
+\subsubsection{Forme développée (ou forme développée réduite)}
+$f(x) = ax^2+bx+c$ avec $a \neq 0$
+
+\subsubsection{Forme factorisée}
+$f(x) = a(x - x_1)(x - x_2)$ avec $x_1$ et $x_2$ les racines de $f$\\
+On notera que $x_1+x_2=-b/a$ et que $x_1x_2=c/a$
+
+\subsubsection{Forme canonique}
+$f(x) = a(x-\alpha)+\beta$ avec $\alpha = \frac{-b}{2a}$ et $\beta = f(\alpha)$
+
+
+\subsection{Variations}
+    Pour $a > 0$: décroissante avant $\alpha$, avec un minimum en $\beta$, puis croissante.\\
+    Pour $a < 0$: croissante avant $\alpha$, avec un maximum en $\beta$, puis décroissante.
+
+
+\subsection{Résolution}
+    \begin{enumerate}
+        \item On calcule le discriminant tel que $\Delta = b^2 - 4ac$.
+        \item On calcule les racines telles que $x_0 = \frac{-b \pm \sqrt{\Delta}}{2a}$.
+    \end{enumerate}
+
+
+\subsection{Signe de la fonction}
+    \begin{enumerate}
+        \item Si $\Delta > 0$: Du signe de $a$ à l'extérieur des racines, de l'autre entre elles. S'annule sur ces dernières
+        \item Si $\Delta = 0$: Du signe de $a$ sur $\mathbf{R}$ S'annule sur les racines.
+        \item Si $\Delta < 0$ Du signe de $a$ sur $\mathbf{R}$.
+    \end{enumerate}
+
+
+
+\section{Dérivations}
+
+
+\subsection{Dérivation locale}
+
+\subsubsection{Taux de variation}
+    \begin{enumerate}
+        \item Entre $a$ et $b$ : $\frac{f(b) - f(a)}{b - a}$.
+        \item Sur $a$: $\frac{f(a + h) - f(a)}{h}$.
+    \end{enumerate}
+
+\subsubsection{Nombre dérivé (dérivée)}
+    \textit{La dérivée de $f(x)$, soit la variation de $f$ en $x$, s'écrit $f'(x)$.}
+    $$f'(x) = \lim \limits_{h \Rightarrow 0} \frac{f(a + h) - f(a)}{h}$$
+
+\subsubsection{Tangente à une courbe}
+    La tangente à la courbe de $f$ en $a$ est définie par: $$\mathcal{T}(x) = f'(a)(x-a) + f(a)$$
+
+
+\subsection{Dérivation globale}
+    Une dérivation globale reprend le concept de dérivation locale, mais fourni une formule applicable sur toute la fonction. Elle est utilisée pour étudier les variations de la fonction.
+
+\subsubsection{Opérations sur les dérivées}
+    \begin{enumerate}
+        \item[] $$(u+v)' = u' +v'$$
+        \item[] $$\forall k \in \mathbf{R} : (ku)' = ku'$$
+        \item[] $$(uv)' = vu' + uv'$$
+        \item[] $$\frac{1}{v}' = \frac{-v'}{v^2}$$
+        \item[] $$\frac{u}{v}' = \frac{u'v - v'u}{v^2}$$
+        \item[] À savoir: $\forall f = g(h) : f' = h'g(h)$ avec $f$, $g$, et $h$ des fonctions
+    \end{enumerate}
+
+\subsubsection{Dérivées de fonctions usuelles}
+    \begin{enumerate}
+        \item[] $$\forall k \in \mathbf{R}, \forall f(x) = k : f'(x) = O$$
+        \item[] $$\forall k \in \mathbf{R}, \forall f(x) = kx : f'(x) = k$$
+        \item[] $$\forall n, \forall f(x) = x^n : f'(x) = nx^{n-1}$$
+        \item[] $$\forall x \in \mathbf{R^*}, \forall f(x) =\frac{1}{x} : f'(x) = \frac{-1}{x^2}$$
+        \item[] $$\forall x \in \mathbf{R^{+*}}, \forall f(x) =\sqrt{x} : f'(x) = \frac{1}{2\sqrt{x}}$$
+        \item[] $$\forall f(x) = e^{g} : f'(x) = g'e^{g}$$
+        \item[] $$\forall x \in \mathbf{R^{-*}}, \forall f(x) = |x| : f'(x) = -1$$
+        \item[] $$\forall x \in \mathbf{R^{+*}}, \forall f(x) = |x| : f'(x) = 1$$
+    \end{enumerate}
+
+\subsubsection{Variations de la fonction}
+    $\forall f$, si $f'$ est négatif, $f$ est décroissante. Inversement, si $f'$ est positive, $f$ est croissante.
+
+
+
+\section{Suites numériques}
+
+
+\subsection{Définition}
+    Une suite numérique $u$ est une suite de valeurs pourvues d'un indice, $n$, qui parcours l'ensemble $\mathbf{N}$. L'élément à l'indice $n$ de la suite $u$ est noté $u_n$.
+
+
+\subsection{Modes de génération}
+
+\subsubsection{Liste}
+    Une simple liste de nombres. (ex: les décimales de $\pi$: 1; 4; 1; 5\dots)
+
+\subsubsection{Formule explicite}
+    Définir $u_n$ en fonction de $n$: $u_n = f(n)$
+
+\subsubsection{Récurrence}
+    Définir $u_n$ en fonction de un ou plusieurs $u_{n-k}$ (ex: suite de Fibonacci: $u_n = u_{n-2} + u_{n1}$)
+
+
+\subsection{Quelques styles de suites}
+
+\subsubsection{Suite arithmétique}
+    Une suite arithmétique est définie par $u_n = u_{n-1} + r$ ou $u_n = u_0 + nr$ avec $r$ sa raison.\\
+    La somme de ses termes d'indices de $p$ à $n$ vaut $(n+1)\times \frac{u_p+u_n}{2}$.\\
+    Pour prouver qu'une suite est arithmétique, il suffit que $r$ dans $u_n - u_{n-1} = r$ soit indépendant de $n$.
+
+\subsubsection{Suite géométrique}
+    Une suite arithmétique est définie par $u_n = u_{n-1} \times q$ ou $u_n = u_0 \times q^n$ avec $q$ sa raison.\\
+    La somme de ses termes d'indices de $p$ à $n$ vaut $u_p\times \frac{1-q^{n-p+1}}{1-q}$.\\
+    Pour prouver qu'une suite est géométrique, il suffit que $q$ dans $\frac{u_n}{u_{n-1}} = q$ soit indépendant de $n$.
+
+
+\subsection{Croissance et décroissance}
+    Pour prouver la croissance ou la décroissance d'une suite, on applique \\$u_{n-+1} - u_n$, qui si négatif prouve une décroissance, et inversement.
+
+
+\subsection{Limite de suites}
+
+\subsubsection{Définition}
+    \begin{enumerate}
+        \item $v_n$ admet une limite $+\infty$ si $\forall A \in \mathbf{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n > A$
+        \item $v_n$ admet une limite $-\infty$ si $\forall A \in \mathbf{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n < A$
+        \item $v_n$ admet une limite $l$ si $\forall E \in \mathbf{N^*}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$ $l-E<u_n<l+E$
+    \end{enumerate}
+
+\subsubsection{Opérations}
+    Lors du calcul d'une limite, les formes indéterminées sont:
+    \\$$\infty - \infty \qquad 0 \times \infty \qquad \frac{0}{0} \qquad \frac{\infty}{\infty}$$
+    Si on en rencontre une, l'usage est de manipuler l'expression de sorte à ne plus avoir ce problème, ou bien d'appliquer la règle de L'Hôpital qui dit que $$\lim \limits_{x \Rightarrow e} \frac{f(x)}{g(x)} = \lim \limits_{x \Rightarrow e} \frac{f'(x)}{g'(x)}$$ ssi $f'(x)$ et $g'(x)$ existent et $g'(x) \ne 0$.
+
+\subsubsection{Comparaison et encadrement}
+    On suppose deux suites $u_n$ et $v_n$ telles que après un certain rang, $u_n>v_n$.
+    $$\lim \limits_{n \Rightarrow \infty} v_n = + \infty \Rightarrow \lim \limits_{n \Rightarrow \infty} u_n = + \infty$$
+    $$\lim \limits_{n \Rightarrow \infty} u_n = - \infty \Rightarrow \lim \limits_{n \Rightarrow \infty} v_n = - \infty$$
+    On suppose $u_n$, $v_n$ et $w_n$, telles que après un certain rang, $u_n \le v_n \le w_n$
+    $$\lim \limits_{n \Rightarrow \infty} u_n = \lim \limits_{n \Rightarrow \infty} w_n = l \Rightarrow \lim \limits_{n \Rightarrow \infty} v_n = l$$
+
+
+
+\section{Trigonométrie}
+
+
+\subsection{Cercle trigonométrique}
+    Le cercle trigonométrique est défini par un cercle de rayon $1 UA$, donc de rayon $2\pi$.\\
+    On admettra que son centre $O$ est aux coordonnées $(0;0)$.
+
+
+\subsection{Radian}
+    Le radian est l'unité de mesure d'angle en trigonométrie. Note $rad$, on retiendra que $1^\circ= \frac{\pi}{180} rad$
+
+
+\subsection{Points sur l'arc}
+Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos{x};\sin{x})$. \\De plus, l'angle $x$ est le même que l'angle $x +2k\pi$, $\forall k \in \mathbf{N}$.
+
+
+\subsection{Fonctions cosinus et sinus}
+    \begin{enumerate}
+        \item $\cos x$ est une fonction paire, variant entre $-1$ et $1$, et récurrente telle que $\cos{x + 2k\pi} = \cos x$, $\forall k \in \mathbf{N}$.
+        \item $\sin x$ est une fonction impaire, variant entre $-1$ et $1$, et récurrente telle que $\sin{x + 2k\pi} = \sin x$, $\forall k \in \mathbf{N}$.
+    \end{enumerate}
+
+
+
+\section{Probabilités}
+
+
+\subsection{Vocabulaire}
+    Soit deux évènements $\mathcal{A}$ et $\mathcal{B}$ :\\
+    On note $\mathcal{A} \cup \mathcal{B}$ l'union des deux évènements, soit celui ou au moins l'un des deux se produit.\\
+    On note $\mathcal{A} \cap \mathcal{B}$ l'intersection des deux évènements, soit celui ou les deux se produisent.\\
+    On note $\mathcal{_AB}$ l'évènement ou $\mathcal{B}$ se produit, sachant que $\mathcal{A}$ s'est déjà produit (utilise typiquement dans les arbres pondérés).\\
+
+
+\subsection{Formules}
+    $$\mathcal{P_A} \cup \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A} \cap \mathcal{P_B}$$
+    $$\mathcal{P_A} \cap \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A} \cup \mathcal{P_B}$$
+    $$\mathcal{P_AB} = \frac{\mathcal{PA} \cap \mathcal{PB}}{\mathcal{PA}}$$
+    $$\mathcal{P_AB} = \frac{\mathcal{P_BA} \times \mathcal{PB}}{\mathcal{PA}}$$
+
+
+\subsection{Indépendance}
+    $\mathcal{A}$ et $\mathcal{B}$ sont indépendants si et seulement si $\mathcal{PA} \cap \mathcal{PB} = \mathcal{PA} \times \mathcal{PB}$. \\
+    Des lors, $\mathcal{P_BA} = \mathcal{PA}$ et $\mathcal{P_AB} = \mathcal{PB}$.
+
+
+
+\section{Variables aléatoires}
+
+
+\subsection{Définition}
+    Une variable aléatoires est une variable pouvant prendre différentes valeurs, suivant une certaine probabilité. \\
+    On associe alors à la variable aléatoire $X$ les valeurs $x_1, x_2, ..., x_n$ et leurs probabilités respectives $p_i$ définies par $X == x_i$.
+
+
+\subsection{Paramètres}
+    Une variable aléatoire a dès lors des paramètres, définis comme suis:
+    \begin{enumerate}
+        \item[] L'espérance,$E(X)$, qui représente la moyenne pondérée des valeurs possibles de cette variable, et qui est définie par: $$\sum^n_{i=1}p_ix_i$$
+        \item[] Sa variance, $V(X)$: $$\sum^n_{i=1}p_i(x_i-E(X))^2$$
+        \item[] Son écart-type, $\sigma(X)$: $$\sqrt{V(X)}$$
+    \end{enumerate}
+
+
+
+\section{Géométrie repérée}
+
+
+\subsection{Vecteurs}
+    Propriétés:
+    \begin{enumerate}
+        \item On note la norme $AB$ du vecteur $\Vec{AB}$ : $||\Vec{AB}||$.
+        \item Le vecteur opposé a $\Vec{AB}$ est $-\Vec{AB} = \Vec{BA}$.
+        \item $\Vec{AB}+\Vec{BC}=\Vec{AC}$
+        \item Si $\Vec{v} = k\Vec{u}$ avec $k$ un réel, alors $\Vec{v}$ et      $\Vec{u}$ sont colinéaires.
+        \item Dans un repère orthonormé, $||\Vec{AB}|| = \sqrt{(x_B-x_A)^2+ (y_B-y_A)^2+...}$.
+    \end{enumerate}
+
+\subsubsection{Produit scalaire}
+    Le produit scalaire, ou travail, d'un vecteur sur un autre, se note $\mathcal{W}$.\\
+    On notera que $\mathcal{W}_uv = \mathcal{W}_vu$.\\
+    Voici les méthodes de calcul de $\Vec{AB} \cdot \Vec{AC} = \mathcal{W}_{AB}AC$.\\
+    \\
+    Méthodes de calcul:
+    \begin{enumerate}
+        \item Par le projeté orthogonal \\Soit $H$ le projeté orthogonal de $C$ sur $(AB)$: $\Vec{AB} \cdot \Vec{AC} = \Vec{AB} \cdot \Vec{AH} = AB \times AH$.
+        \item Par les coordonnées \\$\Vec{AB} \cdot \Vec{AC} = x_{AB}x_{AC}+y_{AB}y_{AC}$
+        \item Par le cosinus \\$\Vec{AB} \cdot \Vec{AC} = AB\times AH\times \cos \alpha$ avec $\alpha$ l'angle forme par les vecteurs.
+        \item Par les normes \\$\Vec{AB} \cdot \Vec{AC} = \frac{1}{2}(AB^2 + AC^2 - BC^2)$
+    \end{enumerate}
+    On notera que $\Vec{AB}$ et $\Vec{AC}$ sont orthogonaux si leur produit scalaire est nul.
+
+
+\subsection{Plan}
+    Un plan est défini dans l'espace par deux vecteurs non colinéaires et un point.\\
+    Dès lors pour un plan $\mathcal{P}$ défini par le point $A$ et les vecteurs $\Vec{u}$ et $\Vec{v}$, $M \in \mathcal{P}$ ssi $\Vec{AM} = a\Vec{u}+b\Vec{v}$ avec $a,b\in\mathbf{R}$
+
+\subsection{Base de l'espace}
+    Trois vecteurs non coplanaires forment une base de l'espace\\
+    Dès lors, $\forall \Vec{u} \in$ la base de l'espace $(\Vec{i};\Vec{j};\Vec{k})$, $\exists x,y,z \in \mathbf{R}$ tels que $x\Vec{u}+y\Vec{j}+z\Vec{k}=\Vec{u}$. On dira que $\Vec{i} = \begin{pmatrix}x\\y\\z\end{pmatrix}$ dans $(\Vec{i};\Vec{j};\Vec{k})$\\\\
+    Propriétés:
+    \begin{enumerate}
+        \item $\Vec{AB} = (x_b - x_a ; y_b - y_a ; ...)$
+        \item $I$ est milieu de $AB$ ssi $I=(\frac{x_a+x_b}{2};\frac{y_a+y_b}{2};...)$
+    \end{enumerate}
+
+
+\subsection{Formes géométriques}
+
+\subsubsection{Droite}
+    Une équation de droite peut s'écrire de deux manières: la forme réduite $y=mx+p$, et la forme cartésienne $ay+bx+c=0$.\\
+    On distingue alors le vecteur directeur et le vecteur normal (orthogonal au premier), de formules respectives $\begin{pmatrix}-b\\a\end{pmatrix}$ et $\begin{pmatrix}a\\b\end{pmatrix}$. On peut alors exploiter ces vecteurs pour déterminer des droites parallèles ou perpendiculaires à la première.
+    \\\\
+    Ajout en terminale:\\
+    Soit $(\Vec{i};\Vec{j};\Vec{k})$ une base de l'espace et $D$ une droite $(x_a;y_a;z_a;\Vec{\begin{pmatrix}a\\b\\c\end{pmatrix}})$,\\ $M(x_m;y_m;z_m) \in D$ ssi  \[
+                                \left \{
+                                \begin{array}{c @{=} c}
+                                    x_m & x_a + ak \\
+                                    y_m & y_a + bk \\
+                                    z_m & z_a + ck
+                                \end{array}
+                                \right.
+                                \]
+    avec $k \in \mathbf{R}$
+
+\subsubsection{Cercle}
+    Ici la forme cartésienne est $(x-x_A)^2+(y-y_A)^2 = r^2$ avec $A$ le centre du cercle et $r$ son rayon.\\
+    Dès lors, l'ensemble des les points $(x;y)$ qui vérifient $(x-a)^2+(y-b)^2 = S$ avec $S\in\mathbf{R}$, est un cercle de centre $(a;b)$ et de rayon $\sqrt{S}$.
+
+\subsubsection{Parabole}
+    On retrouve la forme $y=ax^2+bx+c$ où on remarque l'axe de symétrie $x = -b/2a$ et le sommet $(-b/2a,f(-b/2a))$.
+
+
+
+\section{Boite à outils}
+
+
+\subsection{Prouver une proposition}
+
+\subsubsection{Par déduction}
+    On part d'une hypothèse et par un raisonnement logique, on arrive à une conclusion.
+
+\subsubsection{Par contre exemple}
+    On trouve un cas qui contredit la proposition.
+
+\subsubsection{Par l'absurde}
+    On suppose P et arrive à une contradiction.
+
+\subsubsection{Par contraposée}
+    On prouve la contraposée pour prouvée la proposition
+
+\subsubsection{Par disjonction de cas}
+    Lorsque la proposition dépend d'un variable, on sépare le raisonnement suivant les valeurs de la dite variable.
+
+\subsubsection{Par récurrence}
+    On prouve qu'une proposition est vrai à partir d'un certain rang, en prouvant qu'elle est initialisée pour ce rang puis qu'elle est héréditaire.
+
+
+
+
+\end{document}
