@@ -11,7 +11,7 @@
 \begin{document}
 
 \maketitle
-    Ce livret est un récapitulatif de mon année de mathématiques de première et terminale, au Lycée International de Ferney-Voltaire, sur le site principal, durant les années 2022\textemdash2024, dans la classe 1G10 et de TG7.
+    Ce livret est un récapitulatif de mes années de spécialitée mathématiques de première et terminale et de maths expertes au Lycée International de Ferney-Voltaire durant les années 2022\textemdash2024.
 
 \tableofcontents
 
@@ -19,7 +19,7 @@
 
 
 
-\section{Fonctions de références}
+\section{Fonctions}
 
 
 \subsection{Propriétés de fonction}
@@ -61,45 +61,47 @@
     Son comportement suit la règle suivante : $|x| = |-x| = x$.
 
 
+\subsection{Fonctions trigonométrique }
 
-\section{Règles sur les inégalités}
+\subsubsection{Cercle trigonométrique}
+    Le cercle trigonométrique est défini par un cercle de rayon $1 UA$, donc de rayon $2\pi$.\\
+    On admettra que son centre $O$ est aux coordonnées $(0;0)$.
+
+\subsubsection{Radian}
+    Le radian est l'unité de mesure d'angle en trigonométrie. Note $rad$, on retiendra que $1^\circ= \frac{\pi}{180} rad$
+
+\subsubsection{Points sur l'arc}
+    Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos{x};\sin{x})$. \\De plus, l'angle $x$ est le même que l'angle $x +2k\pi$, $\forall k \in \mathbf{N}$.
+
+\subsubsection{Fonctions cosinus et sinus}
     \begin{enumerate}
-        \item Les additions et soustraction \emph{ne changent pas le sens}.
-        \item Les multiplication et division \emph{ne changent le sens QUE SI leur produit ou dividende est négatif}.
-        \item L'application d'une fonction \emph{ne change le sens QUE SI sa fonction est impaire}.
+        \item $\cos x$ est une fonction paire, variant entre $-1$ et $1$, et récurrente telle que $\cos{x + 2k\pi} = \cos x$, $\forall k \in \mathbf{N}$.
+        \item $\sin x$ est une fonction impaire, variant entre $-1$ et $1$, et récurrente telle que $\sin{x + 2k\pi} = \sin x$, $\forall k \in \mathbf{N}$.
     \end{enumerate}
 
 
+\subsection{Fonctions polynômes du second degré}
 
-\section{Fonctions polynômes du second degré}
+\subsubsection{Formes}
+    \begin{enumerate}
+        \item Forme développée (ou forme développée réduite : $f(x) = ax^2+bx+c$ avec $a \neq 0$
+        \item Forme factorisée : $f(x) = a(x - x_1)(x - x_2)$ avec $x_1$ et $x_2$ les racines de $f$\\
+        On notera que $x_1+x_2=-b/a$ et que $x_1x_2=c/a$
+        \item Forme canonique: $f(x) = a(x-\alpha)+\beta$ avec $\alpha = \frac{-b}{2a}$ et $\beta = f(\alpha)$\\
+        On notera que $(\alpha;\beta)$ est l'extremum de la fonction.
+    \end{enumerate}
 
-
-\subsection{Formes}
-
-\subsubsection{Forme développée (ou forme développée réduite)}
-$f(x) = ax^2+bx+c$ avec $a \neq 0$
-
-\subsubsection{Forme factorisée}
-$f(x) = a(x - x_1)(x - x_2)$ avec $x_1$ et $x_2$ les racines de $f$\\
-On notera que $x_1+x_2=-b/a$ et que $x_1x_2=c/a$
-
-\subsubsection{Forme canonique}
-$f(x) = a(x-\alpha)+\beta$ avec $\alpha = \frac{-b}{2a}$ et $\beta = f(\alpha)$
-
-
-\subsection{Variations}
+\subsubsection{Variations}
     Pour $a > 0$: décroissante avant $\alpha$, avec un minimum en $\beta$, puis croissante.\\
     Pour $a < 0$: croissante avant $\alpha$, avec un maximum en $\beta$, puis décroissante.
 
-
-\subsection{Résolution}
+\subsubsection{Résolution}
     \begin{enumerate}
         \item On calcule le discriminant tel que $\Delta = b^2 - 4ac$.
         \item On calcule les racines telles que $x_0 = \frac{-b \pm \sqrt{\Delta}}{2a}$.
     \end{enumerate}
 
-
-\subsection{Signe de la fonction}
+\subsubsection{Signe de la fonction}
     \begin{enumerate}
         \item Si $\Delta > 0$: Du signe de $a$ à l'extérieur des racines, de l'autre entre elles. S'annule sur ces dernières
         \item Si $\Delta = 0$: Du signe de $a$ sur $\mathbf{R}$ S'annule sur les racines.
@@ -137,19 +139,23 @@ $f(x) = a(x-\alpha)+\beta$ avec $\alpha = \frac{-b}{2a}$ et $\beta = f(\alpha)$
         \item[] $$(uv)' = vu' + uv'$$
         \item[] $$\frac{1}{v}' = \frac{-v'}{v^2}$$
         \item[] $$\frac{u}{v}' = \frac{u'v - v'u}{v^2}$$
-        \item[] À savoir: $\forall f = g(h) : f' = h'g(h)$ avec $f$, $g$, et $h$ des fonctions
+        \item[] $$f(g(x)) \rightarrow g' \times f'(g(x))$$
     \end{enumerate}
 
 \subsubsection{Dérivées de fonctions usuelles}
+    On suppose $f(x) \rightarrow f'(x)$ avec $k,n\in\mathbf{R}$
     \begin{enumerate}
-        \item[] $$\forall k \in \mathbf{R}, \forall f(x) = k : f'(x) = O$$
-        \item[] $$\forall k \in \mathbf{R}, \forall f(x) = kx : f'(x) = k$$
-        \item[] $$\forall n, \forall f(x) = x^n : f'(x) = nx^{n-1}$$
-        \item[] $$\forall x \in \mathbf{R^*}, \forall f(x) =\frac{1}{x} : f'(x) = \frac{-1}{x^2}$$
-        \item[] $$\forall x \in \mathbf{R^{+*}}, \forall f(x) =\sqrt{x} : f'(x) = \frac{1}{2\sqrt{x}}$$
-        \item[] $$\forall f(x) = e^{g} : f'(x) = g'e^{g}$$
-        \item[] $$\forall x \in \mathbf{R^{-*}}, \forall f(x) = |x| : f'(x) = -1$$
-        \item[] $$\forall x \in \mathbf{R^{+*}}, \forall f(x) = |x| : f'(x) = 1$$
+        \item[] $$k \rightarrow 0$$
+        \item[] $$kx \rightarrow k$$
+        \item[] $$x^n \rightarrow nx^{n-1}$$
+        \item[] $$\frac{1}{x} \rightarrow \frac{-1}{x^2}$$
+        \item[] $$\sqrt{x} \rightarrow \frac{1}{2\sqrt{x}}$$
+        \item[] $$e^x \rightarrow e^x$$
+        \item[] \begin{center}
+                    $|x| \rightarrow -1$ si x négatif,  $+1$ si x positif
+                \end{center}
+        \item[] $$\cos{x} \rightarrow \sin{x}$$
+        \item[] $$\sin{x} \rightarrow -\sin{x}$$
     \end{enumerate}
 
 \subsubsection{Variations de la fonction}
@@ -157,7 +163,7 @@ $f(x) = a(x-\alpha)+\beta$ avec $\alpha = \frac{-b}{2a}$ et $\beta = f(\alpha)$
 
 
 
-\section{Suites numériques}
+\section{Suites}
 
 
 \subsection{Définition}
@@ -213,71 +219,6 @@ $f(x) = a(x-\alpha)+\beta$ avec $\alpha = \frac{-b}{2a}$ et $\beta = f(\alpha)$
     $$\lim \limits_{n \Rightarrow \infty} u_n = - \infty \Rightarrow \lim \limits_{n \Rightarrow \infty} v_n = - \infty$$
     On suppose $u_n$, $v_n$ et $w_n$, telles que après un certain rang, $u_n \le v_n \le w_n$
     $$\lim \limits_{n \Rightarrow \infty} u_n = \lim \limits_{n \Rightarrow \infty} w_n = l \Rightarrow \lim \limits_{n \Rightarrow \infty} v_n = l$$
-
-
-
-\section{Trigonométrie}
-
-
-\subsection{Cercle trigonométrique}
-    Le cercle trigonométrique est défini par un cercle de rayon $1 UA$, donc de rayon $2\pi$.\\
-    On admettra que son centre $O$ est aux coordonnées $(0;0)$.
-
-
-\subsection{Radian}
-    Le radian est l'unité de mesure d'angle en trigonométrie. Note $rad$, on retiendra que $1^\circ= \frac{\pi}{180} rad$
-
-
-\subsection{Points sur l'arc}
-Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos{x};\sin{x})$. \\De plus, l'angle $x$ est le même que l'angle $x +2k\pi$, $\forall k \in \mathbf{N}$.
-
-
-\subsection{Fonctions cosinus et sinus}
-    \begin{enumerate}
-        \item $\cos x$ est une fonction paire, variant entre $-1$ et $1$, et récurrente telle que $\cos{x + 2k\pi} = \cos x$, $\forall k \in \mathbf{N}$.
-        \item $\sin x$ est une fonction impaire, variant entre $-1$ et $1$, et récurrente telle que $\sin{x + 2k\pi} = \sin x$, $\forall k \in \mathbf{N}$.
-    \end{enumerate}
-
-
-
-\section{Probabilités}
-
-
-\subsection{Vocabulaire}
-    Soit deux évènements $\mathcal{A}$ et $\mathcal{B}$ :\\
-    On note $\mathcal{A} \cup \mathcal{B}$ l'union des deux évènements, soit celui ou au moins l'un des deux se produit.\\
-    On note $\mathcal{A} \cap \mathcal{B}$ l'intersection des deux évènements, soit celui ou les deux se produisent.\\
-    On note $\mathcal{_AB}$ l'évènement ou $\mathcal{B}$ se produit, sachant que $\mathcal{A}$ s'est déjà produit (utilise typiquement dans les arbres pondérés).\\
-
-
-\subsection{Formules}
-    $$\mathcal{P_A} \cup \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A} \cap \mathcal{P_B}$$
-    $$\mathcal{P_A} \cap \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A} \cup \mathcal{P_B}$$
-    $$\mathcal{P_AB} = \frac{\mathcal{PA} \cap \mathcal{PB}}{\mathcal{PA}}$$
-    $$\mathcal{P_AB} = \frac{\mathcal{P_BA} \times \mathcal{PB}}{\mathcal{PA}}$$
-
-
-\subsection{Indépendance}
-    $\mathcal{A}$ et $\mathcal{B}$ sont indépendants si et seulement si $\mathcal{PA} \cap \mathcal{PB} = \mathcal{PA} \times \mathcal{PB}$. \\
-    Des lors, $\mathcal{P_BA} = \mathcal{PA}$ et $\mathcal{P_AB} = \mathcal{PB}$.
-
-
-
-\section{Variables aléatoires}
-
-
-\subsection{Définition}
-    Une variable aléatoires est une variable pouvant prendre différentes valeurs, suivant une certaine probabilité. \\
-    On associe alors à la variable aléatoire $X$ les valeurs $x_1, x_2, ..., x_n$ et leurs probabilités respectives $p_i$ définies par $X == x_i$.
-
-
-\subsection{Paramètres}
-    Une variable aléatoire a dès lors des paramètres, définis comme suis:
-    \begin{enumerate}
-        \item[] L'espérance,$E(X)$, qui représente la moyenne pondérée des valeurs possibles de cette variable, et qui est définie par: $$\sum^n_{i=1}p_ix_i$$
-        \item[] Sa variance, $V(X)$: $$\sum^n_{i=1}p_i(x_i-E(X))^2$$
-        \item[] Son écart-type, $\sigma(X)$: $$\sqrt{V(X)}$$
-    \end{enumerate}
 
 
 
@@ -350,7 +291,53 @@ Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos{x};\
 
 
 
+\section{Probabilités}
+
+
+\subsection{Vocabulaire}
+    Soit deux évènements $\mathcal{A}$ et $\mathcal{B}$ :\\
+    On note $\mathcal{A} \cup \mathcal{B}$ l'union des deux évènements, soit celui ou au moins l'un des deux se produit.\\
+    On note $\mathcal{A} \cap \mathcal{B}$ l'intersection des deux évènements, soit celui ou les deux se produisent.\\
+    On note $\mathcal{_AB}$ l'évènement ou $\mathcal{B}$ se produit, sachant que $\mathcal{A}$ s'est déjà produit (utilise typiquement dans les arbres pondérés).\\
+
+
+\subsection{Formules}
+    $$\mathcal{P_A} \cup \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A} \cap \mathcal{P_B}$$
+    $$\mathcal{P_A} \cap \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A} \cup \mathcal{P_B}$$
+    $$\mathcal{P_AB} = \frac{\mathcal{PA} \cap \mathcal{PB}}{\mathcal{PA}}$$
+    $$\mathcal{P_AB} = \frac{\mathcal{P_BA} \times \mathcal{PB}}{\mathcal{PA}}$$
+
+
+\subsection{Indépendance}
+    $\mathcal{A}$ et $\mathcal{B}$ sont indépendants si et seulement si $\mathcal{PA} \cap \mathcal{PB} = \mathcal{PA} \times \mathcal{PB}$. \\
+    Des lors, $\mathcal{P_BA} = \mathcal{PA}$ et $\mathcal{P_AB} = \mathcal{PB}$.
+
+
+\subsection{Variables aléatoires}
+
+\subsubsection{Définition}
+    Une variable aléatoires est une variable pouvant prendre différentes valeurs, suivant une certaine probabilité. \\
+    On associe alors à la variable aléatoire $X$ les valeurs $x_1, x_2, ..., x_n$ et leurs probabilités respectives $p_i$ définies par $X == x_i$.
+
+\subsubsection{Paramètres}
+    Une variable aléatoire a dès lors des paramètres, définis comme suis:
+    \begin{enumerate}
+        \item L'espérance,$E(X)$, qui représente la moyenne pondérée des valeurs possibles de cette variable, et qui est définie par: $$\sum^n_{i=1}p_ix_i$$
+        \item Sa variance, $V(X)$: $$\sum^n_{i=1}p_i(x_i-E(X))^2$$
+        \item Son écart-type, $\sigma(X)$: $$\sqrt{V(X)}$$
+    \end{enumerate}
+
+
+
 \section{Boite à outils}
+
+
+\subsection{Règles sur les inégalités}
+    \begin{enumerate}
+        \item Les additions et soustraction \emph{ne changent pas le sens}.
+        \item Les multiplication et division \emph{ne changent le sens QUE SI leur produit ou dividende est négatif}.
+        \item L'application d'une fonction \emph{ne change le sens QUE SI sa fonction est impaire}.
+    \end{enumerate}
 
 
 \subsection{Prouver une proposition}
@@ -373,6 +360,81 @@ Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos{x};\
 \subsubsection{Par récurrence}
     On prouve qu'une proposition est vrai à partir d'un certain rang, en prouvant qu'elle est initialisée pour ce rang puis qu'elle est héréditaire.
 
+
+
+\section{Arithmétique}
+
+
+\subsection{Divisons}
+
+\subsubsection{Divisibilité}
+    Propriétés (On travaille dans $\mathbf{Z}$):
+    \begin{enumerate}
+        \item $b|a$ ($b$ divise $a$) ssi $a=kb$
+        \item $a|b$ et $b|c \Rightarrow a|c$\\
+        Démonstration: $b=ka$ et $c=k'b$ donc $c=k'ka$ or $k'k\in\mathbf{Z}$ donc $a|c$
+        \item $c|a$ et $c|b \Rightarrow c|(au+bv)$\\
+        Démonstration: $a=kc$ et $b=k'c$ donc $au+bv=kcu+k'cv=c(ku+k'v)$ or $(ku+k'v)\in\mathbf{Z}$ donc $c|(au+bv)$
+    \end{enumerate}
+    Critères de divisibilité:
+    \begin{enumerate}
+        \item Est divisible par 2 ou 5 si son chiffre des unités est respectivement divisible par 2 ou 5.
+        \item Est divisible par 4 ou 25 si son nombre (dizaines:unités) est respectivement divisible par 4 ou 25.
+        \item Est divisible par 3 ou 9 si la somme de ses chiffres est respectivement divisible par 3 ou 9.
+        \item Est divisible par 11 si la somme de ses chiffres de rang impair moins la somme de ses chiffres de rang pair est divisible par 11.
+    \end{enumerate}
+
+\subsubsection{Division euclidienne}
+    Soit $a,b\in\mathbf{N^*}$, il existe un unique couple d'entiers $(q;r)$ tel que $a=qb+r$ où $0\le r < b$. \\Cette écriture est la division euclidienne de $a$ par $b$, avec $a$ le dividende, $b$ le diviseur, $q$ le quotient et $r$ le reste.
+    \\ On pourra démontrer $0\le r < b$ par $qb\le a<(q+1)b \rightarrow r=a-qb \ge 0 et r=a-bq<b \rightarrow 0\le r < b$
+    \\ On pourra aussi démontrer l'unicité de $r$ en admettant $a=bq+r=bq'+r' \rightarrow r=a-bq et r'=a-bq' \rightarrow r-r' = a-bq - (a-bq') = -bq+bq' = b(q'-q) \rightarrow b|r-r' $ or $ 0 \le r < n $ et $ -n<-r'\le 0\rightarrow r-r'=0 \rightarrow r=r$
+
+\subsubsection{Congruence}
+    $a$ et $b$ sont dits congrus modulo $n$ si $n|(a-b)$, soit que $r_{a/n}=r_{b/n}$. On note $a\equiv b (n)$
+    \\On pourra démonter l'unicité de $r$ en utilisant $a-b=qn+r-(q'n+r')=(q-q')n+r-r'=kn\rightarrow r-r' = (k+q-q')n \rightarrow n|(r-r') $ or $ 0 \le r < n $ et $ -n<-r'\le 0\rightarrow r-r'=0 \rightarrow r=r'$
+    \\On pourra aussi prouver l'inverse: $r=r' \rightarrow a-b=qn+r-(q'n-r')=(q-q')n+r-r' \rightarrow a-b=(q-q')n \rightarrow n|(a-b) \rightarrow a\equiv b(n)$
+    \\\\Propriétés;
+    \begin{enumerate}
+        \item $a \equiv b(n)$ $b\equiv c(n) \rightarrow a\equiv c(n)$
+        \item $a \equiv b(n)$ $c \equiv d(n) \rightarrow a+c\equiv b+d(n)$
+        \item $a \equiv b(n)$ $c \equiv d(n) \rightarrow ac\equiv bd(n)$
+        \item $a \equiv b(n)$ $k\in\mathbf{Z} \rightarrow ak\equiv bk(n)$
+        \item $a \equiv b(n)$ $p\in\mathbf{N} \rightarrow a^p\equiv b^p(n)$
+    \end{enumerate}
+
+
+\subsection{Matrices et graphes}
+
+\subsubsection{Notions de matrice}
+    Définitions:
+    \begin{enumerate}
+        \item Une matrice est un tableau dimension lignes$\times$colonnes rempli de termes/coefficients.
+        \item Une matrice ligne est une matrice dotée d'une unique ligne, et inversement pour une matrice colonne.
+        \item Deux matrices sont égales si elles sont de même taille et de mêmes termes.
+        \item Une matrice carrée d'ordre $p$ est une matrice de dimensions $p\times p$.
+        \item Une matrice diagonale a tout les termes hors de sa diagonale (haut-gauche $\rightarrow$ bas-droite) de nuls.
+        \item Une matrice est triangle supérieure ou inférieure si tout ses termes respectivement inférieurs ou supérieurs à sa diagonale sont nuls
+        \item On note $I_p$ la matrice carrée d'ordre $p$ diagonale, dont les termes de la diagonale valent $1$.
+        \item La transposée de la matrice $A$ de dimensions $n\times p$, notée $^TA$ (cette notation peut varier) de dimensions $p\times n$, obtenue en échangeant les colonnes et les lignes de $A$.
+    \end{enumerate}
+
+\subsubsection{Opérations sur les matrices}
+    Règles d'addition:
+    \begin{enumerate}
+        \item $A+B = a_{i,j}+b_{i,j}$
+        \item $kA = ka_{i,j}$
+        \item Cette addition est commutative.
+        \item Les règles de distributivité et de factorisation s'appliquent.
+    \end{enumerate}
+    \hfill \break
+    Règles de multiplication:
+    \begin{enumerate}
+        \item Pour effectuer le produit de $A$ par $B$, $A$ doit avoir aurant de lignes que $B$ de colonnes.
+        \item La matrice obtenue par le produit d'une matrice de taille $n \times p$ et une autre de $p \times q$ est de taille $n \times q$.
+        \item $$A\times B=\sum_{k=1}^{p} a_{i,k} \times b_{k,j}$$
+        \item Ce produit n'est pas commutatif.
+        \item $A(n\times n) \times I_n = A$
+    \end{enumerate}
 
 
 
