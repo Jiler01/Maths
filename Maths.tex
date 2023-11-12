@@ -3,6 +3,14 @@
 \usepackage{amsmath}
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 \title{Mathématiques lycée}
 \author{JIVA LILA Rehan}
@@ -11,7 +19,7 @@
 \begin{document}
 
 \maketitle
-    Ce livret est un récapitulatif de mes années de spécialitée mathématiques de première et terminale et de maths expertes au Lycée International de Ferney-Voltaire durant les années 2022\textemdash2024.
+    Ce livret est un récapitulatif de mes années de spécialités mathématiques de première et terminale et de maths expertes au Lycée International de Ferney-Voltaire durant les années 2022\textemdash2024.
 
 \tableofcontents
 
@@ -71,13 +79,13 @@
     Le radian est l'unité de mesure d'angle en trigonométrie. Note $rad$, on retiendra que $1^\circ= \frac{\pi}{180} rad$
 
 \subsubsection{Points sur l'arc}
-    Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos{x};\sin{x})$. \\De plus, l'angle $x$ est le même que l'angle $x +2k\pi$, $\forall k \in \mathbf{N}$.
+    Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos{x};\sin{x})$. \\De plus, l'angle $x$ est le même que l'angle $x +2k\pi$, $\forall k \in \mathbf{Z}$.
 
 \subsubsection{Fonctions cosinus et sinus}
-    \begin{enumerate}
-        \item $\cos x$ est une fonction paire, variant entre $-1$ et $1$, et récurrente telle que $\cos{x + 2k\pi} = \cos x$, $\forall k \in \mathbf{N}$.
-        \item $\sin x$ est une fonction impaire, variant entre $-1$ et $1$, et récurrente telle que $\sin{x + 2k\pi} = \sin x$, $\forall k \in \mathbf{N}$.
-    \end{enumerate}
+\paragraph{Cosinus}
+    $\cos x$ est une fonction paire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\cos{x + 2k\pi} = \cos x$, $\forall k \in \mathbf{N}$.
+\paragraph{Sinus}
+    $\sin x$ est une fonction impaire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\sin{x + 2k\pi} = \sin x$, $\forall k \in \mathbf{N}$.
 
 
 \subsection{Fonctions polynômes du second degré}
@@ -100,6 +108,7 @@
         \item On calcule le discriminant tel que $\Delta = b^2 - 4ac$.
         \item On calcule les racines telles que $x_0 = \frac{-b \pm \sqrt{\Delta}}{2a}$.
     \end{enumerate}
+    Une alternative est de dire que $x_0 = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, mais celle si est moins utilisée afin d'éviter aux étudiants de devoirs aller chercher des solutions dans $\mathbf{C}$
 
 \subsubsection{Signe de la fonction}
     \begin{enumerate}
@@ -211,7 +220,7 @@
 \subsubsection{Opérations}
     Lors du calcul d'une limite, les formes indéterminées sont:
     \\$$\infty - \infty \qquad 0 \times \infty \qquad \frac{0}{0} \qquad \frac{\infty}{\infty}$$
-    Si on en rencontre une, l'usage est de manipuler l'expression de sorte à ne plus avoir ce problème, ou bien d'appliquer la règle de L'Hôpital qui dit que $$\lim \limits_{x \Rightarrow e} \frac{f(x)}{g(x)} = \lim \limits_{x \Rightarrow e} \frac{f'(x)}{g'(x)}$$ ssi $f'(x)$ et $g'(x)$ existent et $g'(x) \ne 0$.
+    Si on en rencontre une, l'usage est de manipuler l'expression de sorte à ne plus avoir ce problème, ou bien d'appliquer la règle de L'Hôpital selon laquelle $$\lim \limits_{x \Rightarrow e} \frac{f(x)}{g(x)} = \lim \limits_{x \Rightarrow e} \frac{f'(x)}{g'(x)}$$ ssi $f'(x)$ et $g'(x)$ existent et $g'(x) \ne 0$.
 
 \subsubsection{Comparaison et encadrement}
     On suppose deux suites $u_n$ et $v_n$ telles que après un certain rang, $u_n>v_n$.
@@ -260,34 +269,35 @@
 
 \subsection{Base de l'espace}
     Trois vecteurs non coplanaires forment une base de l'espace\\
-    Dès lors, $\forall \Vec{u} \in$ la base de l'espace $(\Vec{i};\Vec{j};\Vec{k})$, $\exists x,y,z \in \mathbf{R}$ tels que $x\Vec{u}+y\Vec{j}+z\Vec{k}=\Vec{u}$. On dira que $\Vec{i} = \begin{pmatrix}x\\y\\z\end{pmatrix}$ dans $(\Vec{i};\Vec{j};\Vec{k})$
+    Dès lors, $\forall \Vec{u} \in$ la base de l'espace $(\Vec{i};\Vec{j};\Vec{k})$, $\exists x,y,z \in \mathbf{R}$ tels que $x\Vec{u}+y\Vec{j}+z\Vec{k}=\Vec{u}$. On dira que $\Vec{u} = \begin{pmatrix}x\\y\\z\end{pmatrix}$ dans $(\Vec{i};\Vec{j};\Vec{k})$
 
 
 \subsection{Formes géométriques}
 
-\subsubsection{Droite}
-    Une équation de droite peut s'écrire de deux manières: la forme réduite $y=mx+p$, et la forme cartésienne $ay+bx+c=0$.\\
-    On distingue alors le vecteur directeur et le vecteur normal (orthogonal au premier), de formules respectives $\begin{pmatrix}-b\\a\end{pmatrix}$ et $\begin{pmatrix}a\\b\end{pmatrix}$. On peut alors exploiter ces vecteurs pour déterminer des droites parallèles ou perpendiculaires à la première.
-    \\\\
-    Ajout en terminale:\\
-    Soit $(\Vec{i};\Vec{j};\Vec{k})$ une base de l'espace et $D$ une droite $(x_a;y_a;z_a;\Vec{\begin{pmatrix}a\\b\\c\end{pmatrix}})$,\\ $M(x_m;y_m;z_m) \in D$ ssi  \[
-                                \left \{
-                                \begin{array}{c @{=} c}
-                                    x_m & x_a + ak \\
-                                    y_m & y_a + bk \\
-                                    z_m & z_a + ck
-                                \end{array}
-                                \right.
-                                \]
-    avec $k \in \mathbf{R}$
-
-\subsubsection{Cercle}
+\subsubsection{En 2D}
+\paragraph{Droite}
+    Une équation de droite en 2D peut s'écrire de deux manières: la forme réduite $y=mx+p$, et la forme cartésienne $ay+bx+c=0$.\\
+    On distingue alors le vecteur directeur et le vecteur normal (orthogonal au premier), de formules respectives $\begin{pmatrix}-b\\a\end{pmatrix}$ et $\begin{pmatrix}a\\b\end{pmatrix}$.
+\paragraph{Cercle}
     Ici la forme cartésienne est $(x-x_A)^2+(y-y_A)^2 = r^2$ avec $A$ le centre du cercle et $r$ son rayon.\\
     Dès lors, l'ensemble des les points $(x;y)$ qui vérifient $(x-a)^2+(y-b)^2 = S$ avec $S\in\mathbf{R}$, est un cercle de centre $(a;b)$ et de rayon $\sqrt{S}$.
-
-\subsubsection{Parabole}
+\paragraph{Parabole}
     On retrouve la forme $y=ax^2+bx+c$ où on remarque l'axe de symétrie $x = -b/2a$ et le sommet $(-b/2a,f(-b/2a))$.
 
+\subsubsection{En 3D}
+\paragraph{Droite}
+    Soit $(\Vec{i};\Vec{j};\Vec{k})$ une base de l'espace et $D$ une droite $(x_a;y_a;z_a;\Vec{\begin{pmatrix}a\\b\\c\end{pmatrix}})$,\\
+    Les points de $D$ suivent le mode de génération $(x;y;z)$ suivant:
+                                \[
+                                \left \{
+                                \begin{array}{c @{=} c}
+                                    x & x_a + ak \\
+                                    y & y_a + bk \\
+                                    z & z_a + ck
+                                \end{array}
+                                \forall k \in \mathbf{R}
+                                \right.
+                                \]
 
 
 \section{Probabilités}
@@ -326,38 +336,6 @@
         \item Son écart-type, $\sigma(X)$: $$\sqrt{V(X)}$$
     \end{enumerate}
 
-
-
-\section{Boite à outils}
-
-
-\subsection{Règles sur les inégalités}
-    \begin{enumerate}
-        \item Les additions et soustraction \emph{ne changent pas le sens}.
-        \item Les multiplication et division \emph{ne changent le sens QUE SI leur produit ou dividende est négatif}.
-        \item L'application d'une fonction \emph{ne change le sens QUE SI sa fonction est impaire}.
-    \end{enumerate}
-
-
-\subsection{Prouver une proposition}
-
-\subsubsection{Par déduction}
-    On part d'une hypothèse et par un raisonnement logique, on arrive à une conclusion.
-
-\subsubsection{Par contre exemple}
-    On trouve un cas qui contredit la proposition.
-
-\subsubsection{Par l'absurde}
-    On suppose P et arrive à une contradiction.
-
-\subsubsection{Par contraposée}
-    On prouve la contraposée pour prouvée la proposition
-
-\subsubsection{Par disjonction de cas}
-    Lorsque la proposition dépend d'un variable, on sépare le raisonnement suivant les valeurs de la dite variable.
-
-\subsubsection{Par récurrence}
-    On prouve qu'une proposition est vrai à partir d'un certain rang, en prouvant qu'elle est initialisée pour ce rang puis qu'elle est héréditaire.
 
 
 
@@ -418,7 +396,7 @@
     \end{enumerate}
 
 \subsubsection{Opérations sur les matrices}
-    Règles d'addition:
+\paragraph{Additions}
     \begin{enumerate}
         \item $A+B = a_{i,j}+b_{i,j}$
         \item $kA = ka_{i,j}$
@@ -426,14 +404,65 @@
         \item Les règles de distributivité et de factorisation s'appliquent.
     \end{enumerate}
     \hfill \break
-    Règles de multiplication:
+\paragraph{Multiplication}
     \begin{enumerate}
-        \item Pour effectuer le produit de $A$ par $B$, $A$ doit avoir aurant de lignes que $B$ de colonnes.
+        \item Pour effectuer le produit de $A$ par $B$, $A$ doit avoir autant de lignes que $B$ de colonnes.
         \item La matrice obtenue par le produit d'une matrice de taille $n \times p$ et une autre de $p \times q$ est de taille $n \times q$.
         \item $$A\times B=\sum_{k=1}^{p} a_{i,k} \times b_{k,j}$$
         \item Ce produit n'est pas commutatif.
         \item $A(n\times n) \times I_n = A$
     \end{enumerate}
+\paragraph{Puissances}
+    \begin{enumerate}
+        \item $A^2 = AA$
+        \item $A^0 = I$
+    \end{enumerate}
+\paragraph{Inverse d'une matrice($A^{-1}$)}:\\
+    Une matrice est $A$ dite inversible ssi $\exists B, AB = BA = I$\\
+    Dans le cas d'une matrice carré d'ordre 2 de la forme
+        $\begin{pmatrix}
+        a & b\\
+        c & d
+        \end{pmatrix}$
+    , $A^-1 = \frac{1}{ad-bc}
+        \begin{pmatrix}
+        d & -b\\
+        -c & a
+        \end{pmatrix}$
+    ssi $ad-bc \ne 0$.
+
+
+\section{Boite à outils}
+
+
+\subsection{Règles sur les inégalités}
+    \begin{enumerate}
+        \item Les additions et soustraction \emph{ne changent pas le sens}.
+        \item Les multiplication et division \emph{ne changent le sens QUE SI leur produit ou dividende est négatif}.
+        \item L'application d'une fonction \emph{ne change le sens QUE SI sa fonction est impaire}.
+    \end{enumerate}
+
+
+\subsection{Prouver une proposition}
+
+\subsubsection{Par déduction}
+    On part d'une hypothèse et par un raisonnement logique, on arrive à une conclusion.
+
+\subsubsection{Par contre exemple}
+    On trouve un cas qui contredit la proposition.
+
+\subsubsection{Par l'absurde}
+    On suppose P et arrive à une contradiction.
+
+\subsubsection{Par contraposée}
+    On prouve la contraposée pour prouvée la proposition
+
+\subsubsection{Par disjonction de cas}
+    Lorsque la proposition dépend d'un variable, on sépare le raisonnement suivant les valeurs de la dite variable.
+
+\subsubsection{Par récurrence}
+    On prouve qu'une proposition est vrai à partir d'un certain rang, en prouvant qu'elle est initialisée pour ce rang puis qu'elle est héréditaire.
+
 
 
 
