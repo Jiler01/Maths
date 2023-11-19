@@ -336,6 +336,22 @@
         \item Son écart-type, $\sigma(X)$: $$\sqrt{V(X)}$$
     \end{enumerate}
 
+\subsection{Dénombrement}
+On note $\mathbf{Card(E)}$ le nombre d'éléments dans l'ensemble $\mathbf{E}$.
+
+\subsubsection{Multiplication ou addition}
+     Dans le cas d'un calcul de deux évènements liés, on appliquera une multiplication, sinon une addition.
+
+\subsubsection{Possibilités ordonnées}
+    On fait le produit cartésien des ensembles des possibles pour obtenir les possibilités ordonnées.
+
+\subsubsection{Permutations}
+    $$n!=\prod_{k=0}^nk$$ pour $n = \mathbf{Card(E)}$ est le nombre des permutation possibles pour cet ensemble
+
+\subsubsection{Binôme}
+    $$\frac{n!}{k!(n - k)!} = \binom{n}{k}$$ pour $n = \mathbf{Card(E)}$ est le nombre de façons de prendre $k$ éléments depuis $\mathbf{E}$.
+\paragraph{Pascal}
+    $$\binom{n+1}{k} = \binom{n}{k} + \binom{n}{k-1}$$
 
 
 
@@ -430,6 +446,9 @@
         -c & a
         \end{pmatrix}$
     ssi $ad-bc \ne 0$.
+
+\subsubsection{Systèmes grâce aux matrices}
+    On peut écrire un système sous la forme de produit de la matrice $\mathbf{A}$ qui contient les coefficients, la matrice $\mathbf{X}$ qui contient les inconnues, et la matrice $\mathbf{B}$ qui contient les résultats. On trouve alors $\mathbf{AX} = \mathbf{B}$, donc $\mathbf{X} = \mathbf{A}^{-1}\mathbf{B}$.
 
 
 \section{Boite à outils}
