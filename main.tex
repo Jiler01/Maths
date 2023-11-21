@@ -19,7 +19,8 @@
 \begin{document}
 
 \maketitle
-    Ce livret est un récapitulatif de mes années de spécialités mathématiques de première et terminale et de maths expertes au Lycée International de Ferney-Voltaire durant les années 2022\textemdash2024.
+    Ce livret est un récapitulatif de mes années de spécialités mathématiques de première et terminale et de maths expertes au Lycée International de Ferney-Voltaire durant les années 2022\textemdash2024.\\
+    Remerciements spéciaux à Mme Leclerc, Mme Escot et M Colin, en plus de Yvan Monk, M Tierno et Mme Beltzung pour leurs connaissances , soutiens et passions.
 
 \tableofcontents
 
@@ -340,16 +341,19 @@
 On note $\mathbf{Card(E)}$ le nombre d'éléments dans l'ensemble $\mathbf{E}$.
 
 \subsubsection{Multiplication ou addition}
-     Dans le cas d'un calcul de deux évènements liés, on appliquera une multiplication, sinon une addition.
+     Si e deux évènements sont liés, on appliquera une multiplication, si ils sont successifs, une addition.
 
 \subsubsection{Possibilités ordonnées}
-    On fait le produit cartésien des ensembles des possibles pour obtenir les possibilités ordonnées.
+    On fait le produit cartésien des ensembles des possibles pour obtenir les possibilités ordonnées, soit l'ensemble des tuple (k-uplet, n-uplet, p-uplet...)  de chaque objet avec chaque autre.
+
+\subsection{Arrangements}
+    $$\frac{n!}{(n-k)!}$$ est le nombre d'arrangements possibles de $k$ éléments parmi $n$
 
 \subsubsection{Permutations}
-    $$n!=\prod_{k=0}^nk$$ pour $n = \mathbf{Card(E)}$ est le nombre des permutation possibles pour cet ensemble
+    $$n!=\prod_{k=0}^nk$$ est le nombre des permutation possibles pour $n$ éléments
 
 \subsubsection{Binôme}
-    $$\frac{n!}{k!(n - k)!} = \binom{n}{k}$$ pour $n = \mathbf{Card(E)}$ est le nombre de façons de prendre $k$ éléments depuis $\mathbf{E}$.
+    $$\frac{n!}{k!(n - k)!} = \binom{n}{k}$$ est le nombre de façons de prendre $k$ éléments depuis $n$.
 \paragraph{Pascal}
     $$\binom{n+1}{k} = \binom{n}{k} + \binom{n}{k-1}$$
 
