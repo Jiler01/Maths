@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{tkz-tab}
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{titlesec}
@@ -19,343 +20,386 @@
 \begin{document}
 
 \maketitle
-    Ce livret est un récapitulatif de mes années de spécialités mathématiques de première et terminale et de maths expertes au Lycée International de Ferney-Voltaire durant les années 2022\textemdash2024.\\
-    Remerciements spéciaux à Mme Leclerc, Mme Escot et M Colin, en plus de Yvan Monk, M Tierno et Mme Beltzung pour leurs connaissances , soutiens et passions.
+Ce livret est un récapitulatif de mes années de spécialités mathématiques de première et terminale et de maths expertes au Lycée International de Ferney-Voltaire durant les années 2022\textemdash2024.\\
+Remerciements spéciaux à Mme Leclerc, Mme Escot et M Colin, en plus de Yvan Monk, M Tierno et Mme Beltzung pour leurs connaissances , soutiens et passions.
 
 \tableofcontents
 
 \pagebreak
 
 
-
-\section{Fonctions}
-
-
-\subsection{Propriétés de fonction}
-
-\subsubsection{Croissance \& décroissance}
-    \underline{Pour $a<b$:}\\
-    Si $f(a) < f(b)$: la fonction est \emph{croissante}\\
-    Si $f(a) > f(b)$: la fonction est \emph{décroissante}\\
-    Si $f(a) = f(b)$: la fonction est \emph{monotone}
-
-\subsubsection{Parité \& imparité}
-    \underline{$\forall x \in \mathbf{R}$ :}\\
-    Si $f(-x) = f(x)$: la fonction est \emph{paire}\\
-    Si $f(-x) = -f(x)$: la fonction est \emph{impaire}
+\section{Algèbre}
+\subsection{Fonctions}
 
 
-\subsection{Fonctions affines}
-    Une fonction est une fonction de style $f(x) = ax+b$ avec $a$ la dérivée de la fonction, et $b$ son ordonnée à l'origine.
+\subsubsection{Propriétés de fonction}
+
+\paragraph{Croissance \& décroissance}
+\underline{Pour $a<b$:}\\
+Si $f(a) < f(b)$: la fonction est \emph{croissante}\\
+Si $f(a) > f(b)$: la fonction est \emph{décroissante}\\
+Si $f(a) = f(b)$: la fonction est \emph{monotone}
+
+\paragraph{Parité \& imparité}
+\underline{$\forall x \in \mathbb{R}$ :}\\
+Si $f(-x) = f(x)$: la fonction est \emph{paire}\\
+Si $f(-x) = -f(x)$: la fonction est \emph{impaire}
 
 
-\subsection{Fonctions carrées}
-    La fonction carrée est définie par $f(x) = x^2$. Elle est paire sur $\mathbf{R}$, décroissante sur $\mathbf{R^-}$ et croissante sur sur $\mathbf{R^+}$.
+\subsubsection{Fonctions affines}
+Une fonction est une fonction de style $f(x) = ax+b$ avec $a$ la dérivée de la fonction, et $b$ son ordonnée à l'origine.
 
 
-\subsection{Fonction cube}
-    La fonction cube est définie par $f(x) = x^3$. Elle est impaire et croissante sur $\mathbf{R}$.
+\subsubsection{Fonctions carrées}
+La fonction carrée est définie par $f(x) = x^2$. Elle est paire sur $\mathbb{R}$, décroissante sur $\mathbf{R^-}$ et croissante sur sur $\mathbf{R^+}$.
 
 
-\subsection{Fonction inverse}
-    La fonction inverse est définie par $f(x) = \frac{1}{x}$. Elle est impaire et décroissante sur $\mathbf{R^*}$.
+\subsubsection{Fonction cube}
+La fonction cube est définie par $f(x) = x^3$. Elle est impaire et croissante sur $\mathbb{R}$.
 
 
-\subsection{Fonction racine carrée}
-    La fonction carrée est définie sur $\mathbf{R^+}$ par $f(x) = \sqrt{x} = x^{-2}$. Elle est croissante.
+\subsubsection{Fonction inverse}
+La fonction inverse est définie par $f(x) = \frac{1}{x}$. Elle est impaire et décroissante sur $\mathbf{R^*}$.
 
 
-\subsection{La fonction valeur absolue}
-    La fonction valeur absolue est définie par $f(x) = |x| $. Elle est paire sur sur $\mathbf{R}$, décroissante sur $\mathbf{R^-}$ et croissante sur sur $\mathbf{R^+}$.\\
-    Son comportement suit la règle suivante : $|x| = |-x| = x$.
+\subsubsection{Fonction racine carrée}
+La fonction carrée est définie sur $\mathbf{R^+}$ par $f(x) = \sqrt{x} = x^{-2}$. Elle est croissante.
 
 
-\subsection{Fonctions trigonométrique }
-
-\subsubsection{Cercle trigonométrique}
-    Le cercle trigonométrique est défini par un cercle de rayon $1 UA$, donc de rayon $2\pi$.\\
-    On admettra que son centre $O$ est aux coordonnées $(0;0)$.
-
-\subsubsection{Radian}
-    Le radian est l'unité de mesure d'angle en trigonométrie. Note $rad$, on retiendra que $1^\circ= \frac{\pi}{180} rad$
-
-\subsubsection{Points sur l'arc}
-    Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos{x};\sin{x})$. \\De plus, l'angle $x$ est le même que l'angle $x +2k\pi$, $\forall k \in \mathbf{Z}$.
-
-\subsubsection{Fonctions cosinus et sinus}
-\paragraph{Cosinus}
-    $\cos x$ est une fonction paire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\cos{x + 2k\pi} = \cos x$, $\forall k \in \mathbf{N}$.
-\paragraph{Sinus}
-    $\sin x$ est une fonction impaire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\sin{x + 2k\pi} = \sin x$, $\forall k \in \mathbf{N}$.
+\subsubsection{La fonction valeur absolue}
+La fonction valeur absolue est définie par $f(x) = |x| $. Elle est paire sur sur $\mathbb{R}$, décroissante sur $\mathbf{R^-}$ et croissante sur sur $\mathbf{R^+}$.\\
+Son comportement suit la règle suivante : $|x| = |-x| = x$.
 
 
-\subsection{Fonctions polynômes du second degré}
+\subsubsection{Fonctions trigonométrique }
 
-\subsubsection{Formes}
-    \begin{enumerate}
-        \item Forme développée (ou forme développée réduite : $f(x) = ax^2+bx+c$ avec $a \neq 0$
-        \item Forme factorisée : $f(x) = a(x - x_1)(x - x_2)$ avec $x_1$ et $x_2$ les racines de $f$\\
-        On notera que $x_1+x_2=-b/a$ et que $x_1x_2=c/a$
-        \item Forme canonique: $f(x) = a(x-\alpha)+\beta$ avec $\alpha = \frac{-b}{2a}$ et $\beta = f(\alpha)$\\
-        On notera que $(\alpha;\beta)$ est l'extremum de la fonction.
-    \end{enumerate}
+\paragraph{Cercle trigonométrique}
+Le cercle trigonométrique est défini par un cercle de rayon $1 UA$, donc de rayon $2\pi$.\\
+On admettra que son centre $O$ est aux coordonnées $(0;0)$.
 
-\subsubsection{Variations}
-    Pour $a > 0$: décroissante avant $\alpha$, avec un minimum en $\beta$, puis croissante.\\
-    Pour $a < 0$: croissante avant $\alpha$, avec un maximum en $\beta$, puis décroissante.
+\paragraph{Radian}
+Le radian est l'unité de mesure d'angle en trigonométrie. Note $rad$, on retiendra que $1^\circ= \frac{\pi}{180} rad$
 
-\subsubsection{Résolution}
-    \begin{enumerate}
-        \item On calcule le discriminant tel que $\Delta = b^2 - 4ac$.
-        \item On calcule les racines telles que $x_0 = \frac{-b \pm \sqrt{\Delta}}{2a}$.
-    \end{enumerate}
-    Une alternative est de dire que $x_0 = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, mais celle si est moins utilisée afin d'éviter aux étudiants de devoirs aller chercher des solutions dans $\mathbf{C}$
+\paragraph{Points sur l'arc}
+Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos{x};\sin{x})$. \\De plus, l'angle $x$ est le même que l'angle $x +2k\pi$, $\forall k \in \mathbb{Z}$.
 
-\subsubsection{Signe de la fonction}
-    \begin{enumerate}
-        \item Si $\Delta > 0$: Du signe de $a$ à l'extérieur des racines, de l'autre entre elles. S'annule sur ces dernières
-        \item Si $\Delta = 0$: Du signe de $a$ sur $\mathbf{R}$ S'annule sur les racines.
-        \item Si $\Delta < 0$ Du signe de $a$ sur $\mathbf{R}$.
-    \end{enumerate}
+\paragraph{Fonctions cosinus et sinus}
+\underline{Cosinus}\\
+$\cos x$ est une fonction paire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\cos{x + 2k\pi} = \cos x$, $\forall k \in \mathbb{N}$.\\
+\break
+\underline{Sinus}\\
+$\sin x$ est une fonction impaire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\sin{x + 2k\pi} = \sin x$, $\forall k \in \mathbb{N}$.
 
 
+\subsubsection{Fonctions polynômes du second degré}
 
-\section{Dérivations}
+\paragraph{Formes}
+\begin{enumerate}
+	\item Forme développée (ou forme développée réduite : $f(x) = ax^2+bx+c$ avec $a \neq 0$
+	\item Forme factorisée : $f(x) = a(x - x_1)(x - x_2)$ avec $x_1$ et $x_2$ les racines de $f$\\
+	      On notera que $x_1+x_2=-b/a$ et que $x_1x_2=c/a$
+	\item Forme canonique: $f(x) = a(x-\alpha)+\beta$ avec $\alpha = \frac{-b}{2a}$ et $\beta = f(\alpha)$\\
+	      On notera que $(\alpha;\beta)$ est l'extremum de la fonction.
+\end{enumerate}
 
+\paragraph{Variations}
+Pour $a > 0$: décroissante avant $\alpha$, avec un minimum en $\beta$, puis croissante.\\
+Pour $a < 0$: croissante avant $\alpha$, avec un maximum en $\beta$, puis décroissante.
 
-\subsection{Dérivation locale}
+\paragraph{Résolution}
+\begin{enumerate}
+	\item On calcule le discriminant tel que $\Delta = b^2 - 4ac$.
+	\item On calcule les racines telles que $x_0 = \frac{-b \pm \sqrt{\Delta}}{2a}$.
+\end{enumerate}
+Une alternative est de dire que $x_0 = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, mais celle si est moins utilisée afin d'éviter aux étudiants de devoirs aller chercher des solutions dans $\mathbf{C}$
 
-\subsubsection{Taux de variation}
-    \begin{enumerate}
-        \item Entre $a$ et $b$ : $\frac{f(b) - f(a)}{b - a}$.
-        \item Sur $a$: $\frac{f(a + h) - f(a)}{h}$.
-    \end{enumerate}
-
-\subsubsection{Nombre dérivé (dérivée)}
-    \textit{La dérivée de $f(x)$, soit la variation de $f$ en $x$, s'écrit $f'(x)$.}
-    $$f'(x) = \lim \limits_{h \Rightarrow 0} \frac{f(a + h) - f(a)}{h}$$
-
-\subsubsection{Tangente à une courbe}
-    La tangente à la courbe de $f$ en $a$ est définie par: $$\mathcal{T}(x) = f'(a)(x-a) + f(a)$$
-
-
-\subsection{Dérivation globale}
-    Une dérivation globale reprend le concept de dérivation locale, mais fourni une formule applicable sur toute la fonction. Elle est utilisée pour étudier les variations de la fonction.
-
-\subsubsection{Opérations sur les dérivées}
-    \begin{enumerate}
-        \item[] $$(u+v)' = u' +v'$$
-        \item[] $$\forall k \in \mathbf{R} : (ku)' = ku'$$
-        \item[] $$(uv)' = vu' + uv'$$
-        \item[] $$\frac{1}{v}' = \frac{-v'}{v^2}$$
-        \item[] $$\frac{u}{v}' = \frac{u'v - v'u}{v^2}$$
-        \item[] $$f(g(x)) \rightarrow g' \times f'(g(x))$$
-    \end{enumerate}
-
-\subsubsection{Dérivées de fonctions usuelles}
-    On suppose $f(x) \rightarrow f'(x)$ avec $k,n\in\mathbf{R}$
-    \begin{enumerate}
-        \item[] $$k \rightarrow 0$$
-        \item[] $$kx \rightarrow k$$
-        \item[] $$x^n \rightarrow nx^{n-1}$$
-        \item[] $$\frac{1}{x} \rightarrow \frac{-1}{x^2}$$
-        \item[] $$\sqrt{x} \rightarrow \frac{1}{2\sqrt{x}}$$
-        \item[] $$e^x \rightarrow e^x$$
-        \item[] \begin{center}
-                    $|x| \rightarrow -1$ si x négatif,  $+1$ si x positif
-                \end{center}
-        \item[] $$\cos{x} \rightarrow \sin{x}$$
-        \item[] $$\sin{x} \rightarrow -\sin{x}$$
-    \end{enumerate}
-
-\subsubsection{Variations de la fonction}
-    $\forall f$, si $f'$ est négatif, $f$ est décroissante. Inversement, si $f'$ est positive, $f$ est croissante.
+\paragraph{Signe de la fonction}
+\begin{enumerate}
+	\item Si $\Delta > 0$: Du signe de $a$ à l'extérieur des racines, de l'autre entre elles. S'annule sur ces dernières
+	\item Si $\Delta = 0$: Du signe de $a$ sur $\mathbb{R}$ S'annule sur les racines.
+	\item Si $\Delta < 0$ Du signe de $a$ sur $\mathbb{R}$.
+\end{enumerate}
 
 
 
-\section{Suites}
+\subsection{Suites}
 
-
-\subsection{Définition}
-    Une suite numérique $u$ est une suite de valeurs pourvues d'un indice, $n$, qui parcours l'ensemble $\mathbf{N}$. L'élément à l'indice $n$ de la suite $u$ est noté $u_n$.
-
-
-\subsection{Modes de génération}
-
-\subsubsection{Liste}
-    Une simple liste de nombres. (ex: les décimales de $\pi$: 1; 4; 1; 5\dots)
-
-\subsubsection{Formule explicite}
-    Définir $u_n$ en fonction de $n$: $u_n = f(n)$
-
-\subsubsection{Récurrence}
-    Définir $u_n$ en fonction de un ou plusieurs $u_{n-k}$ (ex: suite de Fibonacci: $u_n = u_{n-2} + u_{n1}$)
-
-
-\subsection{Quelques styles de suites}
-
-\subsubsection{Suite arithmétique}
-    Une suite arithmétique est définie par $u_n = u_{n-1} + r$ ou $u_n = u_0 + nr$ avec $r$ sa raison.\\
-    La somme de ses termes d'indices de $p$ à $n$ vaut $(n+1)\times \frac{u_p+u_n}{2}$.\\
-    Pour prouver qu'une suite est arithmétique, il suffit que $r$ dans $u_n - u_{n-1} = r$ soit indépendant de $n$.
-
-\subsubsection{Suite géométrique}
-    Une suite arithmétique est définie par $u_n = u_{n-1} \times q$ ou $u_n = u_0 \times q^n$ avec $q$ sa raison.\\
-    La somme de ses termes d'indices de $p$ à $n$ vaut $u_p\times \frac{1-q^{n-p+1}}{1-q}$.\\
-    Pour prouver qu'une suite est géométrique, il suffit que $q$ dans $\frac{u_n}{u_{n-1}} = q$ soit indépendant de $n$.
-
-
-\subsection{Croissance et décroissance}
-    Pour prouver la croissance ou la décroissance d'une suite, on applique \\$u_{n-+1} - u_n$, qui si négatif prouve une décroissance, et inversement.
-
-
-\subsection{Limite de suites}
 
 \subsubsection{Définition}
-    \begin{enumerate}
-        \item $v_n$ admet une limite $+\infty$ si $\forall A \in \mathbf{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n > A$
-        \item $v_n$ admet une limite $-\infty$ si $\forall A \in \mathbf{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n < A$
-        \item $v_n$ admet une limite $l$ si $\forall E \in \mathbf{N^*}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$ $l-E<u_n<l+E$
-    \end{enumerate}
+Une suite numérique $u$ est une suite de valeurs pourvues d'un indice, $n$, qui parcours l'ensemble $\mathbb{N}$. L'élément à l'indice $n$ de la suite $u$ est noté $u_n$.
+
+
+\subsubsection{Modes de génération}
+
+\paragraph{Liste}
+Une simple liste de nombres. (ex: les décimales de $\pi$: 1; 4; 1; 5\dots)
+
+\paragraph{Formule explicite}
+Définir $u_n$ en fonction de $n$: $u_n = f(n)$
+
+\paragraph{Récurrence}
+Définir $u_n$ en fonction de un ou plusieurs $u_{n-k}$ (ex: suite de Fibonacci: $u_n = u_{n-2} + u_{n1}$)
+
+
+\subsubsection{Quelques styles de suites}
+
+\paragraph{Suite arithmétique}
+Une suite arithmétique est définie par $u_n = u_{n-1} + r$ ou $u_n = u_0 + nr$ avec $r$ sa raison.\\
+La somme de ses termes d'indices de $p$ à $n$ vaut $(n+1)\times \frac{u_p+u_n}{2}$.\\
+Pour prouver qu'une suite est arithmétique, il suffit que $r$ dans $u_n - u_{n-1} = r$ soit indépendant de $n$.
+
+\paragraph{Suite géométrique}
+Une suite arithmétique est définie par $u_n = u_{n-1} \times q$ ou $u_n = u_0 \times q^n$ avec $q$ sa raison.\\
+La somme de ses termes d'indices de $p$ à $n$ vaut $u_p\times \frac{1-q^{n-p+1}}{1-q}$.\\
+Pour prouver qu'une suite est géométrique, il suffit que $q$ dans $\frac{u_n}{u_{n-1}} = q$ soit indépendant de $n$.
+
+
+\subsubsection{Croissance et décroissance}
+Pour prouver la croissance ou la décroissance d'une suite, on applique \\$u_{n-+1} - u_n$, qui si négatif prouve une décroissance, et inversement.
+
+
+\subsection{Limite}
+Les règles suivantes peuvent s'appliquer aux fonctions comme aux suites, qui ne sont rien d'autre que des fonctions ne prenant pour paramètre que des entiers naturels.
+
+\subsubsection{Définition}
+\begin{enumerate}
+	\item $v_n$ admet une limite $+\infty$ si $\forall A \in \mathbb{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n > A$
+	\item $v_n$ admet une limite $-\infty$ si $\forall A \in \mathbb{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n < A$
+	\item $v_n$ admet une limite $l$ si $\forall E \in \mathbf{N^*}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$ $l-E<u_n<l+E$
+\end{enumerate}
+Note: $\lim \limits_{n \Rightarrow a^+}$ signifie la limite en $a$ par le coté positif, et inversement pour $\lim \limits_{n \Rightarrow a^-}$
 
 \subsubsection{Opérations}
-    Lors du calcul d'une limite, les formes indéterminées sont:
-    \\$$\infty - \infty \qquad 0 \times \infty \qquad \frac{0}{0} \qquad \frac{\infty}{\infty}$$
-    Si on en rencontre une, l'usage est de manipuler l'expression de sorte à ne plus avoir ce problème, ou bien d'appliquer la règle de L'Hôpital selon laquelle $$\lim \limits_{x \Rightarrow e} \frac{f(x)}{g(x)} = \lim \limits_{x \Rightarrow e} \frac{f'(x)}{g'(x)}$$ ssi $f'(x)$ et $g'(x)$ existent et $g'(x) \ne 0$.
+Lors du calcul d'une limite, les formes indéterminées sont:
+\\$$\infty - \infty \qquad 0 \times \infty \qquad \frac{0}{0} \qquad \frac{\infty}{\infty}$$
+Si on en rencontre une, l'usage est de manipuler l'expression de sorte à ne plus avoir ce problème, ou bien d'appliquer la règle de L'Hôpital selon laquelle $$\lim \limits_{x \Rightarrow e} \frac{f(x)}{g(x)} = \lim \limits_{x \Rightarrow e} \frac{f'(x)}{g'(x)}$$ ssi $f'(x)$ et $g'(x)$ existent et $f'(x) = g'(x) = 0$ ou $\pm \infty$.
 
 \subsubsection{Comparaison et encadrement}
-    On suppose deux suites $u_n$ et $v_n$ telles que après un certain rang, $u_n>v_n$.
-    $$\lim \limits_{n \Rightarrow \infty} v_n = + \infty \Rightarrow \lim \limits_{n \Rightarrow \infty} u_n = + \infty$$
-    $$\lim \limits_{n \Rightarrow \infty} u_n = - \infty \Rightarrow \lim \limits_{n \Rightarrow \infty} v_n = - \infty$$
-    On suppose $u_n$, $v_n$ et $w_n$, telles que après un certain rang, $u_n \le v_n \le w_n$
-    $$\lim \limits_{n \Rightarrow \infty} u_n = \lim \limits_{n \Rightarrow \infty} w_n = l \Rightarrow \lim \limits_{n \Rightarrow \infty} v_n = l$$
+On suppose deux suites $u_n$ et $v_n$ telles que après un certain rang, $u_n>v_n$.
+$$\lim \limits_{n \Rightarrow \infty} v_n = + \infty \implies \lim \limits_{n \Rightarrow \infty} u_n = + \infty$$
+$$\lim \limits_{n \Rightarrow \infty} u_n = - \infty \implies \lim \limits_{n \Rightarrow \infty} v_n = - \infty$$
+On suppose $u_n$, $v_n$ et $w_n$, telles que après un certain rang, $u_n \le v_n \le w_n$
+$$\lim \limits_{n \Rightarrow \infty} u_n = \lim \limits_{n \Rightarrow \infty} w_n = l \implies \lim \limits_{n \Rightarrow \infty} v_n = l$$
+
+\subsubsection{Notion d'asymptote}
+Soit $f$ une fonction et $a$ et $l$ des réels.
+\begin{itemize}
+	\item $\lim \limits_{n \Rightarrow \pm \infty} f = l \implies x=l$ est une asymptote horizontale à la courbe $f$
+	\item $\lim \limits_{n \Rightarrow a} f = \pm \infty \implies y=a$ est une asymptote verticale à la courbe $f$
+\end{itemize}
+
+\subsubsection{Croissance comparée}
+Soit $x\in\mathbb{R}$ et $n\in\mathbb{N}$
+On a $\exp^x$ qui crois plus vite que $x^n$.\\
+Ainsi, $\lim \limits_{n \Rightarrow \infty} \frac{\exp{x}}{x^n} = \infty$ et $\lim \limits_{n \Rightarrow -\infty} \exp{x}\times x^n = 0$.
+
+
+\section{Analyse}
+
+\subsection{Dérivation}
+\subsubsection{Dérivation locale}
+
+\paragraph{Taux de variation}
+\begin{enumerate}
+	\item Entre $a$ et $b$ : $\frac{f(b) - f(a)}{b - a}$.
+	\item Sur $a$: $\frac{f(a + h) - f(a)}{h}$.
+\end{enumerate}
+
+\paragraph{Nombre dérivé (dérivée)}
+\textit{La dérivée de $f(x)$, soit la variation de $f$ en $x$, s'écrit $f'(x)$.}
+$$f'(x) = \lim \limits_{h \Rightarrow 0} \frac{f(a + h) - f(a)}{h}$$
+
+\paragraph{Tangente à une courbe}
+La tangente à la courbe de $f$ en $a$ est définie par: $$\mathcal{T}(x) = f'(a)(x-a) + f(a)$$
+
+
+\subsubsection{Dérivation globale}
+Une dérivation globale reprend le concept de dérivation locale, mais fourni une formule applicable sur toute la fonction. Elle est utilisée pour étudier les variations de la fonction.
+
+\paragraph{Opérations sur les dérivées}
+\begin{enumerate}
+	\item[] $$(u+v)' = u' +v'$$
+	\item[] $$\forall k \in \mathbb{R} : (ku)' = ku'$$
+	\item[] $$(uv)' = vu' + uv'$$
+	\item[] $$\frac{1}{v}' = \frac{-v'}{v^2}$$
+	\item[] $$\frac{u}{v}' = \frac{u'v - v'u}{v^2}$$
+	\item[] $$f(g(x)) \rightarrow g' \times f'(g(x))$$
+\end{enumerate}
+
+\paragraph{Dérivées de fonctions usuelles}
+On suppose $f(x) \rightarrow f'(x)$ avec $k,n\in\mathbb{R}$
+\begin{enumerate}
+	\item[] $$k \rightarrow 0$$
+	\item[] $$kx \rightarrow k$$
+	\item[] $$x^n \rightarrow nx^{n-1}$$
+	\item[] $$\frac{1}{x} \rightarrow \frac{-1}{x^2}$$
+	\item[] $$\sqrt{x} \rightarrow \frac{1}{2\sqrt{x}}$$
+	\item[] $$e^x \rightarrow e^x$$
+	\item[] \begin{center}
+	      $|x| \rightarrow -1$ si x négatif,  $+1$ si x positif
+	\end{center}
+	\item[] $$\cos{x} \rightarrow \sin{x}$$
+	\item[] $$\sin{x} \rightarrow -\sin{x}$$
+\end{enumerate}
+
+\paragraph{Variations de la fonction}
+$\forall f$, si $f'$ est négatif, $f$ est décroissante. Inversement, si $f'$ est positive, $f$ est croissante.
+
+\subsection{Graphes}
+\subsubsection{Définition}
+\begin{enumerate}
+	\item Un graphe est un ensemble de sommets reliés par des arrêtes, orientée ou non.
+	\item L'ordre d'un graphe est son nombre de sommets.
+	\item Deux sommets reliés sont dits adjacents.
+	\item Le degré d'un sommet est le nombre d'arètes dont ce sommet est une extrémité (un boucle comptant deux fois).
+	\item Un graphe est dit complet lorsque tout ses sommets sont adjacents.
+\end{enumerate}
+\subsubsection{Chaîne}
+\begin{enumerate}
+	\item Une chaîne est un parcours dans un graphe ex: $A-B-C-D-B-F$
+	\item Elle est dite fermée quand l'origine et l'extrémité sont confondues ex: $A-B-C-D-B-A$
+	\item Un cycle est une chaîne fermée dont toutes les arrêtes sont distinctes ex: $B-C-D-B$
+\end{enumerate}
+\subsubsection{Matrice d'adjacence}
+La matrice d'adjacence $\mathbf{M}$ associée à un graphe d'ordre $n$ dont les sommets sont numérotés de $1$ à $n$ est la matrice carrée d'ordre $n$ telle que le coefficient $\mathbf{m}_{i,j}$ de la matrice $M^p$ vaut le nombre de chemins de longueur $p$ reliant les sommets $i$ et $j$, soit le nombre d'arètes entre $i$ et $j$ quand $p=1$
 
 
 
-\section{Géométrie repérée}
+\section{Géométrie}
 
 
 \subsection{Vecteurs}
-    Propriétés:
-    \begin{enumerate}
-        \item On note la norme $AB$ du vecteur $\Vec{AB}$ : $||\Vec{AB}||$.
-        \item Le vecteur opposé a $\Vec{AB}$ est $-\Vec{AB} = \Vec{BA}$.
-        \item $\Vec{AB}+\Vec{BC}=\Vec{AC}$
-        \item Si $\Vec{v} = k\Vec{u}$ avec $k$ un réel, alors $\Vec{v}$ et $\Vec{u}$ sont colinéaires.
-        \item  Si il existe des réels $\alpha,\beta\in\mathbf{R}$ $\Vec{w}=\alpha\Vec{u}+\beta\Vec{v}$ alors $\Vec{u},\Vec{v},\Vec{w}$ sont coplanaires
-        \item De même, il sont coplanaires ssi il existe $a,b,c\in\mathbf{R^*}$ tels que $a\Vec{u}+b\Vec{v}+c\Vec{w}=0$. Par contraposée, si ces trois coefficients sont nuls alors les vecteurs ne sont pas coplanaires.
-        \item $\Vec{AB} = (x_b - x_a ; y_b - y_a ; ...)$
-        \item $I$ est milieu de $AB$ ssi $I=(\frac{x_a+x_b}{2};\frac{y_a+y_b}{2};...)$
-        \item Dans un repère orthonormé, $||\Vec{AB}|| = \sqrt{(x_B-x_A)^2+ (y_B-y_A)^2+...}$.
-    \end{enumerate}
+Propriétés:
+\begin{enumerate}
+	\item On note la norme $AB$ du vecteur $\Vec{AB}$ : $||\Vec{AB}||$.
+	\item Le vecteur opposé a $\Vec{AB}$ est $-\Vec{AB} = \Vec{BA}$.
+	\item $\Vec{AB}+\Vec{BC}=\Vec{AC}$
+	\item Si $\Vec{v} = k\Vec{u}$ avec $k$ un réel, alors $\Vec{v}$ et $\Vec{u}$ sont colinéaires.
+	\item  Si il existe des réels $\alpha,\beta\in\mathbb{R}$ $\Vec{w}=\alpha\Vec{u}+\beta\Vec{v}$ alors $\Vec{u},\Vec{v},\Vec{w}$ sont coplanaires
+	\item De même, il sont coplanaires ssi il existe $a,b,c\in\mathbf{R^*}$ tels que $a\Vec{u}+b\Vec{v}+c\Vec{w}=0$. Par contraposée, si ces trois coefficients sont nuls alors les vecteurs ne sont pas coplanaires.
+	\item $\Vec{AB} = (x_b - x_a ; y_b - y_a ; ...)$
+	\item $I$ est milieu de $AB$ ssi $I=(\frac{x_a+x_b}{2};\frac{y_a+y_b}{2};...)$
+	\item Dans un repère orthonormé, $||\Vec{AB}|| = \sqrt{(x_B-x_A)^2+ (y_B-y_A)^2+...}$.
+\end{enumerate}
 
 \subsubsection{Produit scalaire}
-    Le produit scalaire, ou travail, d'un vecteur sur un autre, se note $\mathcal{W}$.\\
-    On notera que $\mathcal{W}_uv = \mathcal{W}_vu$.\\
-    Voici les méthodes de calcul de $\Vec{AB} \cdot \Vec{AC} = \mathcal{W}_{AB}AC$.\\
-    \\
-    Méthodes de calcul:
-    \begin{enumerate}
-        \item Par le projeté orthogonal \\Soit $H$ le projeté orthogonal de $C$ sur $(AB)$: $\Vec{AB} \cdot \Vec{AC} = \Vec{AB} \cdot \Vec{AH} = AB \times AH$.
-        \item Par les coordonnées \\$\Vec{AB} \cdot \Vec{AC} = x_{AB}x_{AC}+y_{AB}y_{AC}$
-        \item Par le cosinus \\$\Vec{AB} \cdot \Vec{AC} = AB\times AH\times \cos \alpha$ avec $\alpha$ l'angle forme par les vecteurs.
-        \item Par les normes \\$\Vec{AB} \cdot \Vec{AC} = \frac{1}{2}(AB^2 + AC^2 - BC^2)$
-    \end{enumerate}
-    On notera que $\Vec{AB}$ et $\Vec{AC}$ sont orthogonaux si leur produit scalaire est nul.
+Le produit scalaire, ou travail, d'un vecteur sur un autre, se note $\mathcal{W}$.\\
+On notera que $\mathcal{W}_uv = \mathcal{W}_vu$.\\
+Voici les méthodes de calcul de $\Vec{AB} \cdot \Vec{AC} = \mathcal{W}_{AB}AC$.\\
+\\
+Méthodes de calcul:
+\begin{enumerate}
+	\item Par le projeté orthogonal \\Soit $H$ le projeté orthogonal de $C$ sur $(AB)$: $\Vec{AB} \cdot \Vec{AC} = \Vec{AB} \cdot \Vec{AH} = AB \times AH$.
+	\item Par les coordonnées \\$\Vec{AB} \cdot \Vec{AC} = x_{AB}x_{AC}+y_{AB}y_{AC}$
+	\item Par le cosinus \\$\Vec{AB} \cdot \Vec{AC} = AB\times AH\times \cos \alpha$ avec $\alpha$ l'angle forme par les vecteurs.
+	\item Par les normes \\$\Vec{AB} \cdot \Vec{AC} = \frac{1}{2}(AB^2 + AC^2 - BC^2)$
+\end{enumerate}
+On notera que $\Vec{AB}$ et $\Vec{AC}$ sont orthogonaux si leur produit scalaire est nul.
 
 
 \subsection{Plan}
-    Un plan est défini dans l'espace par deux vecteurs non colinéaires et un point.\\
-    Dès lors pour un plan $\mathcal{P}$ défini par le point $A$ et les vecteurs $\Vec{u}$ et $\Vec{v}$, $M \in \mathcal{P}$ ssi $\Vec{AM} = a\Vec{u}+b\Vec{v}$ avec $a,b\in\mathbf{R}$
+Un plan est défini dans l'espace par deux vecteurs non colinéaires et un point.\\
+Dès lors pour un plan $\mathcal{P}$ défini par le point $A$ et les vecteurs $\Vec{u}$ et $\Vec{v}$, $M \in \mathcal{P}$ ssi $\Vec{AM} = a\Vec{u}+b\Vec{v}$ avec $a,b\in\mathbb{R}$
 
 \subsection{Base de l'espace}
-    Trois vecteurs non coplanaires forment une base de l'espace\\
-    Dès lors, $\forall \Vec{u} \in$ la base de l'espace $(\Vec{i};\Vec{j};\Vec{k})$, $\exists x,y,z \in \mathbf{R}$ tels que $x\Vec{u}+y\Vec{j}+z\Vec{k}=\Vec{u}$. On dira que $\Vec{u} = \begin{pmatrix}x\\y\\z\end{pmatrix}$ dans $(\Vec{i};\Vec{j};\Vec{k})$
+Trois vecteurs non coplanaires forment une base de l'espace\\
+Dès lors, $\forall \Vec{u} \in$ la base de l'espace $(\Vec{i};\Vec{j};\Vec{k})$, $\exists x,y,z \in \mathbb{R}$ tels que $x\Vec{u}+y\Vec{j}+z\Vec{k}=\Vec{u}$. On dira que $\Vec{u} = \begin{pmatrix}x\\y\\z\end{pmatrix}$ dans $(\Vec{i};\Vec{j};\Vec{k})$
 
 
 \subsection{Formes géométriques}
 
 \subsubsection{En 2D}
 \paragraph{Droite}
-    Une équation de droite en 2D peut s'écrire de deux manières: la forme réduite $y=mx+p$, et la forme cartésienne $ay+bx+c=0$.\\
-    On distingue alors le vecteur directeur et le vecteur normal (orthogonal au premier), de formules respectives $\begin{pmatrix}-b\\a\end{pmatrix}$ et $\begin{pmatrix}a\\b\end{pmatrix}$.
+Une équation de droite en 2D peut s'écrire de deux manières: la forme réduite $y=mx+p$, et la forme cartésienne $ay+bx+c=0$.\\
+On distingue alors le vecteur directeur et le vecteur normal (orthogonal au premier), de formules respectives $\begin{pmatrix}-b\\a\end{pmatrix}$ et $\begin{pmatrix}a\\b\end{pmatrix}$.
 \paragraph{Cercle}
-    Ici la forme cartésienne est $(x-x_A)^2+(y-y_A)^2 = r^2$ avec $A$ le centre du cercle et $r$ son rayon.\\
-    Dès lors, l'ensemble des les points $(x;y)$ qui vérifient $(x-a)^2+(y-b)^2 = S$ avec $S\in\mathbf{R}$, est un cercle de centre $(a;b)$ et de rayon $\sqrt{S}$.
+Ici la forme cartésienne est $(x-x_A)^2+(y-y_A)^2 = r^2$ avec $A$ le centre du cercle et $r$ son rayon.\\
+Dès lors, l'ensemble des les points $(x;y)$ qui vérifient $(x-a)^2+(y-b)^2 = S$ avec $S\in\mathbb{R}$, est un cercle de centre $(a;b)$ et de rayon $\sqrt{S}$.
 \paragraph{Parabole}
-    On retrouve la forme $y=ax^2+bx+c$ où on remarque l'axe de symétrie $x = -b/2a$ et le sommet $(-b/2a,f(-b/2a))$.
+On retrouve la forme $y=ax^2+bx+c$ où on remarque l'axe de symétrie $x = -b/2a$ et le sommet $(-b/2a,f(-b/2a))$.
 
 \subsubsection{En 3D}
 \paragraph{Droite}
-    Soit $(\Vec{i};\Vec{j};\Vec{k})$ une base de l'espace et $D$ une droite $(x_a;y_a;z_a;\Vec{\begin{pmatrix}a\\b\\c\end{pmatrix}})$,\\
-    Les points de $D$ suivent le mode de génération $(x;y;z)$ suivant:
-                                \[
-                                \left \{
-                                \begin{array}{c @{=} c}
-                                    x & x_a + ak \\
-                                    y & y_a + bk \\
-                                    z & z_a + ck
-                                \end{array}
-                                \forall k \in \mathbf{R}
-                                \right.
-                                \]
+Soit $(\Vec{i};\Vec{j};\Vec{k})$ une base de l'espace et $D$ une droite $(x_a;y_a;z_a;\Vec{\begin{pmatrix}a\\b\\c\end{pmatrix}})$,\\
+Les points de $D$ suivent le mode de génération $(x;y;z)$ suivant:
+\[
+	\left \{
+	\begin{array}{c @{=} c}
+		x & x_a + ak \\
+		y & y_a + bk \\
+		z & z_a + ck
+	\end{array}
+	\forall k \in \mathbb{R}
+	\right.
+\]
 
 
-\section{Probabilités}
+\subsection{Transformations}
+Dans un repère $(\mathbf{0},\Vec{i},\Vec{j})$, on considère les points $\mathbf{A}(x_a;y_a)$ et $\mathbf{B}(x_b;y_b)$ et un vecteur $\Vec{u}\begin{pmatrix}a\\b\end{pmatrix}$
+
+\subsubsection{Translation}
+$\mathbf{B}$ est l'image de $\mathbf{A}$ par translation de vecteur $\Vec{u}$ ssi $\begin{pmatrix}x_b\\y_b\end{pmatrix} = \begin{pmatrix}x_a\\y_a\end{pmatrix} + \begin{pmatrix}a\\b\end{pmatrix}.$
+
+\subsubsection{Rotation}
+$\mathbf{B}$ est l'image de $\mathbf{A}$ par rotation de centre $\mathbf{0}$ et d'angle $\theta$ ssi $$\begin{pmatrix}x_b\\y_b\end{pmatrix} = \begin{pmatrix}\cos \theta & -\sin \theta \\\sin \theta & \cos \theta\end{pmatrix} \times \begin{pmatrix}x_a\\y_a\end{pmatrix}$$
+
+
+
+\section{Statistiques et Probabilités}
 
 
 \subsection{Vocabulaire}
-    Soit deux évènements $\mathcal{A}$ et $\mathcal{B}$ :\\
-    On note $\mathcal{A} \cup \mathcal{B}$ l'union des deux évènements, soit celui ou au moins l'un des deux se produit.\\
-    On note $\mathcal{A} \cap \mathcal{B}$ l'intersection des deux évènements, soit celui ou les deux se produisent.\\
-    On note $\mathcal{_AB}$ l'évènement ou $\mathcal{B}$ se produit, sachant que $\mathcal{A}$ s'est déjà produit (utilise typiquement dans les arbres pondérés).\\
+Soit deux évènements $\mathcal{A}$ et $\mathcal{B}$ :\\
+On note $\mathcal{A} \cup \mathcal{B}$ l'union des deux évènements, soit celui ou au moins l'un des deux se produit.\\
+On note $\mathcal{A} \cap \mathcal{B}$ l'intersection des deux évènements, soit celui ou les deux se produisent.\\
+On note $\mathcal{_AB}$ l'évènement ou $\mathcal{B}$ se produit, sachant que $\mathcal{A}$ s'est déjà produit (utilise typiquement dans les arbres pondérés).\\
 
 
 \subsection{Formules}
-    $$\mathcal{P_A} \cup \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A} \cap \mathcal{P_B}$$
-    $$\mathcal{P_A} \cap \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A} \cup \mathcal{P_B}$$
-    $$\mathcal{P_AB} = \frac{\mathcal{PA} \cap \mathcal{PB}}{\mathcal{PA}}$$
-    $$\mathcal{P_AB} = \frac{\mathcal{P_BA} \times \mathcal{PB}}{\mathcal{PA}}$$
+$$\mathcal{P_A} \cup \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A} \cap \mathcal{P_B}$$
+$$\mathcal{P_A} \cap \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A} \cup \mathcal{P_B}$$
+$$\mathcal{P_AB} = \frac{\mathcal{PA} \cap \mathcal{PB}}{\mathcal{PA}}$$
+$$\mathcal{P_AB} = \frac{\mathcal{P_BA} \times \mathcal{PB}}{\mathcal{PA}}$$
 
 
 \subsection{Indépendance}
-    $\mathcal{A}$ et $\mathcal{B}$ sont indépendants si et seulement si $\mathcal{PA} \cap \mathcal{PB} = \mathcal{PA} \times \mathcal{PB}$. \\
-    Des lors, $\mathcal{P_BA} = \mathcal{PA}$ et $\mathcal{P_AB} = \mathcal{PB}$.
+$\mathcal{A}$ et $\mathcal{B}$ sont indépendants si et seulement si $\mathcal{PA} \cap \mathcal{PB} = \mathcal{PA} \times \mathcal{PB}$. \\
+Des lors, $\mathcal{P_BA} = \mathcal{PA}$ et $\mathcal{P_AB} = \mathcal{PB}$.
 
 
 \subsection{Variables aléatoires}
 
 \subsubsection{Définition}
-    Une variable aléatoires est une variable pouvant prendre différentes valeurs, suivant une certaine probabilité. \\
-    On associe alors à la variable aléatoire $X$ les valeurs $x_1, x_2, ..., x_n$ et leurs probabilités respectives $p_i$ définies par $X == x_i$.
+Une variable aléatoires est une variable pouvant prendre différentes valeurs, suivant une certaine probabilité. \\
+On associe alors à la variable aléatoire $X$ les valeurs $x_1, x_2, ..., x_n$ et leurs probabilités respectives $p_i$ définies par $P(X = x_i)$.
 
 \subsubsection{Paramètres}
-    Une variable aléatoire a dès lors des paramètres, définis comme suis:
-    \begin{enumerate}
-        \item L'espérance,$E(X)$, qui représente la moyenne pondérée des valeurs possibles de cette variable, et qui est définie par: $$\sum^n_{i=1}p_ix_i$$
-        \item Sa variance, $V(X)$: $$\sum^n_{i=1}p_i(x_i-E(X))^2$$
-        \item Son écart-type, $\sigma(X)$: $$\sqrt{V(X)}$$
-    \end{enumerate}
+Une variable aléatoire a dès lors des paramètres, définis comme suis:
+\begin{enumerate}
+	\item L'espérance,$E(X)$, qui représente la moyenne pondérée des valeurs possibles de cette variable, et qui est définie par: $$\sum^n_{i=1}p_ix_i$$
+	\item Sa variance, une étape de calcul de son écart-type, $V(X)$: $$\sum^n_{i=1}p_i(x_i-E(X))^2$$
+	\item Son écart-type, soit la distance moyenne d'un tirage à l'espérance, $\sigma(X)$: $$\sqrt{V(X)}$$
+\end{enumerate}
 
 \subsection{Dénombrement}
 On note $\mathbf{Card(E)}$ le nombre d'éléments dans l'ensemble $\mathbf{E}$.
 
 \subsubsection{Multiplication ou addition}
-     Si e deux évènements sont liés, on appliquera une multiplication, si ils sont successifs, une addition.
+Si e deux évènements sont liés, on appliquera une multiplication, si ils sont successifs, une addition.
 
 \subsubsection{Possibilités ordonnées}
-    On fait le produit cartésien des ensembles des possibles pour obtenir les possibilités ordonnées, soit l'ensemble des tuple (k-uplet, n-uplet, p-uplet...)  de chaque objet avec chaque autre.
+On fait le produit cartésien des ensembles des possibles pour obtenir les possibilités ordonnées, soit l'ensemble des tuple (k-uplet, n-uplet, p-uplet...)  de chaque objet avec chaque autre.
 
 \subsection{Arrangements}
-    $$\frac{n!}{(n-k)!}$$ est le nombre d'arrangements possibles de $k$ éléments parmi $n$
+$$\frac{n!}{(n-k)!}$$ est le nombre d'arrangements possibles de $k$ éléments parmi $n$
 
 \subsubsection{Permutations}
-    $$n!=\prod_{k=0}^nk$$ est le nombre des permutation possibles pour $n$ éléments
+$$n!=\prod_{k=0}^nk$$ est le nombre des permutation possibles pour $n$ éléments
 
 \subsubsection{Binôme}
-    $$\frac{n!}{k!(n - k)!} = \binom{n}{k}$$ est le nombre de façons de prendre $k$ éléments depuis $n$.
+$$\frac{n!}{k!(n - k)!} = \binom{n}{k}$$ est le nombre de façons de prendre $k$ éléments depuis $n$.
 \paragraph{Pascal}
-    $$\binom{n+1}{k} = \binom{n}{k} + \binom{n}{k-1}$$
+$$\binom{n+1}{k} = \binom{n}{k} + \binom{n}{k-1}$$
 
 
 
@@ -365,126 +409,150 @@ On note $\mathbf{Card(E)}$ le nombre d'éléments dans l'ensemble $\mathbf{E}$.
 \subsection{Divisons}
 
 \subsubsection{Divisibilité}
-    Propriétés (On travaille dans $\mathbf{Z}$):
-    \begin{enumerate}
-        \item $b|a$ ($b$ divise $a$) ssi $a=kb$
-        \item $a|b$ et $b|c \Rightarrow a|c$\\
-        Démonstration: $b=ka$ et $c=k'b$ donc $c=k'ka$ or $k'k\in\mathbf{Z}$ donc $a|c$
-        \item $c|a$ et $c|b \Rightarrow c|(au+bv)$\\
-        Démonstration: $a=kc$ et $b=k'c$ donc $au+bv=kcu+k'cv=c(ku+k'v)$ or $(ku+k'v)\in\mathbf{Z}$ donc $c|(au+bv)$
-    \end{enumerate}
-    Critères de divisibilité:
-    \begin{enumerate}
-        \item Est divisible par 2 ou 5 si son chiffre des unités est respectivement divisible par 2 ou 5.
-        \item Est divisible par 4 ou 25 si son nombre (dizaines:unités) est respectivement divisible par 4 ou 25.
-        \item Est divisible par 3 ou 9 si la somme de ses chiffres est respectivement divisible par 3 ou 9.
-        \item Est divisible par 11 si la somme de ses chiffres de rang impair moins la somme de ses chiffres de rang pair est divisible par 11.
-    \end{enumerate}
+Propriétés (On travaille dans $\mathbb{Z}$):
+\begin{enumerate}
+	\item $b|a$ ($b$ divise $a$) ssi $a=kb$
+	\item $a|b$ et $b|c \Rightarrow a|c$\\
+	      Démonstration: $b=ka$ et $c=k'b$ donc $c=k'ka$ or $k'k\in\mathbb{Z}$ donc $a|c$
+	\item $c|a$ et $c|b \Rightarrow c|(au+bv)$\\
+	      Démonstration: $a=kc$ et $b=k'c$ donc $au+bv=kcu+k'cv=c(ku+k'v)$ or $(ku+k'v)\in\mathbb{Z}$ donc $c|(au+bv)$
+\end{enumerate}
+Critères de divisibilité:
+\begin{enumerate}
+	\item Est divisible par 2 ou 5 si son chiffre des unités est respectivement divisible par 2 ou 5.
+	\item Est divisible par 4 ou 25 si son nombre (dizaines:unités) est respectivement divisible par 4 ou 25.
+	\item Est divisible par 3 ou 9 si la somme de ses chiffres est respectivement divisible par 3 ou 9.
+	\item Est divisible par 11 si la somme de ses chiffres de rang impair moins la somme de ses chiffres de rang pair est divisible par 11.
+\end{enumerate}
 
 \subsubsection{Division euclidienne}
-    Soit $a,b\in\mathbf{N^*}$, il existe un unique couple d'entiers $(q;r)$ tel que $a=qb+r$ où $0\le r < b$. \\Cette écriture est la division euclidienne de $a$ par $b$, avec $a$ le dividende, $b$ le diviseur, $q$ le quotient et $r$ le reste.
-    \\ On pourra démontrer $0\le r < b$ par $qb\le a<(q+1)b \rightarrow r=a-qb \ge 0 et r=a-bq<b \rightarrow 0\le r < b$
-    \\ On pourra aussi démontrer l'unicité de $r$ en admettant $a=bq+r=bq'+r' \rightarrow r=a-bq et r'=a-bq' \rightarrow r-r' = a-bq - (a-bq') = -bq+bq' = b(q'-q) \rightarrow b|r-r' $ or $ 0 \le r < n $ et $ -n<-r'\le 0\rightarrow r-r'=0 \rightarrow r=r$
+Soit $a,b\in\mathbf{N^*}$, il existe un unique couple d'entiers $(q;r)$ tel que $a=qb+r$ où $0\le r < b$. \\Cette écriture est la division euclidienne de $a$ par $b$, avec $a$ le dividende, $b$ le diviseur, $q$ le quotient et $r$ le reste.
 
 \subsubsection{Congruence}
-    $a$ et $b$ sont dits congrus modulo $n$ si $n|(a-b)$, soit que $r_{a/n}=r_{b/n}$. On note $a\equiv b (n)$
-    \\On pourra démonter l'unicité de $r$ en utilisant $a-b=qn+r-(q'n+r')=(q-q')n+r-r'=kn\rightarrow r-r' = (k+q-q')n \rightarrow n|(r-r') $ or $ 0 \le r < n $ et $ -n<-r'\le 0\rightarrow r-r'=0 \rightarrow r=r'$
-    \\On pourra aussi prouver l'inverse: $r=r' \rightarrow a-b=qn+r-(q'n-r')=(q-q')n+r-r' \rightarrow a-b=(q-q')n \rightarrow n|(a-b) \rightarrow a\equiv b(n)$
-    \\\\Propriétés;
-    \begin{enumerate}
-        \item $a \equiv b(n)$ $b\equiv c(n) \rightarrow a\equiv c(n)$
-        \item $a \equiv b(n)$ $c \equiv d(n) \rightarrow a+c\equiv b+d(n)$
-        \item $a \equiv b(n)$ $c \equiv d(n) \rightarrow ac\equiv bd(n)$
-        \item $a \equiv b(n)$ $k\in\mathbf{Z} \rightarrow ak\equiv bk(n)$
-        \item $a \equiv b(n)$ $p\in\mathbf{N} \rightarrow a^p\equiv b^p(n)$
-    \end{enumerate}
+$a$ et $b$ sont dits congrus modulo $n$ si $n|(a-b)$, soit que $r_{a/n}=r_{b/n}$. On note $a\equiv b (n)$
+\\\\Propriétés;
+\begin{enumerate}
+	\item $a \equiv b(n)$ $b\equiv c(n) \rightarrow a\equiv c(n)$
+	\item $a \equiv b(n)$ $c \equiv d(n) \rightarrow a+c\equiv b+d(n)$
+	\item $a \equiv b(n)$ $c \equiv d(n) \rightarrow ac\equiv bd(n)$
+	\item $a \equiv b(n)$ $k\in\mathbb{Z} \rightarrow ak\equiv bk(n)$
+	\item $a \equiv b(n)$ $p\in\mathbb{N} \rightarrow a^p\equiv b^p(n)$
+\end{enumerate}
 
 
-\subsection{Matrices et graphes}
+\subsection{Matrices}
 
 \subsubsection{Notions de matrice}
-    Définitions:
-    \begin{enumerate}
-        \item Une matrice est un tableau dimension lignes$\times$colonnes rempli de termes/coefficients.
-        \item Une matrice ligne est une matrice dotée d'une unique ligne, et inversement pour une matrice colonne.
-        \item Deux matrices sont égales si elles sont de même taille et de mêmes termes.
-        \item Une matrice carrée d'ordre $p$ est une matrice de dimensions $p\times p$.
-        \item Une matrice diagonale a tout les termes hors de sa diagonale (haut-gauche $\rightarrow$ bas-droite) de nuls.
-        \item Une matrice est triangle supérieure ou inférieure si tout ses termes respectivement inférieurs ou supérieurs à sa diagonale sont nuls
-        \item On note $I_p$ la matrice carrée d'ordre $p$ diagonale, dont les termes de la diagonale valent $1$.
-        \item La transposée de la matrice $A$ de dimensions $n\times p$, notée $^TA$ (cette notation peut varier) de dimensions $p\times n$, obtenue en échangeant les colonnes et les lignes de $A$.
-    \end{enumerate}
+Définitions:
+\begin{enumerate}
+	\item Une matrice est un tableau dimension lignes$\times$colonnes rempli de termes/coefficients.
+	\item Une matrice ligne est une matrice dotée d'une unique ligne, et inversement pour une matrice colonne.
+	\item Deux matrices sont égales si elles sont de même taille et de mêmes termes.
+	\item Une matrice carrée d'ordre $p$ est une matrice de dimensions $p\times p$.
+	\item Une matrice diagonale a tout les termes hors de sa diagonale (haut-gauche $\rightarrow$ bas-droite) de nuls.
+	\item Une matrice est triangle supérieure ou inférieure si tout ses termes respectivement inférieurs ou supérieurs à sa diagonale sont nuls
+	\item On note $I_p$ la matrice carrée d'ordre $p$ diagonale, dont les termes de la diagonale valent $1$.
+	\item La transposée de la matrice $A$ de dimensions $n\times p$, notée $^TA$ (cette notation peut varier) de dimensions $p\times n$, obtenue en échangeant les colonnes et les lignes de $A$.
+\end{enumerate}
 
 \subsubsection{Opérations sur les matrices}
 \paragraph{Additions}
-    \begin{enumerate}
-        \item $A+B = a_{i,j}+b_{i,j}$
-        \item $kA = ka_{i,j}$
-        \item Cette addition est commutative.
-        \item Les règles de distributivité et de factorisation s'appliquent.
-    \end{enumerate}
-    \hfill \break
+\begin{enumerate}
+	\item $A+B = a_{i,j}+b_{i,j}$
+	\item $kA = ka_{i,j}$
+	\item Cette addition est commutative.
+	\item Les règles de distributivité et de factorisation s'appliquent.
+\end{enumerate}
+\hfill \break
 \paragraph{Multiplication}
-    \begin{enumerate}
-        \item Pour effectuer le produit de $A$ par $B$, $A$ doit avoir autant de lignes que $B$ de colonnes.
-        \item La matrice obtenue par le produit d'une matrice de taille $n \times p$ et une autre de $p \times q$ est de taille $n \times q$.
-        \item $$A\times B=\sum_{k=1}^{p} a_{i,k} \times b_{k,j}$$
-        \item Ce produit n'est pas commutatif.
-        \item $A(n\times n) \times I_n = A$
-    \end{enumerate}
+\begin{enumerate}
+	\item Pour effectuer le produit de $A$ par $B$, $A$ doit avoir autant de lignes que $B$ de colonnes.
+	\item La matrice obtenue par le produit d'une matrice de taille $n \times p$ et une autre de $p \times q$ est de taille $n \times q$.
+	\item $$A\times B=\sum_{k=1}^{p} a_{i,k} \times b_{k,j}$$
+	\item Ce produit n'est pas commutatif.
+	\item $A(n\times n) \times I_n = A$
+\end{enumerate}
 \paragraph{Puissances}
-    \begin{enumerate}
-        \item $A^2 = AA$
-        \item $A^0 = I$
-    \end{enumerate}
-\paragraph{Inverse d'une matrice($A^{-1}$)}:\\
-    Une matrice est $A$ dite inversible ssi $\exists B, AB = BA = I$\\
-    Dans le cas d'une matrice carré d'ordre 2 de la forme
-        $\begin{pmatrix}
-        a & b\\
-        c & d
-        \end{pmatrix}$
-    , $A^-1 = \frac{1}{ad-bc}
-        \begin{pmatrix}
-        d & -b\\
-        -c & a
-        \end{pmatrix}$
-    ssi $ad-bc \ne 0$.
+\begin{enumerate}
+	\item $A^2 = AA$
+	\item $A^0 = I$
+\end{enumerate}
+\paragraph{Inverse d'une matrice ($A^{-1}$)}:\\
+Une matrice est $A$ dite inversible ssi $\exists B, AB = BA = I$\\
+Dans le cas d'une matrice carré d'ordre 2 de la forme
+$\begin{pmatrix}
+	a & b \\
+	c & d
+\end{pmatrix}$
+, $A^-1 = \frac{1}{ad-bc}
+\begin{pmatrix}
+	d  & -b \\
+	-c & a
+\end{pmatrix}$
+ssi $ad-bc \ne 0$.
 
 \subsubsection{Systèmes grâce aux matrices}
-    On peut écrire un système sous la forme de produit de la matrice $\mathbf{A}$ qui contient les coefficients, la matrice $\mathbf{X}$ qui contient les inconnues, et la matrice $\mathbf{B}$ qui contient les résultats. On trouve alors $\mathbf{AX} = \mathbf{B}$, donc $\mathbf{X} = \mathbf{A}^{-1}\mathbf{B}$.
+On peut écrire un système sous la forme de produit de la matrice $\mathbf{A}$ qui contient les coefficients, la matrice $\mathbf{X}$ qui contient les inconnues, et la matrice $\mathbf{B}$ qui contient les résultats. On trouve alors $\mathbf{AX} = \mathbf{B}$, donc $\mathbf{X} = \mathbf{A}^{-1}\mathbf{B}$.
+
+\subsubsection{Suites de matrices}
+De même, ont peut écrire un système de génération de suites sous la forme d'une équation de matrice. Un exemple d'application serait: Admettons une relation de récurrence $\mathbf{X}_{n+1} = \mathbf{AX}_n+\mathbf{B}$, on peut trouver la limite $\mathbf{X}$ telle que $\mathbf{X} = \mathbf{AX}+\mathbf{B}$ en utilisant l'inverse de $(\mathbf{I}-\mathbf{A})$.
+
 
 
 \section{Boite à outils}
 
 
 \subsection{Règles sur les inégalités}
-    \begin{enumerate}
-        \item Les additions et soustraction \emph{ne changent pas le sens}.
-        \item Les multiplication et division \emph{ne changent le sens QUE SI leur produit ou dividende est négatif}.
-        \item L'application d'une fonction \emph{ne change le sens QUE SI sa fonction est impaire}.
-    \end{enumerate}
+\begin{enumerate}
+	\item Les additions et soustraction \emph{ne changent pas le sens}.
+	\item Les multiplication et division \emph{ne changent le sens QUE SI leur produit ou dividende est négatif}.
+	\item L'application d'une fonction \emph{ne change le sens QUE SI sa fonction est impaire}.
+\end{enumerate}
 
 
 \subsection{Prouver une proposition}
 
 \subsubsection{Par déduction}
-    On part d'une hypothèse et par un raisonnement logique, on arrive à une conclusion.
+On part d'une hypothèse et par un raisonnement logique, on arrive à une conclusion.
 
 \subsubsection{Par contre exemple}
-    On trouve un cas qui contredit la proposition.
+On trouve un cas qui contredit la proposition.
 
 \subsubsection{Par l'absurde}
-    On suppose P et arrive à une contradiction.
+On suppose P et arrive à une contradiction.
 
 \subsubsection{Par contraposée}
-    On prouve la contraposée pour prouvée la proposition
+On prouve la contraposée pour prouvée la proposition
 
 \subsubsection{Par disjonction de cas}
-    Lorsque la proposition dépend d'un variable, on sépare le raisonnement suivant les valeurs de la dite variable.
+Lorsque la proposition dépend d'un variable, on sépare le raisonnement suivant les valeurs de la dite variable.
 
 \subsubsection{Par récurrence}
-    On prouve qu'une proposition est vrai à partir d'un certain rang, en prouvant qu'elle est initialisée pour ce rang puis qu'elle est héréditaire.
+On prouve qu'une proposition est vrai à partir d'un certain rang, en prouvant qu'elle est initialisée pour ce rang puis qu'elle est héréditaire.\\
+\paragraph{Exemple de la rédaction conseillée}
+Soit la suite $u$ telle que \[
+\left \{
+\begin{array}{c @{=} c}
+	u_0     & 2      \\
+	u_{n+1} & 5u_n+4
+\end{array}
+\right.
+\]
+Montrons par récurrence que $\forall n\in\mathbb{N}, u_n>0$\\
+Pour tout entier $n\in\mathbb{N}$, notons $\mathbf{P(n)}: u_n>0$\\
+\break
+\underline{Initialisation pour n=0}\\
+$u_n=u_0=2$ or $2>0$ donc $u_0>0$.\\
+$\mathbf{P(0)}$ est ainsi, donc $\mathbf{P}$ est donc initialisée.\\
+\break
+\underline{Hérédité}\\
+Supposons $n\in\mathbb{N}$ telle que $\mathbf{P(n)}$ vraie, montrons que $\mathbf{P(n+1)}$ est vraie.\\
+$u_n>0$ donc $5u_n+4>0$ donc $u_{n+1}>0$ donc $\mathbf{P(n+1)}$ est vraie.\\
+Ainsi $\mathbf{P(n)} \implies \mathbf{P(n+1)}$.\\
+\break
+\underline{Conclusion}\\
+$\mathbf{P(n)}$ est initialisée et héréditaire, donc par principe de récurrence, $\forall n\in\mathbb{N}, \mathbf{P(n)}$ est vraie soit $\forall n\in\mathbb{N}, u_n>0$.
+
 
 
 
