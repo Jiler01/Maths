@@ -125,7 +125,6 @@ Une alternative est de dire que $x_0 = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, mais
 \subsection{Suites}
 
 
-\subsubsection{Définition}
 Une suite numérique $u$ est une suite de valeurs pourvues d'un indice, $n$, qui parcours l'ensemble $\mathbb{N}$. L'élément à l'indice $n$ de la suite $u$ est noté $u_n$.
 
 
@@ -161,7 +160,7 @@ Pour prouver la croissance ou la décroissance d'une suite, on applique \\$u_{n-
 \subsection{Limite}
 Les règles suivantes peuvent s'appliquer aux fonctions comme aux suites, qui ne sont rien d'autre que des fonctions ne prenant pour paramètre que des entiers naturels.
 
-\subsubsection{Définition}
+\break
 \begin{enumerate}
 	\item $v_n$ admet une limite $+\infty$ si $\forall A \in \mathbb{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n > A$
 	\item $v_n$ admet une limite $-\infty$ si $\forall A \in \mathbb{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n < A$
@@ -246,7 +245,6 @@ $f(x) \rightarrow f'(x)$ avec $f$ une fonction, $k\in\mathbb{R}$ et $n\in\mathbb
 $\forall f$, si $f'$ est négatif, $f$ est décroissante. Inversement, si $f'$ est positive, $f$ est croissante.
 
 \subsection{Graphes}
-\subsubsection{Définition}
 \begin{enumerate}
 	\item Un graphe est un ensemble de sommets reliés par des arrêtes, orientée ou non.
 	\item L'ordre d'un graphe est son nombre de sommets.
@@ -355,11 +353,13 @@ On note $\mathcal{A} \cap \mathcal{B}$ l'intersection des deux évènements, soi
 On note $\mathcal{_AB}$ l'évènement ou $\mathcal{B}$ se produit, sachant que $\mathcal{A}$ s'est déjà produit (utilise typiquement dans les arbres pondérés).\\
 
 
-\subsection{Formules}
+\subsection{Loi et Formules}
 $$\mathcal{P_A} \cup \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A} \cap \mathcal{P_B}$$
 $$\mathcal{P_A} \cap \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A} \cup \mathcal{P_B}$$
 $$\mathcal{P_AB} = \frac{\mathcal{PA} \cap \mathcal{PB}}{\mathcal{PA}}$$
-$$\mathcal{P_AB} = \frac{\mathcal{P_BA} \times \mathcal{PB}}{\mathcal{PA}}$$
+$$\mathcal{P_BA} = \frac{\mathcal{P_AB} \times \mathcal{PA}}{\mathcal{PA}}$$
+\paragraph{Loi des probabilités totales}
+La probabilité d'un événement est égale à la somme des probabilités des chemins conduisant à cet événement.
 
 
 \subsection{Indépendance}
@@ -367,9 +367,34 @@ $\mathcal{A}$ et $\mathcal{B}$ sont indépendants si et seulement si $\mathcal{P
 Des lors, $\mathcal{P_BA} = \mathcal{PA}$ et $\mathcal{P_AB} = \mathcal{PB}$.
 
 
+
+\subsection{Dénombrement}
+On note $\mathbf{Card(E)}$ le nombre d'éléments dans l'ensemble $\mathbf{E}$.
+
+\subsubsection{Multiplication ou addition}
+Si e deux évènements sont liés, on appliquera une multiplication, si ils sont successifs, une addition.
+
+\subsubsection{Possibilités ordonnées}
+On fait le produit cartésien des ensembles des possibles pour obtenir les possibilités ordonnées, soit l'ensemble des tuple (k-uplet, n-uplet, p-uplet...)  de chaque objet avec chaque autre.
+
+\subsubsection{Arrangements}
+$$\frac{n!}{(n-k)!}$$ est le nombre d'arrangements possibles de $k$ éléments parmi $n$
+
+\subsubsection{Permutations}
+$$n!=\prod_{k=0}^nk$$ est le nombre des permutation possibles pour $n$ éléments
+
+\subsubsection{Binôme}
+$$\frac{n!}{k!(n - k)!} = \binom{n}{k}$$ est le nombre de façons de prendre $k$ éléments depuis $n$.
+\paragraph{Pascal}
+$$\binom{n+1}{k} = \binom{n}{k} + \binom{n}{k-1}$$
+\break
+\underline{Exemple d'application}\\
+Le nombre de cas avec au moins un objet est la différence entre le nombre de cas possibles et le nombres de cas sans cet objet: $\binom{n-1}{k-1} = \binom{n}{k} - \binom{n-1}{k}$
+
+
+
 \subsection{Variables aléatoires}
 
-\subsubsection{Définition}
 Une variable aléatoires est une variable pouvant prendre différentes valeurs, suivant une certaine probabilité. \\
 On associe alors à la variable aléatoire $X$ les valeurs $x_1, x_2, ..., x_n$ et leurs probabilités respectives $p_i$ définies par $P(X = x_i)$.
 
@@ -381,27 +406,22 @@ Une variable aléatoire a dès lors des paramètres, définis comme suis:
 	\item Son écart-type, soit la distance moyenne d'un tirage à l'espérance, $\sigma(X)$: $$\sqrt{V(X)}$$
 \end{enumerate}
 
-\subsection{Dénombrement}
-On note $\mathbf{Card(E)}$ le nombre d'éléments dans l'ensemble $\mathbf{E}$.
-
-\subsubsection{Multiplication ou addition}
-Si e deux évènements sont liés, on appliquera une multiplication, si ils sont successifs, une addition.
-
-\subsubsection{Possibilités ordonnées}
-On fait le produit cartésien des ensembles des possibles pour obtenir les possibilités ordonnées, soit l'ensemble des tuple (k-uplet, n-uplet, p-uplet...)  de chaque objet avec chaque autre.
-
-\subsection{Arrangements}
-$$\frac{n!}{(n-k)!}$$ est le nombre d'arrangements possibles de $k$ éléments parmi $n$
-
-\subsubsection{Permutations}
-$$n!=\prod_{k=0}^nk$$ est le nombre des permutation possibles pour $n$ éléments
-
-\subsubsection{Binôme}
-$$\frac{n!}{k!(n - k)!} = \binom{n}{k}$$ est le nombre de façons de prendre $k$ éléments depuis $n$.
-\paragraph{Pascal}
-$$\binom{n+1}{k} = \binom{n}{k} + \binom{n}{k-1}$$
-
-
+\subsubsection{Expérience à 2 issues}
+Soit une expérience de probabilité de succès $p$.\\ La variable aléatoire correspondante prendra comme valeur $1$ en cas de succès, $0$ en cas d'échec.
+\\ Cette expérience est appelée \textit{Épreuve de Bernoulli}
+\paragraph{Loi de Bernoulli}
+La variable $X$ qui rend compte du succès ou de l'échec d'une épreuve de Bernoulli suit une loi de Bernoulli de paramètre $p$. \\
+On note $X \sim \mathcal{B}(p)$. \\
+Elle aurais pour propriétés les suivantes: Espérance= $p$, Variance= $p(1-p)$, Écart-type= $\sqrt{p(1-p}$.
+\paragraph{Loi binomiale}
+Si on répète une expérience de Bernoulli de manière indépendante et identique $n$ fois, on trouve un schéma de Bernoulli.\\
+La variable $X$ qui compterait le nombre de succès suis une loi binomiale de paramètres $n$ et $p$. \\
+On note $X \sim \mathcal{B}(n;p)$. \\
+Elle aurais pour propriétés les suivantes: Espérance= $np$, Variance= $np(1-p)$, Écart-type= $\sqrt{np(1-p)}$\\
+On peut calculer la probabilité de $k$ succès telle que $$\mathcal{P}(X=k)= \binom{n}{k}\times p^n\times (1-p)^{n-k}$$.
+\subsubsection{Intervalle de fluctuation}
+Soit $X$ une variable aléatoire et $a,b,\alpha \in \mathbb{R}$ \\
+Une intervalle $[a;b]$, telle que $\mathcal{P}(a\le X \le b) > 1-\alpha$, est une intervalle de fluctuation au seuil de $1-\alpha$ (au risque de $\alpha$). Elle vaut typiquement $\sum_a^b p_i$.
 
 \section{Arithmétique}
 
@@ -441,9 +461,6 @@ $a$ et $b$ sont dits congrus modulo $n$ si $n|(a-b)$, soit que $r_{a/n}=r_{b/n}$
 
 
 \subsection{Matrices}
-
-\subsubsection{Notions de matrice}
-Définitions:
 \begin{enumerate}
 	\item Une matrice est un tableau dimension lignes$\times$colonnes rempli de termes/coefficients.
 	\item Une matrice ligne est une matrice dotée d'une unique ligne, et inversement pour une matrice colonne.
@@ -455,7 +472,7 @@ Définitions:
 	\item La transposée de la matrice $A$ de dimensions $n\times p$, notée $^TA$ (cette notation peut varier) de dimensions $p\times n$, obtenue en échangeant les colonnes et les lignes de $A$.
 \end{enumerate}
 
-\subsubsection{Opérations sur les matrices}
+\subsubsection{Opérations}
 \paragraph{Additions}
 \begin{enumerate}
 	\item $A+B = a_{i,j}+b_{i,j}$
