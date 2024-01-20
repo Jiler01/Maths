@@ -244,6 +244,17 @@ $f(x) \rightarrow f'(x)$ avec $f$ une fonction, $k\in\mathbb{R}$ et $n\in\mathbb
 \paragraph{Variations de la fonction}
 $\forall f$, si $f'$ est négatif, $f$ est décroissante. Inversement, si $f'$ est positive, $f$ est croissante.
 
+
+\subsubsection{Dérivée seconde}
+La dérivée seconde d'une fonction est la dérivée de la dérivée de cette fonction. Elle représente l'évolution de l'évolution de la fonction.
+
+\paragraph{Convexité}
+Une fonction est convexe quand elle est au dessus de ses fonctions, concave si elle est en dessous. Le point ou elle change de convexité est son point d'infection.\\
+On notera que $f'(x)'>0 \mid x\in \mathbb{I} \Rightarrow f$ convexe, $f'(x)'<0 \mid x\in \mathbb{I} \Rightarrow f$ concave.
+
+
+
+
 \subsection{Graphes}
 \begin{enumerate}
 	\item Un graphe est un ensemble de sommets reliés par des arrêtes, orientée ou non.
@@ -290,7 +301,7 @@ Méthodes de calcul:
 	\item Par le projeté orthogonal \\Soit $H$ le projeté orthogonal de $C$ sur $(AB)$: $\Vec{AB} \cdot \Vec{AC} = \Vec{AB} \cdot \Vec{AH} = AB \times AH$.
 	\item Par les coordonnées \\$\Vec{AB} \cdot \Vec{AC} = x_{AB}x_{AC}+y_{AB}y_{AC}$
 	\item Par le cosinus \\$\Vec{AB} \cdot \Vec{AC} = AB\times AH\times \cos \alpha$ avec $\alpha$ l'angle forme par les vecteurs.
-	\item Par les normes \\$\Vec{AB} \cdot \Vec{AC} = \frac{1}{2}(AB^2 + AC^2 - BC^2)$
+	\item Par les normes \\$\Vec{AB} \cdot \Vec{AC} = \frac{1}{2}(\lVert \Vec{AB} \rVert^2 + \lVert \Vec{AC}\rVert^2 - \rVert \Vec{AB} - \Vec{AC} \rVert ^2) \\ = \frac{1}{2}(\lVert \Vec{AB} + \Vec{AC} \rVert ^2 - \lVert \Vec{AB} \rVert^2 - \lVert \Vec{AC}\rVert^2)$
 \end{enumerate}
 On notera que $\Vec{AB}$ et $\Vec{AC}$ sont orthogonaux si leur produit scalaire est nul.
 
@@ -298,6 +309,12 @@ On notera que $\Vec{AB}$ et $\Vec{AC}$ sont orthogonaux si leur produit scalaire
 \subsection{Plan}
 Un plan est défini dans l'espace par deux vecteurs non colinéaires et un point.\\
 Dès lors pour un plan $\mathcal{P}$ défini par le point $A$ et les vecteurs $\Vec{u}$ et $\Vec{v}$, $M \in \mathcal{P}$ ssi $\Vec{AM} = a\Vec{u}+b\Vec{v}$ avec $a,b\in\mathbb{R}$
+\paragraph{Vecteur normal}
+Est appelé vecteur normal d'un plan le vecteur orthogonal à tout les vecteurs du plan, soit à ses deux vecteurs directeurs. Dès lors, toute droit ayant ce vecteur comme vecteur directeur est orthogonale au plan.
+
+\paragraph{Équation cartésienne}
+L'équation cartésienne d'un plan est l'équation $ax+by+cz+d = 0$ telles que tout les points $(x;y;z)$ du plan vérifient cette équation. On notera que le vecteur $\Vec{\begin{pmatrix}a\\b\\c\end{pmatrix}})$ est le vecteur normal du plan.
+
 
 \subsection{Base de l'espace}
 Trois vecteurs non coplanaires forment une base de l'espace\\
