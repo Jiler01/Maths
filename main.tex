@@ -41,10 +41,11 @@ Pour des raisons de simplicité, ce livret utilise des notations correctes mais 
 \subsection{Propriétés de fonction}
 
 \subsubsection{Croissance \& décroissance}
-\underline{Pour $a<b$:}\\
-Si $f(a) < f(b)$: la fonction est \emph{croissante}\\
-Si $f(a) > f(b)$: la fonction est \emph{décroissante}\\
-Si $f(a) = f(b)$: la fonction est \emph{monotone}
+\underline{Pour tout $a<b$ tels que $a,b\in\mathbb{I}$:}\\
+Si $f(a) \le f(b)$: la fonction est \emph{croissante} sur $\mathbb{I}$\\
+Si $f(a) < f(b)$: la fonction est \emph{strictement croissante} sur $\mathbb{I}$\\
+Si $f(a) \ge f(b)$: la fonction est \emph{décroissante} sur $\mathbb{I}$\\
+Si $f(a) > f(b)$: la fonction est \emph{strictement décroissante} sur $\mathbb{I}$\\
 
 \subsubsection{Parité \& imparité}
 \underline{$\forall x \in \mathbb{R}$ :}\\
@@ -69,7 +70,7 @@ La fonction inverse est définie par $f(x) = \frac{1}{x}$. Elle est impaire et d
 
 
 \subsection{Fonction racine carrée}
-La fonction carrée est définie sur $\mathbf{R^+}$ par $f(x) = \sqrt{x} = x^{-2}$. Elle est croissante.
+La fonction carrée est définie sur $\mathbf{R^+}$ par $f(x) = \sqrt{x}$. Elle est croissante.
 
 
 \subsection{La fonction valeur absolue}
@@ -80,11 +81,11 @@ Son comportement suit la règle suivante : $|x| = |-x| = x$.
 \subsection{Fonctions trigonométrique }
 
 \subsubsection{Cercle trigonométrique}
-Le cercle trigonométrique est défini par un cercle de rayon $1 UA$, donc de rayon $2\pi$.\\
+Le cercle trigonométrique est défini par un cercle de rayon $1$, donc de rayon $2\pi$.\\
 On admettra que son centre $O$ est aux coordonnées $(0;0)$.
 
 \subsubsection{Radian}
-Le radian est l'unité de mesure d'angle en trigonométrie. Note $rad$, on retiendra que $1^\circ= \frac{\pi}{180} rad$
+Le radian est l'unité de mesure d'angle en trigonométrie. Noté $rad$, on retiendra que $1^\circ= \frac{\pi}{180} rad$
 
 \subsubsection{Points sur l'arc}
 Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos{x};\sin{x})$. \\De plus, l'angle $x$ est le même que l'angle $x +2k\pi$, $\forall k \in \mathbb{Z}$.
@@ -115,7 +116,7 @@ Pour $a < 0$: croissante avant $\alpha$, avec un maximum en $\beta$, puis décro
 \subsubsection{Résolution}
 \begin{enumerate}
 	\item On calcule le discriminant tel que $\Delta = b^2 - 4ac$.
-	\item On calcule les racines telles que $x_0 = \frac{-b \pm \sqrt{\Delta}}{2a}$.
+	\item On calcule les racines telles que $x_0 = \frac{-b \pm \sqrt{\Delta}}{2a}$ si $\Delta \ge 0$, $\frac{-b \pm i\sqrt{-\Delta}}{2a}$ sinon.
 \end{enumerate}
 
 \subsubsection{Signe de la fonction}
@@ -222,6 +223,7 @@ La tangente à la courbe de $f$ en $a$ est définie par: $$\mathcal{T}(x) = f'(a
 \subsection{Dérivation globale}
 \href{https://youtu.be/9vKqVkMQHKk}{\underline{\textit{Vidéo (anglais)}}}\\
 \href{https://youtu.be/S0_qX4VJhMQ}{\underline{\textit{Approche géométrique}}}\\
+\href{https://youtu.be/CfW845LNObM}{\underline{\textit{Approche non-conventionnelle}}}
 \break
 Une dérivation globale reprend le concept de dérivation locale, mais fourni une formule applicable sur toute la fonction. Elle est utilisée pour étudier les variations de la fonction.
 
@@ -240,9 +242,10 @@ $f(x) \rightarrow f'(x)$ avec $f$ une fonction et $k\in\mathbb{R}$
 
 \subsubsection{Opérations sur les dérivées}
 \begin{enumerate}
-	\item[] $$(u+v)' = u' +v'$$
 	\item[] $$\forall k \in \mathbb{R} : (ku)' = ku'$$
+	\item[] $$(u+v)' = u' +v'$$
 	\item[] $$(uv)' = vu' + uv'$$
+    \item[] $$(\frac{u}{v})' = \frac{u'v-v'u}{v^2} $$
 	\item[] $$u\circ v \rightarrow v'  \times u'\circ v$$
 \end{enumerate}
 
@@ -256,7 +259,7 @@ La dérivée seconde d'une fonction est la dérivée de la dérivée de cette fo
 
 \subsubsection{Convexité}
 Une fonction est convexe quand elle est au dessus de ses fonctions, concave si elle est en dessous. Le point ou elle change de convexité est son point d'infection.\\
-On notera que $f'(x)'>0 \mid x\in \mathbb{I} \Rightarrow f$ convexe, $f'(x)'<0 \mid x\in \mathbb{I} \Rightarrow f$ concave.
+On notera que $f''(x)>0 \mid x\in \mathbb{I} \Rightarrow f$ convexe, $f''(x)<0 \mid x\in \mathbb{I} \Rightarrow f$ concave.
 
 
 \section{Primitive}
@@ -275,9 +278,10 @@ $f(x) \rightarrow F(x)$ avec $f$ une fonction et $k,c\in\mathbb{R}$.
 \subsubsection{Opérations sur les primitives}
 $f(x) \rightarrow F(x)$ avec $u$ et $v$ des fonction, $U$ et $V$ leurs primitives respectives et $k\in\mathbb{R}$.
 \begin{enumerate}
+	\item[] $$\forall k \in \mathbb{R} : (ku)' = ku'$$
 	\item[] $$u+v \rightarrow U + V$$
-	\item[] $$ku \rightarrow kU$$
 	\item[] $$Vu + Uv \rightarrow UV$$
+    \item[] $$\frac{Uv-Vu}{v^2} \rightarrow \frac{u}{v}$$
 	\item[] $$V \times U\circ v \rightarrow u\circ v$$
 \end{enumerate}
 
@@ -335,7 +339,7 @@ Note: $\lim \limits_{n \rightarrow a^+}$ signifie la limite en $a$ par le coté 
 \subsection{Opérations}
 Lors du calcul d'une limite, les formes indéterminées sont:
 \\$$\infty - \infty \qquad 0 \times \infty \qquad \frac{0}{0} \qquad \frac{\infty}{\infty}$$
-Si on en rencontre une, l'usage est de manipuler l'expression de sorte à ne plus avoir ce problème, ou bien d'appliquer la règle de L'Hôpital selon laquelle $$\lim \limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \lim \limits_{x \rightarrow a} \frac{f'(x)}{g'(x)}$$ ssi $a$ est un réel ou $+\infty$ ou $-\infty$, $\lim \limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \frac{0}{0}$ ou $\frac{\pm\infty}{\pm\infty}$, et $f'(x)$ et $g'(x)$ existent.
+Si on en rencontre une, l'usage est de manipuler l'expression de sorte à ne plus avoir ce problème, ou bien d'appliquer la règle de L'Hôpital selon laquelle $$\lim \limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \lim \limits_{x \rightarrow a} \frac{f'(x)}{g'(x)}$$ ssi $a$ est un réel ou $+\infty$ ou $-\infty$, $\lim \limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \frac{0}{0}$ ou $\frac{\pm\infty}{\pm\infty}$, $f'(x)$ et $g'(x)$ existent, et $g'(x) \ne 0$.
 
 \subsection{Comparaison et encadrement}
 On suppose deux suites $u_n$ et $v_n$ telles que après un certain rang, $u_n>v_n$.
@@ -353,7 +357,7 @@ Soit $f$ une fonction et $a$ et $l$ des réels.
 
 \subsection{Croissance comparée}
 Soit $x\in\mathbb{R}$ et $n\in\mathbb{N}$
-On a $\exp^x$ qui crois plus vite que $x^n$.\\
+On a $\exp(x)$ qui crois et décroit plus vite que $x^n$.\\
 Ainsi, $\lim \limits_{n \rightarrow \infty} \frac{\exp{x}}{x^n} = \infty$ et $\lim \limits_{n \rightarrow -\infty} \exp{x}\times x^n = 0$.
 
 
@@ -394,7 +398,7 @@ On notera que $\Vec{AB}$ et $\Vec{AC}$ sont orthogonaux si leur produit scalaire
 
 
 \section{Plan}
-\href{https://youtu.be/k7RM-ot2NWY}{\underline{\textit{Vidéo (anglais}}}\\
+\href{https://youtu.be/k7RM-ot2NWY}{\underline{\textit{Vidéo (anglais)}}}\\
 \break
 Un plan est défini dans l'espace par deux vecteurs non colinéaires et un point.\\
 Dès lors pour un plan $\mathcal{P}$ défini par le point $A$ et les vecteurs $\Vec{u}$ et $\Vec{v}$, $M \in \mathcal{P}$ ssi $\Vec{AM} = a\Vec{u}+b\Vec{v}$ avec $a,b\in\mathbb{R}$
@@ -456,8 +460,8 @@ $\mathbf{B}$ est l'image de $\mathbf{A}$ par rotation de centre $\mathbf{0}$ et 
 
 \section{Vocabulaire}
 Soit deux évènements $\mathcal{A}$ et $\mathcal{B}$ :\\
-On note $\mathcal{A} \cup \mathcal{B}$ l'union des deux évènements, soit celui ou au moins l'un des deux se produit.\\
-On note $\mathcal{A} \cap \mathcal{B}$ l'intersection des deux évènements, soit celui ou les deux se produisent.\\
+On note $\mathcal{A} \cup \mathcal{B}$ l'union des deux évènements, soit celui où au moins l'un des deux se produit.\\
+On note $\mathcal{A} \cap \mathcal{B}$ l'intersection des deux évènements, soit celui où les deux se produisent.\\
 On note $\mathcal{_AB}$ l'évènement ou $\mathcal{B}$ se produit, sachant que $\mathcal{A}$ s'est déjà produit (utilise typiquement dans les arbres pondérés).\\
 
 
@@ -467,7 +471,7 @@ $$\mathcal{P_A} \cap \mathcal{P_B} = \mathcal{P_A} +\mathcal{P_B} - \mathcal{P_A
 $$\mathcal{P_AB} = \frac{\mathcal{PA} \cap \mathcal{PB}}{\mathcal{PA}}$$
 $$\mathcal{P_BA} = \frac{\mathcal{P_AB} \times \mathcal{PA}}{\mathcal{PB}}$$
 \break
-\href{https://youtube.com/playlist?list=PLj2YHanZadz49HJPJqMucrW_KgTVXcmmP}{\underline{\textit{Vidéo sur le théorème de Bayes, soit la dernière formule ci dessus (anglais)}}}
+\href{https://youtube.com/playlist?list=PLj2YHanZadz49HJPJqMucrW_KgTVXcmmP}{\underline{\textit{Vidéos sur le théorème de Bayes, soit la dernière formule ci dessus (anglais)}}}
 \subsubsection{Loi des probabilités totales}
 La probabilité d'un événement est égale à la somme des probabilités des chemins conduisant à cet événement.
 
@@ -482,10 +486,11 @@ Des lors, $\mathcal{P_BA} = \mathcal{PA}$ et $\mathcal{P_AB} = \mathcal{PB}$.
 On note $\mathbf{Card(E)}$ le nombre d'éléments dans l'ensemble $\mathbf{E}$.
 
 \subsection{Multiplication ou addition}
-Si e deux évènements sont liés, on appliquera une multiplication, si ils sont successifs, une addition.
+Si deux évènements sont liés, on appliquera une multiplication, si ils sont successifs, une addition.
 
 \subsection{Possibilités ordonnées}
-On fait le produit cartésien des ensembles des possibles pour obtenir les possibilités ordonnées, soit l'ensemble des tuple (k-uplet, n-uplet, p-uplet...)  de chaque objet avec chaque autre.
+On fait le produit cartésien des ensembles des possibles pour obtenir les possibilités ordonnées, soit l'ensemble des n-uplets  de chaque objet avec chaque autre.
+\underline{Exemple:} soit deux ensembles $A = \{1;2\}$ et $B=\{a;b\}$.  Alors $A\times B = \{(1;a);(1;b);(2;a);(2;b)\}$.
 
 \subsection{Arrangements}
 $$\frac{n!}{(n-k)!}$$ est le nombre d'arrangements possibles de $k$ éléments parmi $n$
@@ -511,7 +516,7 @@ On associe alors à la variable aléatoire $X$ les valeurs $x_1, x_2, ..., x_n$ 
 \subsection{Paramètres}
 Une variable aléatoire a dès lors des paramètres, définis comme suis:
 \begin{enumerate}
-	\item L'espérance,$E(X)$, qui représente la moyenne pondérée des valeurs possibles de cette variable, et qui est définie par: $$\sum^n_{i=1}p_ix_i$$
+	\item L'espérance, $E(X)$, qui représente la moyenne pondérée des valeurs possibles de cette variable, et qui est définie par: $$\sum^n_{i=1}p_ix_i$$
 	\item Sa variance, une étape de calcul de son écart-type, $V(X)$: $$\sum^n_{i=1}p_i(x_i-E(X))^2$$
 	\item Son écart-type, soit la distance moyenne d'un tirage à l'espérance, $\sigma(X)$: $$\sqrt{V(X)}$$
 \end{enumerate}
@@ -709,10 +714,10 @@ On note $\bar{z}$ le nombre tel que si $z=a+bi$, $\bar{z}=a-bi$ ($a,b\in\mathbb{
 On part d'une hypothèse et par un raisonnement logique, on arrive à une conclusion.
 
 \subsection{Par contre exemple}
-On trouve un cas qui contredit la proposition.
+On trouve un cas qui contredit la proposition selon laquelle la proposition que l'on essaye de prouver est fausse.
 
 \subsection{Par l'absurde}
-On suppose P et arrive à une contradiction.
+On suppose que la proposition est fausse et arrive à une contradiction.
 
 \subsection{Par contraposée}
 On prouve la contraposée pour prouvée la proposition
@@ -732,7 +737,7 @@ Soit la suite $u$ telle que \[
 \right.
 \]
 Montrons par récurrence que $\forall n\in\mathbb{N}, u_n>0$\\
-Pour tout entier $n\in\mathbb{N}$, notons $\mathbf{P(n)}: u_n>0$\\
+Pour tout entier $n\in\mathbb{N}$, notons $\mathbf{P(n)}: \text{"}u_n>0\text{"}$\\
 \break
 \underline{Initialisation pour n=0}\\
 $u_n=u_0=2$ or $2>0$ donc $u_0>0$.\\
