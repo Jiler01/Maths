@@ -5,6 +5,7 @@
 \usepackage[french]{babel}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{parskip">parskip}
 
 \newlist{impl}{itemize}{1}
 \setlist[impl]{label=$\Leftrightarrow$}
@@ -22,18 +23,22 @@ Remerciements spéciaux à Mme Leclerc, Mme Escot, feu M Colin, M Tierno et Mme 
 \underline{Notation:}\\
 Pour des raisons de simplicité, ce livret utilise des notations correctes mais avec lesquelles vous pourriez ne pas être familier-re. En voici donc quelques unes expliquées:
 \begin{itemize}
-    \item $\exp(x) = \sum_{k=0}^{\infty} \frac{x^k}{k!}$ (\href{https://youtu.be/3d6DsjIBzJ4}{\underline{\textit{explication (anglais)}}}
-    \item $x^k$ ($x\in\mathbb{R^{+*}}$) équivaut à $\exp(k\ln(x))$
-    \item $x^\frac{1}{n}$ équivaut à $\sqrt[k]{x}$
-    \item On note $f(g(x) = (f\circ g)(x)$ avec $f$ et $g$ des fonctions.
-    \item Soit $f$ une fonction, on note $f'$ sa dérivée, $f''$ sa dérivée seconde, $f^{(n)}$ sa dérivée n-ième, et $F$ sa primitive.
+	\item $\exp(x) = \sum_{k=0}^{\infty} \frac{x^k}{k!}$ (\href{https://youtu.be/3d6DsjIBzJ4}{\underline{\textit{explication (anglais)}}}
+	\item $x^k$ ($x\in\mathbb{R^{+*}}$) équivaut à $\exp(k\ln(x))$
+	\item $x^\frac{1}{n}$ équivaut à $\sqrt[k]{x}$
+	\item On note $f(g(x) = (f\circ g)(x)$ avec $f$ et $g$ des fonctions.
+	\item Soit $f$ une fonction, on note $f'$ sa dérivée, $f''$ sa dérivée seconde, $f^{(n)}$ sa dérivée n-ième, et $F$ sa primitive.
+	\item Soit $\mathbb{I}$ un intervalle, $\mathbb{I^+}$ est l'ensemble des éléments positifs de $\mathbb{I}$, et de même pour $\mathbb{I^-}$. De plus, l'ensemble $\mathbb{I^*}$ équivaut à l'ensemble $\mathbb{I}$ privé de son élément nul.
+	\item $\forall$ signifie "pour tout"
+	\item $\in$ signifie "dans"
+	\item $\exists$ signifie "il existe", $\exists!$ siginifie "il existe un unique"
 \end{itemize}
 
 \tableofcontents
 
 \pagebreak
 
-\part{Algèbre}
+\pagebreak\part{Algèbre}
 \setcounter{section}{0}
 \renewcommand*{\theHsection}{chX.\the\value{section}}
 \section{Fonctions}
@@ -43,8 +48,8 @@ Pour des raisons de simplicité, ce livret utilise des notations correctes mais 
 
 \subsubsection{Croissance \& décroissance}
 \underline{Pour tout $a<b$ tels que $a,b\in\mathbb{I}$:}\\
-Si $f(a) \le f(b)$: la fonction est \emph{croissante} sur $\mathbb{I}$\\
 Si $f(a) < f(b)$: la fonction est \emph{strictement croissante} sur $\mathbb{I}$\\
+Si $f(a) \le f(b)$: la fonction est \emph{croissante} sur $\mathbb{I}$\\
 Si $f(a) \ge f(b)$: la fonction est \emph{décroissante} sur $\mathbb{I}$\\
 Si $f(a) > f(b)$: la fonction est \emph{strictement décroissante} sur $\mathbb{I}$\\
 
@@ -59,7 +64,7 @@ Une fonction est une fonction de style $f(x) = ax+b$ avec $a$ la dérivée de la
 
 
 \subsection{Fonctions carrées}
-La fonction carrée est définie par $f(x) = x^2$. Elle est paire sur $\mathbb{R}$, décroissante sur $\mathbf{R^-}$ et croissante sur sur $\mathbf{R^+}$.
+La fonction carrée est définie par $f(x) = x^2$. Elle est paire sur $\mathbb{R}$, décroissante sur $\mathbb{R^-}$ et croissante sur sur $\mathbb{R^+}$.
 
 
 \subsection{Fonction cube}
@@ -67,15 +72,15 @@ La fonction cube est définie par $f(x) = x^3$. Elle est impaire et croissante s
 
 
 \subsection{Fonction inverse}
-La fonction inverse est définie par $f(x) = \frac{1}{x}$. Elle est impaire et décroissante sur $\mathbf{R^*}$.
+La fonction inverse est définie par $f(x) = \frac{1}{x}$. Elle est impaire et décroissante sur $\mathbb{R^*}$.
 
 
 \subsection{Fonction racine carrée}
-La fonction carrée est définie sur $\mathbf{R^+}$ par $f(x) = \sqrt{x}$. Elle est croissante.
+La fonction carrée est définie sur $\mathbb{R^+}$ par $f(x) = \sqrt{x}$. Elle est croissante.
 
 
 \subsection{La fonction valeur absolue}
-La fonction valeur absolue est définie par $f(x) = |x| $. Elle est paire sur sur $\mathbb{R}$, décroissante sur $\mathbf{R^-}$ et croissante sur sur $\mathbf{R^+}$.\\
+La fonction valeur absolue est définie par $f(x) = |x| $. Elle est paire sur sur $\mathbb{R}$, décroissante sur $\mathbb{R^-}$ et croissante sur sur $\mathbb{R^+}$.\\
 Son comportement suit la règle suivante : $|x| = |-x| = x$.
 
 
@@ -93,10 +98,10 @@ Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos{x};\
 
 \subsubsection{Fonctions cosinus et sinus}
 \paragraph{Cosinus}
-$\cos x$ est une fonction paire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\cos{x + 2k\pi} = \cos x$, $\forall k \in \mathbb{N}$.\\
+$\cos$ est une fonction paire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\cos(x + 2k\pi) = \cos(x)$, $\forall k \in \mathbb{N}$.\\
 \break
 \paragraph{Sinus}
-$\sin x$ est une fonction impaire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\sin{x + 2k\pi} = \sin x$, $\forall k \in \mathbb{N}$.
+$\sin$ est une fonction impaire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\sin(x + 2k\pi) = \sin(x)$, $\forall k \in \mathbb{N}$.
 
 
 \subsection{Fonctions polynômes du second degré}
@@ -168,53 +173,58 @@ Pour prouver la croissance ou la décroissance d'une suite, on applique \\$u_{n-
 \section{Polynômes}
 Le terme polynôme $P$ de degré $n$ à coefficients réels est une expressions qui s'écrit sous la forme $$P(z) = \sum^n_{i=0}c_iz^i \mid \forall i \in \mathbb{N}, c_i\in \mathbb{R} \text{ et } c_n \neq 0 $$.
 On nomme $a$ une racine de $P$ ssi $P(a) = 0$
-\subsection{Propriétés}
-\subsubsection{Factorisation de $z^n-a^n$ par $z-a$}
-Soit $n\in\mathbb{N^*}$, $\forall z,a\in\mathbb{C}$, il existe $Q$ un polynôme de degré au plus $n-1$ tel que $z^n-a^n = (z-a)Q(z)$. \\
-Remarque: $z^n-a^n = (z-a)\sum_{i=1}^{n}z^{n-i}a^{i-1}$\\
-\break
-\underline{Démonstration:}
-\begin{enumerate}
-	\item Initialisation: $z^1-a^1 = (z-a) \times Q(z)$ avec $Q(z) = 1$. $deg(Q) = 0$.
-	\item Hérédité: $z^{n+1}-a^{n+1} = z^{n+1} + za^n - za^n - a^{n+1} = z(z^n-a^n) + a^n(z-a) = z(z-a)Q(z) + a^n(z-a)$ avec $Q$ un polynôme de degré au plus $n-1$ $= (z-a)(zQ(z) + a^n) = (z-a)R(z)$ avec $R$ le polynôme de degré au plus $n$ tel que $R(z) = zQ(z) + a^n$.
-\end{enumerate}
-\subsubsection{Factorisation d'un polynôme par $z-a$ avec $a\in\mathbb{C}$ une racine}
-Soit $P$ un polynôme de degré $n$ et $a$ une racine de $P$.\\
-Alors $\forall z\in\mathbb{C}$, $P(z)=(z-a)Q(z)$ avec $Q$ un polynôme de degré au plus $n-1$.\\
-\break
-\underline{Démonstration:}
-\begin{impl}
-	\item P(z) = $\sum^n_{i=0}c_iz^i$ et $P(a) = 0$
-	\item $P(z) = P(z) - P(a) = \sum^n_{i=0}c_iz^i - \sum^n_{i=0}c_ia^i = \sum^n_{i=0}c_i(z^i-a^i)$
-	\item $P(z) = = \sum^n_{i=0}c_i(z-a)Q_i(z)$ avec $deg(Q_k) \le k-1 \forall k \in \mathbb{N}$, selon la propriété précédente.
-	\item $P(z) = (z-a)\sum^n_{i=0}c_iQ_i(z) = (z-a)Q(z) \text{ avec } Q(z) = \sum^n_{i=0}c_iQ_i(z)$.
-\end{impl}
-De plus, $Q$ est de degré au plus n-1 car somme de polynômes de degrés au plus $n-1$.
-\subsubsection{Nombre racines}
+\subsection{Nombre racines}
 Le nombre de racine d'un polynôme est inférieur ou égal à son degré.\\
-\break
-\underline{Démonstration:}
-On prendra $P$ un polynôme
-\begin{enumerate}
-	\item Initialisation $deg(P) = 1$: $deg(P) = 1 \Leftrightarrow P(z) = c_1z + c_0$ avec $c_i\in\mathbb{C}\forall i\in\mathbb{N}$ donc $P(z) = 0 \Leftrightarrow c_1z + c_0 = 0 \Leftrightarrow z = -\frac{c_0}{c_1}$. Le nombre de racines ($1$) est plus petit ou égal à $deg(P)$.
-	\item Hérédité $deg(P) \ge 1$: Si $P$ n'admet aucune racine alors le nombre de racine de $P$ est plus petit ou égal à $deg(P)$. Sinon, soit $a$ une racine, $P(z) = (z-a)Q(z)$ avec $Q$ un polynôme de degré au plus $deg(P)-1$. Alors, $Q$ admet au plus $deg(P) - 1$ racines et $P$, qui en admet une de plus, en admet au plus $deg(P)$.
-\end{enumerate}
 
-\part{Analyse}
+\pagebreak\part{Analyse}
 \setcounter{section}{0}
 \renewcommand*{\theHsection}{chX.\the\value{section}}
+\section{Limites}
+\href{https://youtu.be/kfF40MiS7zA}{\underline{\textit{Vidéo (anglais}}}\\
+\break
+Les règles suivantes peuvent s'appliquer aux fonctions comme aux suites, qui ne sont rien d'autre que des fonctions ne prenant pour paramètre que des entiers naturels.
+
+\break
+\begin{enumerate}
+	\item $v_n$ admet une limite $+\infty$ si $\forall A \in \mathbb{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n > A$
+	\item $v_n$ admet une limite $-\infty$ si $\forall A \in \mathbb{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n < A$
+	\item $v_n$ admet une limite $l$ si $\forall E \in \mathbb{R^{+*}}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$ $l-E<u_n<l+E$
+\end{enumerate}
+Note: $\lim \limits_{n \rightarrow a^+}$ signifie la limite en $a$ par le coté positif, et inversement pour $\lim \limits_{n \rightarrow a^-}$
+
+\subsection{Opérations}
+Lors du calcul d'une limite, les formes indéterminées sont:
+\\$$\infty - \infty \qquad 0 \times \infty \qquad \frac{0}{0} \qquad \frac{\infty}{\infty}$$
+Si on en rencontre une, l'usage est de manipuler l'expression de sorte à ne plus avoir ce problème, ou bien d'appliquer la règle de L'Hôpital selon laquelle $$\lim \limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \lim \limits_{x \rightarrow a} \frac{f'(x)}{g'(x)}$$ ssi $a$ est un réel ou $+\infty$ ou $-\infty$, $\lim \limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \frac{0}{0}$ ou $\frac{\pm\infty}{\pm\infty}$, $f'(x)$ et $g'(x)$ existent, et $g'(x) \ne 0$.
+
+\subsection{Comparaison et encadrement}
+On suppose deux suites $u_n$ et $v_n$ telles que après un certain rang, $u_n>v_n$.
+$$\lim \limits_{n \rightarrow \infty} v_n = + \infty \implies \lim \limits_{n \rightarrow \infty} u_n = + \infty$$
+$$\lim \limits_{n \rightarrow \infty} u_n = - \infty \implies \lim \limits_{n \rightarrow \infty} v_n = - \infty$$
+On suppose $u_n$, $v_n$ et $w_n$, telles que après un certain rang, $u_n \le v_n \le w_n$
+$$\lim \limits_{n \rightarrow \infty} u_n = \lim \limits_{n \rightarrow \infty} w_n = l \implies \lim \limits_{n \rightarrow \infty} v_n = l$$
+
+\subsection{Notion d'asymptote}
+Soit $f$ une fonction et $a$ et $l$ des réels.
+\begin{itemize}
+	\item $\lim \limits_{n \rightarrow \pm \infty} f = l \implies x=l$ est une asymptote horizontale à la courbe $f$
+	\item $\lim \limits_{n \rightarrow a} f = \pm \infty \implies y=a$ est une asymptote verticale à la courbe $f$
+\end{itemize}
+
+\subsection{Croissance comparée}
+Soit $x\in\mathbb{R}$ et $n\in\mathbb{N}$
+On a $\exp(x)$ qui crois et décroit plus vite que $x^n$.\\
+Ainsi, $\lim \limits_{n \rightarrow \infty} \frac{\exp{x}}{x^n} = \infty$ et $\lim \limits_{n \rightarrow -\infty} \exp{x}\times x^n = 0$.
+
 
 \section{Dérivation}
 \subsection{Dérivation locale}
 
 \subsubsection{Taux de variation}
-\begin{enumerate}
-	\item Entre $a$ et $b$ : $\frac{f(b) - f(a)}{b - a}$.
-	\item Sur $a$: $\frac{f(a + h) - f(a)}{h}$.
-\end{enumerate}
+Le taux de variation entre $a$ et $b$, soit la croissance moyenne entre $a$ et $b$, peut être mesuré tel que : $\frac{f(b) - f(a)}{b - a}$.\\
 
 \subsubsection{Nombre dérivé (dérivée)}
-\textit{La dérivée de $f(x)$, soit la variation de $f$ en $x$, s'écrit $f'(x)$.}
+La dérivée de $f(x)$, soit la variation de $f$ en $x$, s'écrit $f'(x)$. Il s'agit du taux de variation instantané, alors que le deuxième point se confond avec le premier. Sa formule est donc:
 $$f'(x) = \lim \limits_{h \Rightarrow 0} \frac{f(a + h) - f(a)}{h}$$
 
 \subsubsection{Tangente à une courbe}
@@ -246,7 +256,7 @@ $f(x) \rightarrow f'(x)$ avec $f$ une fonction et $k\in\mathbb{R}$
 	\item[] $$\forall k \in \mathbb{R} : (ku)' = ku'$$
 	\item[] $$(u+v)' = u' +v'$$
 	\item[] $$(uv)' = vu' + uv'$$
-    \item[] $$(\frac{u}{v})' = \frac{u'v-v'u}{v^2} $$
+	\item[] $$(\frac{u}{v})' = \frac{u'v-v'u}{v^2} $$
 	\item[] $$u\circ v \rightarrow v'  \times u'\circ v$$
 \end{enumerate}
 
@@ -282,7 +292,7 @@ $f(x) \rightarrow F(x)$ avec $u$ et $v$ des fonction, $U$ et $V$ leurs primitive
 	\item[] $$\forall k \in \mathbb{R} : (ku)' = ku'$$
 	\item[] $$u+v \rightarrow U + V$$
 	\item[] $$Vu + Uv \rightarrow UV$$
-    \item[] $$\frac{Uv-Vu}{v^2} \rightarrow \frac{u}{v}$$
+	\item[] $$\frac{Uv-Vu}{v^2} \rightarrow \frac{u}{v}$$
 	\item[] $$V \times U\circ v \rightarrow u\circ v$$
 \end{enumerate}
 
@@ -324,45 +334,8 @@ La matrice d'adjacence $\mathbf{M}$ associée à un graphe d'ordre $n$ dont les 
 
 
 
-\section{Limites}
-\href{https://youtu.be/kfF40MiS7zA}{\underline{\textit{Vidéo (anglais}}}\\
-\break
-Les règles suivantes peuvent s'appliquer aux fonctions comme aux suites, qui ne sont rien d'autre que des fonctions ne prenant pour paramètre que des entiers naturels.
 
-\break
-\begin{enumerate}
-	\item $v_n$ admet une limite $+\infty$ si $\forall A \in \mathbb{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n > A$
-	\item $v_n$ admet une limite $-\infty$ si $\forall A \in \mathbb{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n < A$
-	\item $v_n$ admet une limite $l$ si $\forall E \in \mathbf{N^*}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$ $l-E<u_n<l+E$
-\end{enumerate}
-Note: $\lim \limits_{n \rightarrow a^+}$ signifie la limite en $a$ par le coté positif, et inversement pour $\lim \limits_{n \rightarrow a^-}$
-
-\subsection{Opérations}
-Lors du calcul d'une limite, les formes indéterminées sont:
-\\$$\infty - \infty \qquad 0 \times \infty \qquad \frac{0}{0} \qquad \frac{\infty}{\infty}$$
-Si on en rencontre une, l'usage est de manipuler l'expression de sorte à ne plus avoir ce problème, ou bien d'appliquer la règle de L'Hôpital selon laquelle $$\lim \limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \lim \limits_{x \rightarrow a} \frac{f'(x)}{g'(x)}$$ ssi $a$ est un réel ou $+\infty$ ou $-\infty$, $\lim \limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \frac{0}{0}$ ou $\frac{\pm\infty}{\pm\infty}$, $f'(x)$ et $g'(x)$ existent, et $g'(x) \ne 0$.
-
-\subsection{Comparaison et encadrement}
-On suppose deux suites $u_n$ et $v_n$ telles que après un certain rang, $u_n>v_n$.
-$$\lim \limits_{n \rightarrow \infty} v_n = + \infty \implies \lim \limits_{n \rightarrow \infty} u_n = + \infty$$
-$$\lim \limits_{n \rightarrow \infty} u_n = - \infty \implies \lim \limits_{n \rightarrow \infty} v_n = - \infty$$
-On suppose $u_n$, $v_n$ et $w_n$, telles que après un certain rang, $u_n \le v_n \le w_n$
-$$\lim \limits_{n \rightarrow \infty} u_n = \lim \limits_{n \rightarrow \infty} w_n = l \implies \lim \limits_{n \rightarrow \infty} v_n = l$$
-
-\subsection{Notion d'asymptote}
-Soit $f$ une fonction et $a$ et $l$ des réels.
-\begin{itemize}
-	\item $\lim \limits_{n \rightarrow \pm \infty} f = l \implies x=l$ est une asymptote horizontale à la courbe $f$
-	\item $\lim \limits_{n \rightarrow a} f = \pm \infty \implies y=a$ est une asymptote verticale à la courbe $f$
-\end{itemize}
-
-\subsection{Croissance comparée}
-Soit $x\in\mathbb{R}$ et $n\in\mathbb{N}$
-On a $\exp(x)$ qui crois et décroit plus vite que $x^n$.\\
-Ainsi, $\lim \limits_{n \rightarrow \infty} \frac{\exp{x}}{x^n} = \infty$ et $\lim \limits_{n \rightarrow -\infty} \exp{x}\times x^n = 0$.
-
-
-\part{Géométrie}
+\pagebreak\part{Géométrie}
 \setcounter{section}{0}
 \renewcommand*{\theHsection}{chX.\the\value{section}}
 
@@ -370,18 +343,28 @@ Ainsi, $\lim \limits_{n \rightarrow \infty} \frac{\exp{x}}{x^n} = \infty$ et $\l
 \section{Vecteurs}
 \href{https://youtu.be/fNk_zzaMoSs}{\underline{\textit{Vidéo (anglais)}}}\\
 \break
-Propriétés:
-\begin{enumerate}
-	\item On note la norme $AB$ du vecteur $\Vec{AB}$ : $||\Vec{AB}||$.
-	\item Le vecteur opposé a $\Vec{AB}$ est $-\Vec{AB} = \Vec{BA}$.
-	\item $\Vec{AB}+\Vec{BC}=\Vec{AC}$
-	\item Si $\Vec{v} = k\Vec{u}$ avec $k$ un réel, alors $\Vec{v}$ et $\Vec{u}$ sont colinéaires.
-	\item  Si il existe des réels $\alpha,\beta\in\mathbb{R}$ $\Vec{w}=\alpha\Vec{u}+\beta\Vec{v}$ alors $\Vec{u},\Vec{v},\Vec{w}$ sont coplanaires
-	\item De même, il sont coplanaires ssi il existe $a,b,c\in\mathbf{R^*}$ tels que $a\Vec{u}+b\Vec{v}+c\Vec{w}=0$. Par contraposée, si ces trois coefficients sont nuls alors les vecteurs ne sont pas coplanaires.
-	\item $\Vec{AB} = (x_b - x_a ; y_b - y_a ; ...)$
-	\item $I$ est milieu de $AB$ ssi $I=(\frac{x_a+x_b}{2};\frac{y_a+y_b}{2};...)$
-	\item Dans un repère orthonormé, $||\Vec{AB}|| = \sqrt{(x_B-x_A)^2+ (y_B-y_A)^2+...}$.
-\end{enumerate}
+
+Le vecteur $\Vec{AB}$ se note $(x_b - x_a ; y_b - y_a ; ...)$.\\
+$I$ est milieu de $AB$ ssi $I=(\frac{x_a+x_b}{2};\frac{y_a+y_b}{2};...)$
+
+
+
+\subsubsection{Norme d'un vecteur}
+On note la norme $AB$ du vecteur $\Vec{AB}$ : $||\Vec{AB}||$.\\
+Dans un repère orthonormé (euclidien), $||\Vec{AB}||$ peut se calculer avec la formule de la distance euclidienne, comme suit: $\sqrt{(x_B-x_A)^2+ (y_B-y_A)^2+...}$.
+
+\subsubsection{Vecteur opposé}
+Le vecteur opposé a $\Vec{AB}$ est $-\Vec{AB} = \Vec{BA}$.
+
+\subsubsection{Relation de Chasles}
+Les vecteurs ne prennent pas compte des détours. Ainsi, $\Vec{AB}+\Vec{BC}=\Vec{AC}$.
+
+\subsubsection{Colinéarité}
+Si $\Vec{v} = k\Vec{u}$ avec $k$ un réel, alors $\Vec{v}$ et $\Vec{u}$ sont colinéaires.
+
+\subsection{Coplanairité}
+Si il existe des réels $\alpha,\beta\in\mathbb{R}$ $\Vec{w}=\alpha\Vec{u}+\beta\Vec{v}$ alors $\Vec{u},\Vec{v},\Vec{w}$ sont coplanaires.\\
+De même, il sont coplanaires ssi il existe $a,b,c\in\mathbf{R^*}$ tels que $a\Vec{u}+b\Vec{v}+c\Vec{w}=0$. Par contraposée, si ces trois coefficients sont nuls alors les vecteurs ne sont pas coplanaires.
 
 \subsection{Produit scalaire}
 \href{https://youtu.be/LyGKycYT2v0}{\underline{\textit{Compréhension la dualité entre le produit scalaire et les produits de matrices (anglais)}}}\\
@@ -403,11 +386,17 @@ On notera que $\Vec{AB}$ et $\Vec{AC}$ sont orthogonaux si leur produit scalaire
 \break
 Un plan est défini dans l'espace par deux vecteurs non colinéaires et un point.\\
 Dès lors pour un plan $\mathcal{P}$ défini par le point $A$ et les vecteurs $\Vec{u}$ et $\Vec{v}$, $M \in \mathcal{P}$ ssi $\Vec{AM} = a\Vec{u}+b\Vec{v}$ avec $a,b\in\mathbb{R}$
-\subsubsection{Vecteur normal}
+\subsection{Vecteur normal}
 Est appelé vecteur normal d'un plan le vecteur orthogonal à tout les vecteurs du plan, soit à ses deux vecteurs directeurs. Dès lors, toute droite ayant ce vecteur comme vecteur directeur est orthogonale au plan.
 
-\subsubsection{Équation cartésienne}
+\subsection{Équation cartésienne}
 L'équation cartésienne d'un plan est l'équation $ax+by+cz+d = 0$ telles que tout les points $(x;y;z)$ du plan vérifient cette équation. On notera que le vecteur $\Vec{\begin{pmatrix}a\\b\\c\end{pmatrix}})$ est le vecteur normal du plan.
+
+\section{Distance d'un point à}
+\paragraph{Un point}
+Pour trouver la distance $AB$, il suffit de trouver la norme du vecteur $\Vec{AB}$.
+\paragraph{Un plan}
+La distance d'un point à un plan est la distance de ce point au projeté orthogonal de ce point sur ce plan. Ces deux points forment un vecteur dont on peut chercher la normes, et qui a la particularité d'être normal du plan, donc colinéaire à tout vecteur normal de ce plan.
 
 
 \section{Base de l'espace}
@@ -454,7 +443,7 @@ $\mathbf{B}$ est l'image de $\mathbf{A}$ par rotation de centre $\mathbf{0}$ et 
 
 
 
-\part{Statistiques et Probabilités}
+\pagebreak\pagebreak\part{Statistiques et Probabilités}
 \setcounter{section}{0}
 \renewcommand*{\theHsection}{chX.\the\value{section}}
 
@@ -473,7 +462,7 @@ $$\mathcal{P_AB} = \frac{\mathcal{PA} \cap \mathcal{PB}}{\mathcal{PA}}$$
 $$\mathcal{P_BA} = \frac{\mathcal{P_AB} \times \mathcal{PA}}{\mathcal{PB}}$$
 \break
 \href{https://youtube.com/playlist?list=PLj2YHanZadz49HJPJqMucrW_KgTVXcmmP}{\underline{\textit{Vidéos sur le théorème de Bayes, soit la dernière formule ci dessus (anglais)}}}
-\subsubsection{Loi des probabilités totales}
+\subsection{Loi des probabilités totales}
 La probabilité d'un événement est égale à la somme des probabilités des chemins conduisant à cet événement.
 
 
@@ -539,7 +528,7 @@ On peut calculer la probabilité de $k$ succès telle que $$\mathcal{P}(X=k)= \b
 Soit $X$ une variable aléatoire et $a,b,\alpha \in \mathbb{R}$ \\
 Une intervalle $[a;b]$, telle que $\mathcal{P}(a\le X \le b) > 1-\alpha$, est une intervalle de fluctuation au seuil de $1-\alpha$ (au risque de $\alpha$). Elle vaut typiquement $\sum_a^b p_i$.
 
-\part{Arithmétique}
+\pagebreak\pagebreak\part{Arithmétique}
 \setcounter{section}{0}
 \renewcommand*{\theHsection}{chX.\the\value{section}}
 
@@ -695,7 +684,7 @@ On note $\bar{z}$ le nombre tel que si $z=a+bi$, $\bar{z}=a-bi$ ($a,b\in\mathbb{
 \end{enumerate}
 
 
-\part{Boite à outils}
+\pagebreak\part{Boite à outils}
 \setcounter{section}{0}
 \renewcommand*{\theHsection}{chX.\the\value{section}}
 
