@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{physics}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage[T1]{fontenc}
@@ -23,7 +24,7 @@ Remerciements spéciaux à Mme Leclerc, Mme Escot, feu M Colin, M Tierno et Mme 
 \underline{Notation:}\\
 Pour des raisons de simplicité, ce livret utilise des notations correctes mais avec lesquelles vous pourriez ne pas être familier-re. En voici donc quelques unes expliquées:
 \begin{itemize}
-	\item $\exp(x) = \sum_{k=0}^{\infty} \frac{x^k}{k!}$ (\href{https://youtu.be/3d6DsjIBzJ4}{\underline{\textit{explication (anglais)}}}
+	\item $\exp(x) = \sum_{k=0}^{\infty} \frac{x^k}{k!}$ (\href{https://youtu.be/3d6DsjIBzJ4}{\underline{\textit{explication (anglais)})}}
 	\item $x^k$ ($x\in\mathbb{R^{+*}}$) équivaut à $\exp(k\ln(x))$
 	\item $x^\frac{1}{n}$ équivaut à $\sqrt[k]{x}$
 	\item On note $f(g(x) = (f\circ g)(x)$ avec $f$ et $g$ des fonctions.
@@ -80,8 +81,8 @@ La fonction carrée est définie sur $\mathbb{R^+}$ par $f(x) = \sqrt{x}$. Elle 
 
 
 \subsection{La fonction valeur absolue}
-La fonction valeur absolue est définie par $f(x) = |x| $. Elle est paire sur sur $\mathbb{R}$, décroissante sur $\mathbb{R^-}$ et croissante sur sur $\mathbb{R^+}$.\\
-Son comportement suit la règle suivante : $|x| = |-x| = x$.
+La fonction valeur absolue est définie par $f(x) = \abs{x} $. Elle est paire sur sur $\mathbb{R}$, décroissante sur $\mathbb{R^-}$ et croissante sur sur $\mathbb{R^+}$.\\
+Son comportement suit la règle suivante : $\abs{x} = \abs{-x} = x$.
 
 
 \subsection{Fonctions trigonométrique }
@@ -91,15 +92,14 @@ Le cercle trigonométrique est défini par un cercle de rayon $1$, donc de rayon
 On admettra que son centre $O$ est aux coordonnées $(0;0)$.
 
 \subsubsection{Radian}
-Le radian est l'unité de mesure d'angle en trigonométrie. Noté $rad$, on retiendra que $1^\circ= \frac{\pi}{180} rad$
+Le radian est l'unité de mesure d'angle correspondant à une portion du cercle-unité (de rayon 1 ua) telle que l'arc du cercle associé à cette portion a pour longueur 1 ua. Noté $rad$, on retiendra que $1^\circ= \frac{\pi}{180} rad$ .
 
 \subsubsection{Points sur l'arc}
-Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos{x};\sin{x})$. \\De plus, l'angle $x$ est le même que l'angle $x +2k\pi$, $\forall k \in \mathbb{Z}$.
+Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos(x);\sin(x))$. \\De plus, l'angle $x$ est le même que l'angle $x +2k\pi$, $\forall k \in \mathbb{Z}$.
 
 \subsubsection{Fonctions cosinus et sinus}
 \paragraph{Cosinus}
 $\cos$ est une fonction paire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\cos(x + 2k\pi) = \cos(x)$, $\forall k \in \mathbb{N}$.\\
-\break
 \paragraph{Sinus}
 $\sin$ est une fonction impaire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\sin(x + 2k\pi) = \sin(x)$, $\forall k \in \mathbb{N}$.
 
@@ -122,7 +122,7 @@ Pour $a < 0$: croissante avant $\alpha$, avec un maximum en $\beta$, puis décro
 \subsubsection{Résolution}
 \begin{enumerate}
 	\item On calcule le discriminant tel que $\Delta = b^2 - 4ac$.
-	\item On calcule les racines telles que $x_0 = \frac{-b \pm \sqrt{\Delta}}{2a}$ si $\Delta \ge 0$, $\frac{-b \pm i\sqrt{-\Delta}}{2a}$ sinon.
+	\item On calcule les racines telles que $x_0 = \frac{-b \pm \sqrt{\Delta}}{2a}$ si $\Delta \ge 0$, $\frac{-b \pm i\sqrt{\abs{\Delta}}}{2a}$ sinon.
 \end{enumerate}
 
 \subsubsection{Signe de la fonction}
@@ -180,7 +180,7 @@ Le nombre de racine d'un polynôme est inférieur ou égal à son degré.\\
 \setcounter{section}{0}
 \renewcommand*{\theHsection}{chX.\the\value{section}}
 \section{Limites}
-\href{https://youtu.be/kfF40MiS7zA}{\underline{\textit{Vidéo (anglais}}}\\
+\href{https://youtu.be/kfF40MiS7zA}{\underline{\textit{Vidéo (anglais)}}}\\
 \break
 Les règles suivantes peuvent s'appliquer aux fonctions comme aux suites, qui ne sont rien d'autre que des fonctions ne prenant pour paramètre que des entiers naturels.
 
@@ -232,7 +232,7 @@ La tangente à la courbe de $f$ en $a$ est définie par: $$\mathcal{T}(x) = f'(a
 
 
 \subsection{Dérivation globale}
-\href{https://youtu.be/9vKqVkMQHKk}{\underline{\textit{Vidéo (anglais)}}}\\
+\href{https://youtu.be/9vKqVkMQHKk}{\underline{\textit{Vidéo (anglais))}}}\\
 \href{https://youtu.be/S0_qX4VJhMQ}{\underline{\textit{Approche géométrique}}}\\
 \href{https://youtu.be/CfW845LNObM}{\underline{\textit{Approche non-conventionnelle}}}
 \break
@@ -246,7 +246,7 @@ $f(x) \rightarrow f'(x)$ avec $f$ une fonction et $k\in\mathbb{R}$
 	\item[] $$x^n \text{ } (n\in\mathbb{R}, x\ne 0 \text{ si } n\le 1) \rightarrow nx^{n-1}$$
 	\item[] $$e^x \rightarrow e^x$$
 	\item[] \begin{center}
-	      $|x| \rightarrow -1$ si x négatif,  $+1$ si x positif
+	      $\abs{x} \rightarrow -1$ si x négatif,  $+1$ si x positif
 	\end{center}
 	\item[] \begin{center}Pour les fonctions trigonométriques, on tourne dans le sens horaire.\end{center}
 \end{enumerate}
@@ -350,8 +350,8 @@ $I$ est milieu de $AB$ ssi $I=(\frac{x_a+x_b}{2};\frac{y_a+y_b}{2};...)$
 
 
 \subsubsection{Norme d'un vecteur}
-On note la norme $AB$ du vecteur $\Vec{AB}$ : $||\Vec{AB}||$.\\
-Dans un repère orthonormé (euclidien), $||\Vec{AB}||$ peut se calculer avec la formule de la distance euclidienne, comme suit: $\sqrt{(x_B-x_A)^2+ (y_B-y_A)^2+...}$.
+On note la norme $AB$ du vecteur $\Vec{AB}$ : $\norm{\Vec{AB}}$.\\
+Dans un repère orthonormé (euclidien), $\norm{\Vec{AB}}$ peut se calculer avec la formule de la distance euclidienne, comme suit: $\sqrt{(x_B-x_A)^2+ (y_B-y_A)^2+...}$.
 
 \subsubsection{Vecteur opposé}
 Le vecteur opposé a $\Vec{AB}$ est $-\Vec{AB} = \Vec{BA}$.
