@@ -292,13 +292,13 @@ $f(x) \rightarrow F(x)$ avec $u$ et $v$ des fonction, $U$ et $V$ leurs primitive
 	\item[] $$\forall k \in \mathbb{R} : (ku)' = kU$$
 	\item[] $$u+v \rightarrow U + V$$
 	\item[] $$Vu + Uv \rightarrow UV$$
-	\item[] $$\frac{Uv-Vu}{v^2} \rightarrow \frac{u}{v}$$
+	\item[] $$\frac{Uv-Vu}{V^2} \rightarrow \frac{u}{v}$$
 	\item[] $$V \times U\circ v \rightarrow u\circ v$$
 \end{enumerate}
 
 \section{Continuité}
 \begin{enumerate}
-	\item Une fonction $f$ est dite continue au point $a$ si $\lim \limits_{x \rightarrow a} f(x) = f(a)$.
+	\item Une fonction $f$ est dite continue au point $a$ si $\lim \limits_{x \rightarrow a} f(x) = f(a)$ (et que donc ces deux éléments existent).
 	\item Une fonction est continue sur l'intervalle $\mathbb{I}$ si elle est continue en tout point de $\mathbb{I}$.
 \end{enumerate}
 \subsubsection{Propriétés}
@@ -670,17 +670,16 @@ De même, ont peut écrire un système de génération de suites sous la forme d
 
 
 \section{Nombre complexes}
-Il existe un ensemble, celui des nombres complexes ($\mathbb{C}$), qui comprend et fonctionne comme $\mathbb{R}$, à l'exception qu'il comporte un élément noté $i$ défini tel que $i^2 = -1$. Tout élément de cet ensemble s'écrie dès lors sous la forme $a+bi$ avec $a,b\in\mathbb{R}$, où $a$ est sa partie réelle ($Re(z)$) et $b$ sa partie imaginaire ($Im(z)$).\\
-Un imaginaire pur a une partie réelle nulle et un réel pur a une partie imaginaire nulle.
+Il existe un ensemble, celui des nombres complexes ($\mathbb{C}$), qui comprend et fonctionne comme $\mathbb{R}$, à l'exception qu'il comporte un élément noté $i$ défini tel que $i^2 = -1$. Tout élément de cet ensemble (notés $z$ par convention) s'écrie dès lors sous la forme $z=a+bi$ avec $a,b\in\mathbb{R}$, où $a$ est sa partie réelle ($Re(z)$) et $b$ sa partie imaginaire ($Im(z)$).\\
+Un imaginaire pûr a une partie réelle nulle et un réel pûr a une partie imaginaire nulle.
 
 \subsection{Conjugué}
-On note $\bar{z}$ le nombre tel que si $z=a+bi$, $\bar{z}=a-bi$ ($a,b\in\mathbb{R}$).\\
+On note $\bar{z}$ le nombre complexe tel que si $z=a+bi$, $\bar{z}=a-bi$ ($a,b\in\mathbb{R}$).\\
 \paragraph{Conséquences}
 \begin{enumerate}
-	\item $z+\bar{z} = 2Re(a)$
-	\item $z-\bar{z} = 2iIm(a)$
-	\item $z+\bar{z}=0 \Leftrightarrow  Re(z)=0$
-	\item $z=\bar{z} \Leftrightarrow Im(z)=0$
+	\item $z+\bar{z} = 2Re(a)$ donc $z+\bar{z}=0 \Leftrightarrow  Re(z)=0$
+	\item $z-\bar{z} = 2iIm(a)$ donc $z-\bar{z}=0 \Leftrightarrow z=\bar{z} \LeftrightarrowIm(z)=0$
+	\item $z\times\bar{z} = Re(z)^2 + Im(z)^2$ (cf 4ème identité remarquable)
 \end{enumerate}
 
 
