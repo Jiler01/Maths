@@ -32,7 +32,8 @@ Pour des raisons de simplicité, ce livret utilise des notations correctes mais 
 	\item Soit $\mathbb{I}$ un intervalle, $\mathbb{I^+}$ est l'ensemble des éléments positifs de $\mathbb{I}$, et de même pour $\mathbb{I^-}$. De plus, l'ensemble $\mathbb{I^*}$ équivaut à l'ensemble $\mathbb{I}$ privé de son élément nul.
 	\item $\forall$ signifie "pour tout"
 	\item $\in$ signifie "dans"
-	\item $\exists$ signifie "il existe", $\exists!$ siginifie "il existe un unique"
+	\item $\exists$ signifie "il existe", $\exists!$ signifie "il existe un unique"
+	\item Soit $f$ une fonction, $[f(x)]_a^b = f(b)-f(a)$
 \end{itemize}
 
 \tableofcontents
@@ -99,9 +100,9 @@ Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos(x);\
 
 \subsubsection{Fonctions cosinus et sinus}
 \paragraph{Cosinus}
-$\cos$ est une fonction paire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\cos(x + 2k\pi) = \cos(x)$, $\forall k \in \mathbb{N}$.\\
+$\cos$ est une fonction paire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\cos(x + 2k\pi) = \cos(x)$, $\forall k \in \mathbb{Z}$.\\
 \paragraph{Sinus}
-$\sin$ est une fonction impaire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\sin(x + 2k\pi) = \sin(x)$, $\forall k \in \mathbb{N}$.
+$\sin$ est une fonction impaire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\sin(x + 2k\pi) = \sin(x)$, $\forall k \in \mathbb{Z}$.
 
 
 \subsection{Fonctions polynômes du second degré}
@@ -188,7 +189,7 @@ Les règles suivantes peuvent s'appliquer aux fonctions comme aux suites, qui ne
 \begin{enumerate}
 	\item $v_n$ admet une limite $+\infty$ si $\forall A \in \mathbb{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n > A$
 	\item $v_n$ admet une limite $-\infty$ si $\forall A \in \mathbb{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n < A$
-	\item $v_n$ admet une limite $l$ si $\forall E \in \mathbb{R^{+*}}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$ $l-E<u_n<l+E$
+	\item $v_n$ admet une limite $l$ si $\forall E \in \mathbb{R^{+*}}$, il existe un rang $n_0$ tel que $\forall n \ge n_0\,l-E<u_n<l+E$
 \end{enumerate}
 Note: $\lim \limits_{n \rightarrow a^+}$ signifie la limite en $a$ par le coté positif, et inversement pour $\lim \limits_{n \rightarrow a^-}$
 
@@ -243,7 +244,7 @@ $f(x) \rightarrow f'(x)$ avec $f$ une fonction et $k\in\mathbb{R}$
 \begin{enumerate}
 	\item[] $$k \rightarrow 0$$
 	\item[] $$kx \rightarrow k$$
-	\item[] $$x^n \text{ } (n\in\mathbb{R}, x\ne 0 \text{ si } n\le 1) \rightarrow nx^{n-1}$$
+	\item[] $$x^n \, (n\in\mathbb{R}, x\ne 0 \text{ si } n\le 1) \rightarrow nx^{n-1}$$
 	\item[] $$e^x \rightarrow e^x$$
 	\item[] \begin{center}
 	      $\abs{x} \rightarrow -1$ si x négatif,  $+1$ si x positif
@@ -272,21 +273,39 @@ La dérivée seconde d'une fonction est la dérivée de la dérivée de cette fo
 Une fonction est convexe quand elle est au dessus de ses fonctions, concave si elle est en dessous. Le point ou elle change de convexité est son point d'infection.\\
 On notera que $f''(x)>0 \mid x\in \mathbb{I} \Rightarrow f$ convexe, $f''(x)<0 \mid x\in \mathbb{I} \Rightarrow f$ concave.
 
+\section{Continuité}
+\begin{enumerate}
+	\item Une fonction $f$ est dite continue au point $a$ si $\lim \limits_{x \rightarrow a} f(x) = f(a)$ (et que donc ces deux éléments existent).
+	\item Une fonction est continue sur l'intervalle $\mathbb{I}$ si elle est continue en tout point de $\mathbb{I}$.
+\end{enumerate}
+\subsection{Propriétés}
+\begin{enumerate}
+	\item Si une fonction $f$ est dérivable en un point $a$ alors $f$ est continue en $a$.
+	\item Les fonctions usuelles (fonction carrée, fonction cube, fonction inverse, fonction exponentielle, fonction sinus, fonction cosinus et les fonctions polynômes) sont continues sur leur ensemble de définition.
+	\item Tout fonction définie comme la somme, le produit, le quotient ou la composée de fonctions continues est continue sur son ensemble de définition.
+\end{enumerate}
+\subsection{Théorème des valeurs intermédiaire}
+Si la fonction $f$ est définie et continue sur un intervalle $[a;b]$, alors $$\forall k \in [f(a);f(b)], \exists x \in [a;b] \mid f(x) = k$$
+\subsection{Théorème de la bijection}
+Si la fonction $f$ est définie, continue et strictement monotone sur un intervalle $[a;b]$, alors $$\forall k \in [f(a);f(b)], \exists ! x \in [a;b] \mid f(x) = k$$
+\subsection{Théorème du point fixe (suites)}
+Soit $f$ une fonction et $u$ une suite telle que $u_0 \in \mathbb{R}$ et $u_{n+1} = f(u_n)$, alors si $f$ est continue et $\lim \limits_{n \rightarrow +\infty} u_n = l$, $l$ est solution de l'équation $l = f(l)$.
+
 
 \section{Primitive}
 Une primitive est l'opposée d'une dérivée. Soit $f$ une fonction, la primitive de $f$ est la fonction $F$ telle que $F' = f$.
 
-\subsubsection{Primitives de fonctions usuelles}
+\subsection{Primitives de fonctions usuelles}
 $f(x) \rightarrow F(x)$ avec $f$ une fonction et $k,c\in\mathbb{R}$.
 \begin{enumerate}
 	\item[] $$k \rightarrow kx + c$$
-	\item[] $$x^n \text{ } (n\in \mathbb{R} \setminus \{-1\}) \rightarrow \frac{x^{n+1}}{n+1}+c$$
-	\item[] $$\frac{1}{x} \text{ } (x>0) \rightarrow \ln(x)+c$$
+	\item[] $$x^n \, (n\in \mathbb{R} \setminus \{-1\}) \rightarrow \frac{x^{n+1}}{n+1}+c$$
+	\item[] $$\frac{1}{x} \, (x>0) \rightarrow \ln(x)+c$$
 	\item[] $$e^x \rightarrow e^x+c$$
 	\item[] \begin{center}Pour les fonctions trigonométriques, on tourne dans le sens anti-horaire.\end{center}
 \end{enumerate}
 
-\subsubsection{Opérations sur les primitives}
+\subsection{Opérations sur les primitives}
 $f(x) \rightarrow F(x)$ avec $u$ et $v$ des fonction, $U$ et $V$ leurs primitives respectives et $k\in\mathbb{R}$.
 \begin{enumerate}
 	\item[] $$\forall k \in \mathbb{R} : (ku)' = kU$$
@@ -296,24 +315,33 @@ $f(x) \rightarrow F(x)$ avec $u$ et $v$ des fonction, $U$ et $V$ leurs primitive
 	\item[] $$V \times U\circ v \rightarrow u\circ v$$
 \end{enumerate}
 
-\section{Continuité}
-\begin{enumerate}
-	\item Une fonction $f$ est dite continue au point $a$ si $\lim \limits_{x \rightarrow a} f(x) = f(a)$ (et que donc ces deux éléments existent).
-	\item Une fonction est continue sur l'intervalle $\mathbb{I}$ si elle est continue en tout point de $\mathbb{I}$.
-\end{enumerate}
-\subsubsection{Propriétés}
-\begin{enumerate}
-	\item Si une fonction $f$ est dérivable en un point $a$ alors $f$ est continue en $a$.
-	\item Les fonctions usuelles (fonction carrée, fonction cube, fonction inverse, fonction exponentielle, fonction sinus, fonction cosinus et les fonctions polynômes) sont continues sur leur ensemble de définition.
-	\item Tout fonction définie comme la somme, le produit, le quotient ou la composée de fonctions continues est continue sur son ensemble de définition.
-\end{enumerate}
-\subsubsection{Théorème des valeurs intermédiaire}
-Si la fonction $f$ est définie et continue sur un intervalle $[a;b]$, alors $$\forall k \in [f(a);f(b)], \exists x \in [a;b] \mid f(x) = k$$
-\subsubsection{Théorème de la bijection}
-Si la fonction $f$ est définie, continue et strictement monotone sur un intervalle $[a;b]$, alors $$\forall k \in [f(a);f(b)], \exists ! x \in [a;b] \mid f(x) = k$$
-\subsubsection{Théorème du point fixe (suites)}
-Soit $f$ une fonction et $u$ une suite telle que $u_0 \in \mathbb{R}$ et $u_{n+1} = f(u_n)$, alors si $f$ est continue et $\lim \limits_{n \rightarrow +\infty} u_n = l$, $l$ est solution de l'équation $l = f(l)$.
+\subsection{Ensemble de primitives}
+Soit $F$ une primitive de $f$, $G: x\rightarrow F(x) + k\,k\in\mathbb{R}$, est aussi une primitive de $f$, ce qui peut facilement se vérifier en la dérivant. Ainsi $\{H: x\rightarrow F(x) + k \forall k\in\mathbb{R}\}$ est l'ensemble des primitives de $f$.
+\subsection{Primitive particulière}
+On ajoute que si $f$ est continue sur $\mathbb{I}$, $\forall x\in\mathbb{I}$ et $y\in\mathbb{R}$, $\exists ! F\mid F'=f$ et $F(x)=y$.
 
+\section{Équations différentielles}
+\subsection{De type $y'=ay$}
+Les solution au équations de type $y'=ay$ avec $y$ une fonction, sont les fonctions $y$ telles que $y(x) = Ce^{ax}$ avec $C\in\mathbb{R}$
+\subsection{De type $y'=ay+b$}.
+Les solution au équations de type $y'=ay+b$ avec $y$ une fonction et $b\in\mathbb{R}$, sont les fonctions $y$ telles que $y(x) = Ce^{ax}-\frac{b}{a}$ avec $C\in\mathbb{R}$
+\subsection{De type $y'=ay + f$}.
+Les solution au équations de type $y'=ay +f$ avec $y$ et $f$ des fonctions, sont les fonctions $y$ telles que $y(x) = Ce^{ax} + u(x)$ avec $C\in\mathbb{R}$ et $u$ une solution particulière de l'équation.
+
+\section{Intégration}
+L'intégrale de la fonction $f$ entre les bornes $a$ et $b$ et l' "aire signée" (négative sous $y=0$, positive au dessus) entre la courbe de $y=f(x)$ et la droite $y=0$, entre les droites $x=a$ et $x=b$. Elle est notée $\int_{a}^{b} f(x) \,dx$
+\subsection{Lien aux primitives}
+Soit $F_a$ la fonction telle que $F_a(x) = \int_{a}^{x}f(x),dx$, $F_a$ est la primitive de $f$ qui s'annule de $a$. En effet, $\int_{a}^{a}f(x),dx = 0$ et $F_a'(x) \in \lim \limits_{h \rightarrow 0}[f(x);f(x+h)]$, donc $F_a'=f$.
+\subsubsection{Application directe}
+Ainsi, $\int_{a}^{b}f(x),dx = F_a(b) = F_a(b) - F_a(a) = (F_a(b)+k) - (F_a(a)+k)\, \forall k\in\mathbb{R} = F(b)-F(a) = [F(x)]_a^b$ avec $F(x) = F_a(x)+k \, \forall k\in\mathbb{R}$, soit une quelconque primitive de $f$.
+\subsection{Propriétés}
+Avec $f$, $g$ des fonctions continues sur $[a;b]$, $F$ et $G$ leurs primitives, $k$ un réel, et $c\in[a;b]$
+\begin{enumerate}
+	\item (Linéarité) $\int_{a}^{b}kf(x),dx = k\int_{a}^{b}f(x),dx$
+	\item (Linéarité) $\int_{a}^{b}f(x)+g(x),dx = \int_{a}^{b}f(x),dx+\int_{a}^{b}g(x),dx$
+	\item (Relation de Chasles) $\int_{a}^{b}f(x),dx = \int_{a}^{c}f(x),dx + \int_{c}^{b}f(x),dx$
+	\item (Notable:) $\int_{a}^{b}f(x)g(x),dx = [f(x)G(x)]_a^b- \int_{a}^{b}f'(x)+G(x),dx$
+\end{enumerate}
 
 \section{Graphes}
 \begin{enumerate}
@@ -363,7 +391,7 @@ Les vecteurs ne prennent pas compte des détours. Ainsi, $\Vec{AB}+\Vec{BC}=\Vec
 Si $\Vec{v} = k\Vec{u}$ avec $k$ un réel, alors $\Vec{v}$ et $\Vec{u}$ sont colinéaires.
 
 \subsection{Coplanairité}
-Si il existe des réels $\alpha,\beta\in\mathbb{R}$ $\Vec{w}=\alpha\Vec{u}+\beta\Vec{v}$ alors $\Vec{u},\Vec{v},\Vec{w}$ sont coplanaires.\\
+Si il existe des réels $\alpha,\beta\in\mathbb{R}\mid\Vec{w}=\alpha\Vec{u}+\beta\Vec{v}$ alors $\Vec{u},\Vec{v},\Vec{w}$ sont coplanaires.\\
 De même, il sont coplanaires ssi il existe $a,b,c\in\mathbf{R^*}$ tels que $a\Vec{u}+b\Vec{v}+c\Vec{w}=0$. Par contraposée, si ces trois coefficients sont nuls alors les vecteurs ne sont pas coplanaires.
 
 \subsection{Produit scalaire}
@@ -412,7 +440,7 @@ Une équation de droite en 2D peut s'écrire de deux manières: la forme réduit
 On distingue alors le vecteur directeur et le vecteur normal (orthogonal au premier), de formules respectives $\begin{pmatrix}-b\\a\end{pmatrix}$ et $\begin{pmatrix}a\\b\end{pmatrix}$.
 \subsubsection{Cercle}
 Ici la forme cartésienne est $(x-x_A)^2+(y-y_A)^2 = r^2$ avec $A$ le centre du cercle et $r$ son rayon.\\
-Dès lors, l'ensemble des les points $(x;y)$ qui vérifient $(x-a)^2+(y-b)^2 = S$ avec $S\in\mathbb{R}$, est un cercle de centre $(a;b)$ et de rayon $\sqrt{S}$.
+Dès lors, l'ensemble des les points $(x;y)$ qui vérifient $(x-a)^2+(y-b)^2 = S$ avec $S\in\mathbb{R^+}$, est un cercle de centre $(a;b)$ et de rayon $\sqrt{S}$.
 \subsubsection{Parabole}
 On retrouve la forme $y=ax^2+bx+c$ où on remarque l'axe de symétrie $x = -b/2a$ et le sommet $(-b/2a,f(-b/2a))$.
 
@@ -425,7 +453,7 @@ Les points de $D$ suivent le mode de génération $(x;y;z)$ suivant:
 	\begin{array}{c @{=} c}
 		x & x_a + ak \\
 		y & y_a + bk \\
-		z & z_a + ck
+		z & z_a + ck 
 	\end{array}
 	\forall k \in \mathbb{R}
 	\right.
@@ -559,11 +587,11 @@ Soit $a,b\in\mathbf{N^*}$, il existe un unique couple d'entiers $(q;r)$ tel que 
 $a$ et $b$ sont dits congrus modulo $n$ si $n|(a-b)$, soit que $r_{a/n}=r_{b/n}$. On note $a\equiv b (n)$
 \\\\Propriétés;
 \begin{enumerate}
-	\item $a \equiv b(n)$ $b\equiv c(n) \rightarrow a\equiv c(n)$
-	\item $a \equiv b(n)$ $c \equiv d(n) \rightarrow a+c\equiv b+d(n)$
-	\item $a \equiv b(n)$ $c \equiv d(n) \rightarrow ac\equiv bd(n)$
-	\item $a \equiv b(n)$ $k\in\mathbb{Z} \rightarrow ak\equiv bk(n)$
-	\item $a \equiv b(n)$ $p\in\mathbb{N} \rightarrow a^p\equiv b^p(n)$
+	\item $a \equiv b(n)\,b\equiv c(n) \rightarrow a\equiv c(n)$
+	\item $a \equiv b(n)\,c \equiv d(n) \rightarrow a+c\equiv b+d(n)$
+	\item $a \equiv b(n)\,c \equiv d(n) \rightarrow ac\equiv bd(n)$
+	\item $a \equiv b(n)\,k\in\mathbb{Z} \rightarrow ak\equiv bk(n)$
+	\item $a \equiv b(n)\,p\in\mathbb{N} \rightarrow a^p\equiv b^p(n)$
 \end{enumerate}
 
 
@@ -630,12 +658,12 @@ Une matrice est $A$ dite inversible ssi $\exists B, AB = BA = I$. On note alors 
 Dans le cas d'une matrice carré d'ordre 2 de la forme
 $\begin{pmatrix}
 	a & b \\
-	c & d
+	c & d 
 \end{pmatrix}$
 , $A^{-1} = \frac{1}{det(A)}
 \begin{pmatrix}
 	d  & -b \\
-	-c & a
+	-c & a  
 \end{pmatrix}$.
 
 \subsection{Caractéristiques d'une matrice}
@@ -721,7 +749,7 @@ Soit la suite $u$ telle que \[
 \left \{
 \begin{array}{c @{=} c}
 	u_0     & 2      \\
-	u_{n+1} & 5u_n+4
+	u_{n+1} & 5u_n+4 
 \end{array}
 \right.
 \]
