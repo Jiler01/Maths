@@ -63,33 +63,37 @@ Si $f(a) > f(b)$: la fonction est \emph{strictement décroissante} sur $\mathbb{
 Si $f(-x) = f(x)$: la fonction est \emph{paire}\\
 Si $f(-x) = -f(x)$: la fonction est \emph{impaire}
 
-\subsubsection{Périodicite}
+\subsubsection{Périodicité}
 \underline{$\forall x \in \mathbb{D}_f$ :}\\
 Si $f(x + k) = f(x)$: la fonction est \emph{k-périodique}
-
-
-\subsection{Fonctions affines}
+\subsection{Fonctions usuelles}
+\subsubsection{Fonctions communes}
+\paragraph{Fonctions affines}
 Une fonction est une fonction de style $f(x) = ax+b$ avec $a$ la dérivée de la fonction, et $b$ son ordonnée à l'origine.
 
 
-\subsection{Fonctions carrées}
+\paragraph{Fonction carrée}
 La fonction carrée est définie par $f(x) = x^2$. Elle est paire sur $\mathbb{R}$, décroissante sur $\mathbb{R^-}$ et croissante sur sur $\mathbb{R^+}$.
 
 
-\subsection{Fonction cube}
+\paragraph{Fonction cube}
 La fonction cube est définie par $f(x) = x^3$. Elle est impaire et croissante sur $\mathbb{R}$.
 
 
-\subsection{Fonction inverse}
+\paragraph{Fonction inverse}
 La fonction inverse est définie par $f(x) = \frac{1}{x}$. Elle est impaire et décroissante sur $\mathbb{R^*}$.
 
 
-\subsection{Fonction racine carrée}
+\paragraph{Fonction racine carrée}
 La fonction carrée est définie sur $\mathbb{R^+}$ par $f(x) = \sqrt{x}$. Elle est croissante.
 
-\subsection{Logarithme népérien}
+\subsubsection{Fonction valeur absolue}
+La fonction valeur absolue est définie par $f(x) = \abs{x} $. Elle est paire sur sur $\mathbb{R}$, décroissante sur $\mathbb{R^-}$ et croissante sur sur $\mathbb{R^+}$.\\
+Son comportement suit la règle suivante : $\abs{x} = \abs{-x} = x$.
+
+\subsubsection{Logarithme népérien}
 La fonction logarithme népérien, notée $\ln$ est la fonction telle que $\forall x > 0, \ln(x) = y \mid \exp(y) = x$.
-\subsubsection{Propriétés}
+\paragraph{Propriétés}
 \begin{enumerate}
 	\item Pour tout $x>0$,  $\exp(\ln(x)) = x$
 	\item Pour tout $x \in \mathbb{R}$, $\ln(\exp(x)) = x$
@@ -102,33 +106,28 @@ La fonction logarithme népérien, notée $\ln$ est la fonction telle que $\fora
 \end{enumerate}
 
 
-\subsection{La fonction valeur absolue}
-La fonction valeur absolue est définie par $f(x) = \abs{x} $. Elle est paire sur sur $\mathbb{R}$, décroissante sur $\mathbb{R^-}$ et croissante sur sur $\mathbb{R^+}$.\\
-Son comportement suit la règle suivante : $\abs{x} = \abs{-x} = x$.
+\subsubsection{Fonctions trigonométrique }
 
-
-\subsection{Fonctions trigonométrique }
-
-\subsubsection{Cercle trigonométrique}
+\paragraph{Cercle trigonométrique}
 Le cercle trigonométrique est défini par un cercle de rayon $1$, donc de périmètre $2\pi$.\\
 On admettra que son centre $O$ est aux coordonnées $(0;0)$.
 
-\subsubsection{Radian}
+\paragraph{Radian}
 Le radian est l'unité de mesure d'angle correspondant à une portion du cercle-unité (de rayon 1 ua) telle que l'arc du cercle associé à cette portion a pour longueur 1 ua. Noté $rad$, on retiendra que $1^\circ= \frac{\pi}{180} rad$ .
 
-\subsubsection{Points sur l'arc}
+\paragraph{Points sur l'arc}
 Le point correspondant a l'angle $x$ radians, aura pour coordonnées $(\cos(x);\sin(x))$. \\De plus, l'angle $x$ est le même que l'angle $x +2k\pi$, $\forall k \in \mathbb{Z}$.
 
-\subsubsection{Fonctions cosinus et sinus}
-\paragraph{Cosinus}
+\paragraph{Fonctions cosinus et sinus}
+\subparagraph{Cosinus}
 $\cos$ est une fonction paire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\cos(x + 2k\pi) = \cos(x)$, $\forall k \in \mathbb{Z}$.\\
-\paragraph{Sinus}
+\subparagraph{Sinus}
 $\sin$ est une fonction impaire, variant entre $-1$ et $1$, et de période $2\pi$, tel que $\sin(x + 2k\pi) = \sin(x)$, $\forall k \in \mathbb{Z}$.
 
 
-\subsection{Fonctions polynômes du second degré}
+\subsubsection{Fonctions polynômes du second degré}
 
-\subsubsection{Formes}
+\paragraph{Formes}
 \begin{enumerate}
 	\item Forme développée (ou forme développée réduite : $f(x) = ax^2+bx+c$ avec $a \neq 0$
 	\item Forme factorisée : $f(x) = a(x - x_1)(x - x_2)$ avec $x_1$ et $x_2$ les racines de $f$\\
@@ -137,17 +136,17 @@ $\sin$ est une fonction impaire, variant entre $-1$ et $1$, et de période $2\pi
 	      On notera que $(\alpha;\beta)$ est l'extremum de la fonction, que l'on peut retrouver en étudiant sa dérivée.
 \end{enumerate}
 
-\subsubsection{Variations}
+\paragraph{Variations}
 Pour $a > 0$: décroissante avant $\alpha$, avec un minimum en $\beta$, puis croissante.\\
 Pour $a < 0$: croissante avant $\alpha$, avec un maximum en $\beta$, puis décroissante.
 
-\subsubsection{Résolution}
+\paragraph{Résolution}
 \begin{enumerate}
 	\item On calcule le discriminant tel que $\Delta = b^2 - 4ac$.
 	\item On calcule les racines telles que $x_0 = \frac{-b \pm \sqrt{\Delta}}{2a}$ si $\Delta \ge 0$, $\frac{-b \pm i\sqrt{\abs{\Delta}}}{2a}$ sinon.
 \end{enumerate}
 
-\subsubsection{Signe de la fonction}
+\paragraph{Signe de la fonction}
 \begin{enumerate}
 	\item Si $\Delta > 0$: Du signe de $a$ à l'extérieur des racines, de l'autre entre elles. S'annule sur ces dernières
 	\item Si $\Delta = 0$: Du signe de $a$ sur $\mathbb{R}$ S'annule sur la racines.
@@ -171,7 +170,7 @@ Une simple liste de nombres. (ex: les décimales de $\pi$: 1; 4; 1; 5\dots)
 Définir $u_n$ en fonction de $n$: $u_n = f(n)$
 
 \subsubsection{Récurrence}
-Définir $u_n$ en fonction de un ou plusieurs $u_{n-k}$ (ex: suite de Fibonacci: $u_n = u_{n-2} + u_{n1}$)
+Définir $u_n$ en fonction de un ou plusieurs $u_{n-k}$ (ex: suite de Fibonacci: $u_n = u_{n-2} + u_{n-1}$)
 
 
 \subsection{Quelques styles de suites}
@@ -248,7 +247,7 @@ La dérivée de $f(x)$, soit la variation de $f$ en $x$, s'écrit $f'(x)$. Il s'
 $$f'(x) = \lim \limits_{h \Rightarrow 0} \frac{f(a + h) - f(a)}{h}$$
 
 \subsubsection{Tangente à une courbe}
-La tangente à la courbe de $f$ en $a$ est définie par: $$\mathcal{T}(x) = f'(a)(x-a) + f(a)$$
+La tangente à la courbe de $f$ en $a$ est la droite définie par: $$\mathcal{T} = f'(a)(x-a) + f(a)$$
 
 
 \subsection{Dérivation globale}
@@ -265,9 +264,7 @@ $f(x) \rightarrow f'(x)$ avec $f$ une fonction et $k\in\mathbb{R}$
 	\item[] $$kx \rightarrow k$$
 	\item[] $$x^n \, (n\in\mathbb{R}, x\ne 0 \text{ si } n\le 1) \rightarrow nx^{n-1}$$
 	\item[] $$e^x \rightarrow e^x$$
-	\item[] \begin{center}
-	      $\abs{x} \rightarrow -1$ si x négatif,  $+1$ si x positif
-	\end{center}
+	\item[] $$\abs{x} \rightarrow \frac{x}{\abs{x}}$$
 	\item[] \begin{center}Pour les fonctions trigonométriques, on tourne dans le sens horaire.\end{center}
 \end{enumerate}
 
