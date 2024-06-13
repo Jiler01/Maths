@@ -19,7 +19,7 @@
 
 \maketitle
 Ce livret est un récapitulatif de mes années de spécialités mathématiques de première et terminale et de maths expertes au Lycée International de Ferney-Voltaire durant les années 2022\textemdash2024.\\
-Remerciements spéciaux à Mme Leclerc, Mme Escot, feu M Colin, M Tierno et Mme Beltzung pour leurs connaissances, soutiens et passions, ainsi qu'a Yvan Monka (\href{https://www.maths-et-tiques.fr/}{\textit{Maths et tiques}}) et Grant Sanderson (\href{https://www.3blue1brown.com}{\textit{3Blue1Brown}}).\\
+Remerciements spéciaux à Mme Escot, M Tierno, Mme Beltzung, Mme Leclerc et feu M Colin  pour leurs connaissances, soutiens et passions, ainsi qu'a Yvan Monka (\href{https://www.maths-et-tiques.fr/}{\textit{Maths et tiques}}) et Grant Sanderson (\href{https://www.3blue1brown.com}{\textit{3Blue1Brown}}), pour leur contenu de la plus haute qualité\\
 \break
 \underline{Notation:}\\
 Pour des raisons de simplicité, ce livret utilise des notations correctes mais avec lesquelles vous pourriez ne pas être familier-re. En voici donc quelques unes expliquées:
@@ -34,7 +34,10 @@ Pour des raisons de simplicité, ce livret utilise des notations correctes mais 
 	\item $\in$ signifie "dans"
 	\item $\exists$ signifie "il existe", $\exists!$ signifie "il existe un unique"
 	\item Soit $f$ une fonction, $[f(x)]_a^b = f(b)-f(a)$
+	\item Soit $f$ une fonction, on note $\mathbb{D}_f$ son ensemble de définition 
 \end{itemize}
+
+\pagebreak
 
 \tableofcontents
 
@@ -56,9 +59,13 @@ Si $f(a) \ge f(b)$: la fonction est \emph{décroissante} sur $\mathbb{I}$\\
 Si $f(a) > f(b)$: la fonction est \emph{strictement décroissante} sur $\mathbb{I}$\\
 
 \subsubsection{Parité \& imparité}
-\underline{$\forall x \in \mathbb{R}$ :}\\
+\underline{$\forall x \in \mathbb{D}_f$ :}\\
 Si $f(-x) = f(x)$: la fonction est \emph{paire}\\
 Si $f(-x) = -f(x)$: la fonction est \emph{impaire}
+
+\subsubsection{Périodicite}
+\underline{$\forall x \in \mathbb{D}_f$ :}\\
+Si $f(x + k) = f(x)$: la fonction est \emph{k-périodique}
 
 
 \subsection{Fonctions affines}
@@ -80,6 +87,20 @@ La fonction inverse est définie par $f(x) = \frac{1}{x}$. Elle est impaire et d
 \subsection{Fonction racine carrée}
 La fonction carrée est définie sur $\mathbb{R^+}$ par $f(x) = \sqrt{x}$. Elle est croissante.
 
+\subsection{Logarithme népérien}
+La fonction logarithme népérien, notée $\ln$ est la fonction telle que $\forall x > 0, \ln(x) = y \mid \exp(y) = x$.
+\subsubsection{Propriétés}
+\begin{enumerate}
+	\item Pour tout $x>0$,  $\exp(\ln(x)) = x$
+	\item Pour tout $x \in \mathbb{R}$, $\ln(\exp(x)) = x$
+	\item La fonction logarithme népérien est strictement croissante et concave.
+	\item $\ln(a) = \ln(b) \Leftrightarrow a=b$
+	\item $\ln(a\times b) = \ln(a) + \ln(b)$
+	\item $\lim \limits_{x \rightarrow +\infty} \ln(x) = +\infty$
+	\item $\lim \limits_{x \rightarrow 0^+}\ln(x) = -\infty$
+	\item Pour tout $x>0$, $(\ln ')(x) = 1/x$
+\end{enumerate}
+
 
 \subsection{La fonction valeur absolue}
 La fonction valeur absolue est définie par $f(x) = \abs{x} $. Elle est paire sur sur $\mathbb{R}$, décroissante sur $\mathbb{R^-}$ et croissante sur sur $\mathbb{R^+}$.\\
@@ -89,7 +110,7 @@ Son comportement suit la règle suivante : $\abs{x} = \abs{-x} = x$.
 \subsection{Fonctions trigonométrique }
 
 \subsubsection{Cercle trigonométrique}
-Le cercle trigonométrique est défini par un cercle de rayon $1$, donc de rayon $2\pi$.\\
+Le cercle trigonométrique est défini par un cercle de rayon $1$, donc de périmètre $2\pi$.\\
 On admettra que son centre $O$ est aux coordonnées $(0;0)$.
 
 \subsubsection{Radian}
@@ -174,7 +195,7 @@ Pour prouver la croissance ou la décroissance d'une suite, on applique \\$u_{n-
 \section{Polynômes}
 Le terme polynôme $P$ de degré $n$ à coefficients réels est une expressions qui s'écrit sous la forme $$P(z) = \sum^n_{i=0}c_iz^i \mid \forall i \in \mathbb{N}, c_i\in \mathbb{R} \text{ et } c_n \neq 0 $$.
 On nomme $a$ une racine de $P$ ssi $P(a) = 0$
-\subsection{Nombre racines}
+\subsection{Nombre de racines}
 Le nombre de racine d'un polynôme est inférieur ou égal à son degré.\\
 
 \pagebreak\part{Analyse}
@@ -184,8 +205,6 @@ Le nombre de racine d'un polynôme est inférieur ou égal à son degré.\\
 \href{https://youtu.be/kfF40MiS7zA}{\underline{\textit{Vidéo (anglais)}}}\\
 \break
 Les règles suivantes peuvent s'appliquer aux fonctions comme aux suites, qui ne sont rien d'autre que des fonctions ne prenant pour paramètre que des entiers naturels.
-
-\break
 \begin{enumerate}
 	\item $v_n$ admet une limite $+\infty$ si $\forall A \in \mathbb{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n > A$
 	\item $v_n$ admet une limite $-\infty$ si $\forall A \in \mathbb{R}$, il existe un rang $n_0$ tel que $\forall n \ge n_0$, $u_n < A$
@@ -271,7 +290,7 @@ La dérivée seconde d'une fonction est la dérivée de la dérivée de cette fo
 
 \subsubsection{Convexité}
 Une fonction est convexe quand elle est au dessus de ses fonctions, concave si elle est en dessous. Le point ou elle change de convexité est son point d'infection.\\
-On notera que $f''(x)>0 \mid x\in \mathbb{I} \Rightarrow f$ convexe, $f''(x)<0 \mid x\in \mathbb{I} \Rightarrow f$ concave.
+On notera que $f''(x)>0 \mid x\in \mathbb{I} \Rightarrow f$ convexe sur $\mathbb{I}$, $f''(x)<0 \mid x\in \mathbb{I} \Rightarrow f$ concave sur $\mathbb{I}$.
 
 \section{Continuité}
 \begin{enumerate}
@@ -289,7 +308,7 @@ Si la fonction $f$ est définie et continue sur un intervalle $[a;b]$, alors $$\
 \subsection{Théorème de la bijection}
 Si la fonction $f$ est définie, continue et strictement monotone sur un intervalle $[a;b]$, alors $$\forall k \in [f(a);f(b)], \exists ! x \in [a;b] \mid f(x) = k$$
 \subsection{Théorème du point fixe (suites)}
-Soit $f$ une fonction et $u$ une suite telle que $u_0 \in \mathbb{R}$ et $u_{n+1} = f(u_n)$, alors si $f$ est continue et $\lim \limits_{n \rightarrow +\infty} u_n = l$, $l$ est solution de l'équation $l = f(l)$.
+Soit $f$ une fonction et $u$ une suite telle que $u_0 \in \mathbb{R}$ et $u_{n+1} = f(u_n)$, alors si $f$ est continue et $\lim \limits_{n \rightarrow +\infty} u_n \in \mathbb{R}$, $l$ est solution de l'équation $l = f(l)$.
 
 
 \section{Primitive}
@@ -331,16 +350,16 @@ Les solution au équations de type $y'=ay +f$ avec $y$ et $f$ des fonctions, son
 \section{Intégration}
 L'intégrale de la fonction $f$ entre les bornes $a$ et $b$ et l' "aire signée" (négative sous $y=0$, positive au dessus) entre la courbe de $y=f(x)$ et la droite $y=0$, entre les droites $x=a$ et $x=b$. Elle est notée $\int_{a}^{b} f(x) \,dx$
 \subsection{Lien aux primitives}
-Soit $F_a$ la fonction telle que $F_a(x) = \int_{a}^{x}f(x),dx$, $F_a$ est la primitive de $f$ qui s'annule de $a$. En effet, $\int_{a}^{a}f(x),dx = 0$ et $F_a'(x) \in \lim \limits_{h \rightarrow 0}[f(x);f(x+h)]$, donc $F_a'=f$.
+Soit $F_a$ la fonction telle que $F_a(x) = \int_{a}^{x}f(x)\,dx$, $F_a$ est la primitive de $f$ qui s'annule de $a$. En effet, $\int_{a}^{a}f(x)\,dx = 0$ et $F_a'(x) \in \lim \limits_{h \rightarrow 0}[f(x);f(x+h)]$, donc $F_a'=f$.
 \subsubsection{Application directe}
-Ainsi, $\int_{a}^{b}f(x),dx = F_a(b) = F_a(b) - F_a(a) = (F_a(b)+k) - (F_a(a)+k)\, \forall k\in\mathbb{R} = F(b)-F(a) = [F(x)]_a^b$ avec $F(x) = F_a(x)+k \, \forall k\in\mathbb{R}$, soit une quelconque primitive de $f$.
+Ainsi, $\int_{a}^{b}f(x)\,dx = F_a(b) = F_a(b) - F_a(a) = (F_a(b)+k) - (F_a(a)+k)\, \forall k\in\mathbb{R} = F(b)-F(a) = [F(x)]_a^b$ avec $F(x) = F_a(x)+k \, \forall k\in\mathbb{R}$, soit une quelconque primitive de $f$.
 \subsection{Propriétés}
 Avec $f$, $g$ des fonctions continues sur $[a;b]$, $F$ et $G$ leurs primitives, $k$ un réel, et $c\in[a;b]$
 \begin{enumerate}
-	\item (Linéarité) $\int_{a}^{b}kf(x),dx = k\int_{a}^{b}f(x),dx$
-	\item (Linéarité) $\int_{a}^{b}f(x)+g(x),dx = \int_{a}^{b}f(x),dx+\int_{a}^{b}g(x),dx$
-	\item (Relation de Chasles) $\int_{a}^{b}f(x),dx = \int_{a}^{c}f(x),dx + \int_{c}^{b}f(x),dx$
-	\item (Notable:) $\int_{a}^{b}f(x)g(x),dx = [f(x)G(x)]_a^b- \int_{a}^{b}f'(x)+G(x),dx$
+	\item (Linéarité) $\int_{a}^{b}kf(x)\\ = k\int_{a}^{b}f(x)\,dx$
+	\item (Linéarité) $\int_{a}^{b}f(x)+g(x)\,dx = \int_{a}^{b}f(x)\,dx+\int_{a}^{b}g(x),dx$
+	\item (Relation de Chasles) $\int_{a}^{b}f(x)\,dx = \int_{a}^{c}f(x)\,dx + \int_{c}^{b}f(x)\,dx$
+	\item (Notable:) $\int_{a}^{b}f(x)g(x)\,dx = [f(x)G(x)]_a^b- \int_{a}^{b}f'(x)+G(x)\,dx$
 \end{enumerate}
 
 \section{Graphes}
@@ -420,7 +439,7 @@ Est appelé vecteur normal d'un plan le vecteur orthogonal à tout les vecteurs 
 \subsection{Équation cartésienne}
 L'équation cartésienne d'un plan est l'équation $ax+by+cz+d = 0$ telles que tout les points $(x;y;z)$ du plan vérifient cette équation. On notera que le vecteur $\Vec{\begin{pmatrix}a\\b\\c\end{pmatrix}})$ est le vecteur normal du plan.
 
-\section{Distance d'un point à}
+\section{Distance d'un point à ...}
 \paragraph{Un point}
 Pour trouver la distance $AB$, il suffit de trouver la norme du vecteur $\Vec{AB}$.
 \paragraph{Un plan}
@@ -531,6 +550,7 @@ Le nombre de cas avec au moins un objet est la différence entre le nombre de ca
 Une variable aléatoires est une variable pouvant prendre différentes valeurs, suivant une certaine probabilité. \\
 On associe alors à la variable aléatoire $X$ les valeurs $x_1, x_2, ..., x_n$ et leurs probabilités respectives $p_i$ définies par $P(X = x_i)$.
 
+
 \subsection{Paramètres}
 Une variable aléatoire a dès lors des paramètres, définis comme suis:
 \begin{enumerate}
@@ -538,6 +558,31 @@ Une variable aléatoire a dès lors des paramètres, définis comme suis:
 	\item Sa variance, une étape de calcul de son écart-type, $V(X)$: $$\sum^n_{i=1}p_i(x_i-E(X))^2$$
 	\item Son écart-type, soit la distance moyenne d'un tirage à l'espérance, $\sigma(X)$: $$\sqrt{V(X)}$$
 \end{enumerate}
+
+\subsection{Somme de variable aléatoires}
+Soit $X$ et $Y$ des variables aléatoires, et $a\in\mathbb{R}$.\\
+On définis $X + Y$ comme la somme des valeurs de $X$ et de $Y$, et $aX$ comme le produit de $a$ et de la valeur de $X$.
+On a:
+\begin{enumerate}
+	\item $E(X + Y) = E(X) + E(Y)$ (Linéarité de l'espérance)
+	\item $E(aX) = a\times E(X)$ (Linéarité de l'espérance)
+	\item[]
+	\item \emph{Ssi $X$ et $Y$ sont indépendantes}: $V(X + Y) = V(X) + V(Y)$ 
+	\item $V(aX) = a^2V(X)$
+	\item $\sigma(aX) = \abs{a}\sigma(X)$
+\end{enumerate}
+
+\subsection{Échantillons de variables aléatoires}
+Un échantillon de taille $n\in\mathbb{N}$ associée a une loi est une liste de $n$ variables aléatoires \emph{indépendantes et suivant cette loi}.
+\subsubsection{Somme d'un échantillon}
+Soit $S_n$ la somme d'un échantillon longueur $n$ associé à la loi d'une variable aléatoire $X$. On a:
+\begin{enumerate}
+	\item $E(S_n) = nE(X)$
+	\item $V(S_n) = nV(X)$
+	\item $\sigma(S_n) = \sqrt{n}\sigma(X)$
+\end{enumerate}
+\subsubsection{Moyenne d'un échantillon }
+Soit $M_n = \frac{1}{n}S_n$. On applique les règles sur la somme de variables aléatoires pour obtenir:$E(S_n) = E(X)$, $V(S_n) = V(X)/n$ et $\sigma(S_n) = \sigma(X)/\sqrt{n}$.
 
 \subsection{Expérience à 2 issues}
 Soit une expérience de probabilité de succès $p$.\\ La variable aléatoire correspondante prendra comme valeur $1$ en cas de succès, $0$ en cas d'échec.
@@ -556,7 +601,18 @@ On peut calculer la probabilité de $k$ succès telle que $$\mathcal{P}(X=k)= \b
 Soit $X$ une variable aléatoire et $a,b,\alpha \in \mathbb{R}$ \\
 Une intervalle $[a;b]$, telle que $\mathcal{P}(a\le X \le b) > 1-\alpha$, est une intervalle de fluctuation au seuil de $1-\alpha$ (au risque de $\alpha$). Elle vaut typiquement $\sum_a^b p_i$.
 
-\pagebreak\pagebreak\part{Arithmétique}
+
+\pagebreak\pagebreak
+\subsection{Concentration}
+\subsubsection{Inégalité de Bienaymé-Tchebychev et de concentration}
+$\forall \delta > 0$
+$$P(\abs{X - E(X)} \ge \delta) \le \frac{V(X)}{\delta^2}$$
+Cette inégalité peut être appliquée à une moyenne:
+$$P(\abs{M_n - E(X)} \ge \delta) \le \frac{V(X)}{n\delta^2}$$
+\subsubsection{Loi faible des grands nombres}
+$$\lim \limits_{n \rightarrow +\infty} P(\abs{M_n - E(X)} \ge \delta) = 0$$
+
+\part{Arithmétique}
 \setcounter{section}{0}
 \renewcommand*{\theHsection}{chX.\the\value{section}}
 
@@ -791,23 +847,6 @@ Une fonction polynôme $P$ de degré $n$ est de la forme $P(z) = \sum^n_{k=0}a_k
 	\item Soit $n\in\mathbb{Z}, a\in\mathbb{C}$, il existe un polynôme $Q$ de degré $n-1$ tel que $a^n-b^n = (a-b)Q(z)$. (Note: $Q(z) = \sum_{k=0}^{n-1} a^{n-1-k}\times b^k$)
 	\item Soit $P$ un polynôme de degré $n$ et $a\in\mathbb{C} \mid P(a)=0$, il existe un polynôme $Q$ de degré $n-1$ tel que $P(z) = (z-a)Q(z)$.
 	\item Soit $P$ un polynôme de degré $n$, il a $n$ racines ou moins.
-\end{enumerate}
-
-
-\section{Fonctions utiles}
-
-\subsection{Logarithme népérien}
-La fonction logarithme népérien, notée $\ln$ est la fonction telle que $\forall x > 0, \ln{x} = y \mid \exp{y} = x$.
-\subsubsection{Propriétés}
-\begin{enumerate}
-	\item Pour tout $x>0$, $\ln(\exp(x)) = x$
-	\item Pour tout $x \in \mathbb{R}$, $\exp(\ln(x)) = x$
-	\item La fonction logarithme népérien est strictement croissante et concave.
-	\item $\ln(a) = \ln(b) \Leftrightarrow a=b$
-	\item $\ln(a\times b) = \ln(a) + \ln(b)$
-	\item $\lim \limits_{x \rightarrow +\infty} \ln(x) = +\infty$
-	\item $\lim \limits_{x \rightarrow 0^-}\ln(x) = -\infty$
-	\item Pour tout $x>0$, $(\ln ')(x) = 1/x$
 \end{enumerate}
 
 
